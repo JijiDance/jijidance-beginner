@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Beginner Level – Jiji Bellydance</title>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --t1:#D4601A;--t2:#E8824A;--t3:#F5C4A0;
+  --v1:#8B4A2A;--v2:#C07050;--v3:#E8D5C8;
+  --o1:#D4601A;--o2:#E8824A;
+  --dark:#2A1A0E;--dark2:#3D2A1A;
+  --bg:#FAF3EE;--white:#FDFAF7;
+  --text:#2A1A0E;--mid:#6B4A38;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+.btn{display:inline-block;font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;transition:all .25s;cursor:pointer}
+.btn-teal{background:var(--t1);color:var(--dark);border:none;box-shadow:0 4px 20px rgba(0,212,170,.3)}
+.btn-teal:hover{background:var(--t2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,212,170,.4)}
+.btn-violet{background:var(--v1);color:#fff;border:none;box-shadow:0 4px 20px rgba(123,47,190,.3)}
+.btn-violet:hover{background:var(--v2);transform:translateY(-2px)}
+.btn-orange{background:var(--o1);color:#fff;border:none;box-shadow:0 4px 20px rgba(255,107,53,.3)}
+.btn-orange:hover{background:var(--o2);transform:translateY(-2px)}
+.btn-outline-lt{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}
+.btn-outline-lt:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.btn-outline-dark{background:transparent;color:var(--dark);border:2px solid var(--dark)}
+.btn-outline-dark:hover{background:var(--dark);color:#fff;transform:translateY(-2px)}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(150deg,#1A0A06 0%,#2A1208 40%,#1A0A06 70%,#0E0704 100%);
+  display:flex;align-items:center;padding:5rem 6vw;
+  position:relative;overflow:hidden;
+}
+/* teal glow left */
+.g1{position:absolute;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,170,.18) 0%,transparent 70%);top:-80px;left:-80px;pointer-events:none}
+/* violet glow right */
+.g2{position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(123,47,190,.15) 0%,transparent 70%);bottom:-60px;right:-60px;pointer-events:none}
+/* orange accent */
+.g3{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.1) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+
+.hero-inner{position:relative;z-index:2;max-width:1100px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:2.5rem}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--t1);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-tag span{font-size:.65rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.hero h1{font-family:'Abril Fatface',serif;font-size:clamp(4rem,9vw,9.5rem);line-height:.85;color:#fff;margin-bottom:2rem}
+.hero h1 .t{color:var(--t1)}
+.hero-body{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:420px;margin-bottom:2.5rem;line-height:1.75}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* floating right panel */
+.hero-panel{display:flex;flex-direction:column;gap:1rem}
+.panel-card{background:rgba(255,255,255,.04);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);padding:1.5rem 1.8rem;border-radius:16px;position:relative;overflow:hidden}
+.panel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.panel-card:nth-child(1)::before{background:linear-gradient(90deg,var(--t1),var(--v1))}
+.panel-card:nth-child(2)::before{background:linear-gradient(90deg,var(--v1),var(--o1))}
+.panel-tag{font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-bottom:.5rem}
+.panel-card h3{font-family:'Abril Fatface',serif;font-size:1.5rem;color:#fff}
+.panel-card p{font-size:.85rem;color:rgba(255,255,255,.4);margin-top:.2rem}
+.panel-start{color:var(--t1);font-size:.75rem;font-weight:500;margin-top:.5rem;display:block}
+.panel-cta{background:linear-gradient(135deg,var(--t1),var(--v1));border-radius:16px;padding:1.5rem;text-align:center}
+.panel-cta p{color:#fff;font-weight:500;font-size:.85rem;margin-bottom:.8rem}
+
+/* STRIP */
+.strip{background:linear-gradient(90deg,var(--t1),var(--v1),var(--o1),var(--t1));background-size:300% 100%;animation:gs 5s linear infinite;padding:.65rem 0;overflow:hidden;white-space:nowrap}
+@keyframes gs{0%{background-position:0%}100%{background-position:300%}}
+.strip-track{display:inline-flex;gap:2rem;animation:marquee 20s linear infinite}
+.strip-track span{font-family:'Abril Fatface',serif;font-size:.82rem;color:#fff;letter-spacing:.06em}
+.strip-track .dot{opacity:.4}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* NUMBERS */
+.nums{background:var(--bg);padding:4rem 6vw}
+.nums-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.num{padding:2rem;border-radius:20px;background:var(--white);border:1px solid rgba(0,212,170,.15)}
+.num-n{font-family:'Abril Fatface',serif;font-size:3.5rem;line-height:1;display:block;background:linear-gradient(135deg,var(--t1),var(--v1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.num-l{font-size:.63rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin-top:.2rem;display:block}
+
+/* SCHEDULE */
+.schedule{background:var(--white);padding:6rem 6vw}
+.schedule-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.tag{font-size:.63rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--t1);display:block;margin-bottom:1rem}
+.schedule h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.9;color:var(--text);margin-bottom:2rem}
+.schedule h2 em{font-style:italic;color:var(--v1)}
+.gcard{border-radius:16px;background:var(--bg);padding:1.5rem;margin-bottom:1rem;display:flex;align-items:center;gap:1.2rem;border:1px solid rgba(0,212,170,.15);transition:all .2s}
+.gcard:hover{border-color:var(--t1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,212,170,.1)}
+.gcard-bar{width:4px;border-radius:4px;background:linear-gradient(180deg,var(--t1),var(--v1));flex-shrink:0;align-self:stretch;min-height:70px}
+
+.gcard-day{font-family:'Abril Fatface',serif;font-size:1.2rem;color:var(--text)}
+.gcard-time{font-size:.9rem;color:var(--mid)}
+.gcard-start{font-size:.72rem;color:var(--t1);font-weight:500;margin-top:.2rem}
+.recover{background:rgba(0,212,170,.06);border:1px solid rgba(0,212,170,.2);padding:.9rem 1.2rem;border-radius:12px;font-size:.83rem;color:var(--mid);margin-top:1.2rem}
+.what{padding:1rem 0}
+.what h3{font-family:'Abril Fatface',serif;font-size:1.8rem;color:#fff;margin-bottom:1rem}
+.what p{font-size:.9rem;margin-bottom:.8rem;line-height:1.65}
+
+/* PERKS */
+.perks{background:var(--bg);padding:6rem 6vw}
+.perks-inner{max-width:1100px;margin:0 auto}
+.perks h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.9;color:var(--text);margin-bottom:3rem}
+.perks h2 span{color:var(--v1)}
+.perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.perk{background:var(--white);padding:2rem;border-radius:20px;border:1px solid rgba(0,212,170,.1);transition:all .25s}
+.perk:hover{border-color:var(--t1);transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,212,170,.1)}
+.perk-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.perk h4{font-family:'Abril Fatface',serif;font-size:1.1rem;color:var(--text);margin-bottom:.4rem}
+.perk p{font-size:.87rem;color:var(--mid);line-height:1.6}
+
+/* PRICING */
+.pricing{background:var(--dark);padding:6rem 6vw;text-align:center}
+.pricing-inner{max-width:780px;margin:0 auto}
+.pricing h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,5rem);line-height:.9;color:#fff;margin-bottom:3rem}
+.pricing h2 span{color:var(--t1)}
+.price-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}
+.pcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:2.5rem 2rem;border-radius:20px;text-align:center;position:relative}
+.pcard.best{border:1px solid var(--t1);background:rgba(0,212,170,.05)}
+.best-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--t1),var(--v1));color:#fff;font-size:.58rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:.22rem .8rem;border-radius:40px}
+.pl{font-size:.63rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-bottom:.8rem}
+.pa{font-family:'Abril Fatface',serif;font-size:4.5rem;color:#fff;line-height:1;display:block}
+.pc{font-size:1.3rem;vertical-align:top;margin-top:.7rem;display:inline-block}
+.ps{font-size:.78rem;color:rgba(255,255,255,.3);display:block;margin-top:.3rem}
+.pn{font-size:.78rem;color:rgba(255,255,255,.3);margin-top:.8rem}
+.bank{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:1.8rem 2rem;border-radius:16px;max-width:420px;margin:2rem auto;text-align:left}
+.bank h4{font-family:'Abril Fatface',serif;font-size:1rem;margin-bottom:1rem;color:#fff}
+.br{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem}
+.br span:first-child{color:rgba(255,255,255,.3)}
+.br span:last-child{color:rgba(255,255,255,.65)}
+
+/* LOCATION */
+.location{background:linear-gradient(135deg,#C47A8A 0%,#D4956A 50%,#C4607A 100%);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.location h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);color:#fff;margin-bottom:1rem}
+.location p{color:rgba(255,255,255,.8);margin-bottom:.5rem}
+
+/* CTA */
+.cta-final{background:var(--bg);padding:7rem 6vw;text-align:center;position:relative;overflow:hidden}
+.cta-blob{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,170,.08) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-final h2{font-family:'Abril Fatface',serif;font-size:clamp(3.5rem,9vw,9rem);line-height:.85;color:var(--text);margin-bottom:1.5rem;position:relative;z-index:1}
+.cta-final h2 span{color:var(--v1)}
+.cta-final p{color:var(--mid);max-width:420px;margin:0 auto 2.5rem;font-size:.9rem;position:relative;z-index:1}
+.cta-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem;padding:5rem 2rem}
+  .hero-panel{display:none}
+  .nums-inner{grid-template-columns:repeat(2,1fr)}
+  .schedule-inner{grid-template-columns:1fr;gap:2rem;padding:4rem 2rem}
+  .perks-grid{grid-template-columns:1fr}
+  .price-cards{grid-template-columns:1fr}
+  .perks,.pricing,.cta-final,.location,.schedule,.nums{padding:4rem 2rem}
+}
+
+/* ── REVIEWS CAROUSEL ── */
+.reviews {
+  background: var(--white);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+.reviews-header {
+  padding: 0 6vw;
+  margin-bottom: 3rem;
+}
+.reviews-header h2 {
+  font-family: 'Abril Fatface', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: .92; color: var(--text);
+}
+.reviews-header h2 span { color: var(--t1); }
+.reviews-header p { color: var(--mid); font-size: .9rem; margin-top: .6rem; }
+
+.reviews-track-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.reviews-track-wrap::-webkit-scrollbar { display: none; }
+.reviews-track-wrap.dragging { cursor: grabbing; }
+
+.reviews-track {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0 6vw 1.5rem;
+  width: max-content;
+}
+
+.review-card {
+  width: 300px;
+  flex-shrink: 0;
+  background: var(--bg);
+  border-radius: 20px;
+  border: 1px solid rgba(0,212,170,.12);
+  padding: 1.8rem;
+  transition: box-shadow .25s, transform .25s;
+  user-select: none;
+}
+.review-card:hover {
+  box-shadow: 0 8px 28px rgba(0,212,170,.12);
+  transform: translateY(-3px);
+}
+.review-stars {
+  display: flex; gap: 3px; margin-bottom: .8rem;
+}
+.review-stars span { color: #FFC107; font-size: 1rem; }
+
+.review-text {
+  font-size: .9rem; color: var(--mid); line-height: 1.65;
+  margin-bottom: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-author {
+  display: flex; align-items: center; gap: .8rem;
+}
+.review-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1rem; color: #fff;
+  flex-shrink: 0;
+}
+.review-name { font-size: .82rem; font-weight: 500; color: var(--text); }
+.review-date { font-size: .72rem; color: var(--mid); margin-top: .1rem; }
+.review-source {
+  margin-left: auto;
+  font-size: .68rem; font-weight: 500; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(0,0,0,.25);
+}
+
+.reviews-hint {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: .72rem;
+  color: var(--mid);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .6;
+}
+
+/* ── WHATSAPP CTA ── */
+.whatsapp-section {
+  background: linear-gradient(135deg, var(--dark), var(--dark2));
+  padding: 5rem 6vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.whatsapp-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(37,211,102,.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.wa-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+.wa-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: #25D366; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem; font-size: 2rem;
+  box-shadow: 0 0 32px rgba(37,211,102,.3);
+}
+.whatsapp-section h2 {
+  font-family: 'Abril Fatface', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: #fff; margin-bottom: .8rem; line-height: 1.1;
+}
+.whatsapp-section p {
+  color: rgba(255,255,255,.5);
+  font-size: .95rem; margin-bottom: 2rem;
+}
+.btn-wa {
+  display: inline-flex; align-items: center; gap: .6rem;
+  background: #25D366; color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .75rem; font-weight: 500;
+  letter-spacing: .15em; text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.4rem; border-radius: 60px;
+  box-shadow: 0 4px 20px rgba(37,211,102,.35);
+  transition: all .25s;
+}
+.btn-wa:hover { background: #20BA5C; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,.45); }
+
+/* ── BANK DETAILS: collapsible ── */
+.bank-toggle {
+  background: none; border: none;
+  color: rgba(255,255,255,.35);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem; font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase;
+  cursor: pointer; display: flex; align-items: center; gap: .5rem;
+  margin: 1.5rem auto 0; padding: 0;
+  transition: color .2s;
+}
+.bank-toggle:hover { color: rgba(255,255,255,.6); }
+.bank-toggle .arrow { transition: transform .3s; font-style: normal; font-size: .7rem; }
+.bank-toggle.open .arrow { transform: rotate(180deg); }
+
+.bank-collapse {
+  max-height: 0; overflow: hidden;
+  transition: max-height .4s ease, opacity .3s ease;
+  opacity: 0;
+}
+.bank-collapse.open {
+  max-height: 300px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .review-card { width: 270px; }
+}
+
+
+/* Hide Shopify default page title and padding */
+.shopify-section { margin: 0 !important; padding: 0 !important; }
+h1.title, h1.page-title, .page-title, .page-header, 
+[class*="page-title"], [class*="PageTitle"],
+.template-page h1:first-of-type { display: none !important; }
+main { padding: 0 !important; margin: 0 !important; }
+.main-page-content { padding: 0 !important; }
+
+/* Fix outline button overridden by Shopify theme */
+.btn-outline, a.btn-outline, a.btn-outline:visited {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: rgba(255,255,255,0.9) !important;
+  border: 2px solid rgba(255,255,255,0.5) !important;
+  -webkit-appearance: none !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1) !important;
+  color: #fff !important;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="g1"></div><div class="g2"></div><div class="g3"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><div class="hero-tag-dot"></div><div style="display:flex;flex-direction:column;gap:.15rem;text-align:left"><span>Abu Dhabi &bull; Group Classes</span><span>Beginner &bull; Aug &amp; Sept 2026</span></div></div>
+      <h1>BEGINNER<br><span class="t">LEVEL</span><br>COURSE</h1>
+      <p class="hero-body">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space.</p>
+      <div class="hero-ctas">
+        <a href="https://m815sjhn01s.typeform.com/to/I5AGGVwi" class="btn btn-teal" target="_blank">Register Now →</a>
+        <a href="#pricing" class="btn btn-outline-lt">See Pricing</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="panel-card">
+        <span class="panel-tag">Group A</span>
+        <h3>TUESDAY</h3>
+        <p>Every Tuesday · 7:00 PM</p>
+        <span class="panel-start">Starts August 11, 2026</span>
+      </div>
+      <div class="panel-card">
+        <span class="panel-tag">Group B</span>
+        <h3>WEDNESDAY</h3>
+        <p>Every Wednesday · 8:00 PM</p>
+        <span class="panel-start" style="color:var(--v2)">Starts August 12, 2026</span>
+      </div>
+      <div class="panel-cta">
+        <p>⚡ Spots limited: registration open</p>
+        <a href="https://m815sjhn01s.typeform.com/to/I5AGGVwi" class="btn btn-outline-lt" target="_blank" style="padding:.7rem 1.8rem">Register →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-track">
+    <span>Beginner</span><span class="dot"> ✦ </span><span>8 Weeks</span><span class="dot"> ✦ </span><span>Ladies Only</span><span class="dot"> ✦ </span><span>August 2026</span><span class="dot"> ✦ </span><span>Tue & Wed</span><span class="dot"> ✦ </span><span>Spots Limited</span><span class="dot"> ✦ </span>
+    <span>Beginner</span><span class="dot"> ✦ </span><span>8 Weeks</span><span class="dot"> ✦ </span><span>Ladies Only</span><span class="dot"> ✦ </span><span>August 2026</span><span class="dot"> ✦ </span><span>Tue & Wed</span><span class="dot"> ✦ </span><span>Spots Limited</span><span class="dot"> ✦ </span>
+  </div>
+</div>
+
+
+
+<section class="schedule">
+  <div class="schedule-inner">
+    <div>
+      <span class="tag">Schedule &bull; August &amp; September &bull; Beginner Level</span>
+      <h2>Choose your <em>group</em></h2>
+      <div class="gcard"><div class="gcard-bar"></div><div><div class="gcard-day">Tuesday</div><div class="gcard-time">7:00 PM</div><div class="gcard-start">Starts August 11, 2026</div></div></div>
+      <div class="gcard"><div class="gcard-bar" style="background:linear-gradient(180deg,var(--v1),var(--o1))"></div><div><div class="gcard-day">Wednesday</div><div class="gcard-time">8:00 PM</div><div class="gcard-start">Starts August 12, 2026</div></div></div>
+      <div class="recover" style="font-family:'Abril Fatface',serif;font-size:1.1rem;font-style:italic;background:transparent;border:none;padding:.5rem 0;color:var(--mid)">💡 Can't attend one week? Recover with the other group.</div>
+    </div>
+    <div>
+      <span class="tag">What to expect</span>
+      <div style="padding:1rem 0">
+        <h3 style="font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--text);margin-bottom:1rem;line-height:1.2">8 weeks of learning + dancing + having fun</h3>
+        <p style="font-size:1rem;color:var(--mid);margin-bottom:.8rem;line-height:1.7">Learn new bellydance steps every week, build rhythm and confidence in a safe, ladies-only space.</p>
+        <p style="font-size:1rem;color:var(--mid);margin-bottom:.8rem;line-height:1.7">Let's dance a full choreography together in our last class! 🎉</p>
+        <p style="font-size:.95rem;color:var(--mid)">‼️ No recording allowed - let's respect the privacy of all the ladies 🫶</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="perks">
+  <div class="perks-inner">
+    <span class="tag">What's included</span>
+    <h2>Everything to feel <span>at home</span></h2>
+    <div class="perks-grid">
+      <div class="perk"><span class="perk-icon">👗</span><h4>Belts Provided</h4><p>No need to buy anything: belts provided for all classes.</p></div>
+      <div class="perk"><span class="perk-icon">🌸</span><h4>Beautiful Studio</h4><p>Inside a gorgeous flower shop: full privacy guaranteed.</p></div>
+      <div class="perk"><span class="perk-icon">🅿️</span><h4>Easy Parking</h4><p>Mawaqif public parking in front and nearby the studio.</p></div>
+      <div class="perk"><span class="perk-icon">☕️</span><h4>Café Inside</h4><p>Coffee, juice, water: and flowers! Or bring your own.</p></div>
+      <div class="perk"><span class="perk-icon">💃🏻</span><h4>Final Choreography</h4><p>Let's dance a full choreography together in our last class!</p></div>
+      <div class="perk"><span class="perk-icon">🫶</span><h4>Supportive Community</h4><p>No competition: we are all growing together!</p></div>
+      <div class="perk"><span class="perk-icon">💬</span><h4>Exclusive WhatsApp Group</h4><p>Weekly videos with explanations of the steps learned in class, so you can practice at home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <span class="tag" style="color:var(--t1)">Pricing</span>
+    <h2>Your <span>investment</span></h2>
+    <div class="price-cards">
+      <div class="pcard best">
+        <div class="best-tag">Save AED 50</div>
+        <span class="pl">Bank Transfer</span>
+        <span class="pa"><span class="pc">AED </span>800</span>
+        <span class="ps">Full course · 8 weeks</span>
+        <p class="pn">Pay by bank transfer and save AED 50.</p>
+      </div>
+      <div class="pcard">
+        <span class="pl">Card / Tabby</span>
+        <span class="pa"><span class="pc">AED </span>850</span>
+        <span class="ps">Full course · 8 weeks</span>
+        <p class="pn">Split in 4 installments with Tabby.</p>
+      </div>
+    </div>
+    <button class="bank-toggle" onclick="toggleBank(this)" aria-expanded="false">
+      <span>🏦 Bank transfer details</span>
+      <em class="arrow">▼</em>
+    </button>
+    <div class="bank-collapse" id="bankDetails">
+      <div class="bank" style="margin-top:1rem">
+        <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7">The bank transfer details will be provided in the registration form after you submit your registration.</p>
+      </div>
+    </div>
+    <a href="https://business.mamopay.com/pay/jijidance-e904bde82a41" class="btn btn-teal" target="_blank" rel="noopener" style="margin-top:1.5rem">Pay by Card / Tabby →</a>
+  </div>
+</section>
+
+<section class="location">
+  <h2>📍 Find us in Abu Dhabi</h2>
+  <p><strong>Inside a beautiful flower shop</strong>: opposite to Umm Al Emarat Park.</p>
+  <p style="margin-bottom:2rem">Full privacy · Easy Mawaqif parking</p>
+  <a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" class="btn btn-outline-lt" target="_blank" rel="noopener">Open in Google Maps →</a>
+</section>
+
+<!-- ── GOOGLE REVIEWS CAROUSEL ── -->
+<section class="reviews">
+  <div class="reviews-header">
+    <span class="tag">What our ladies say</span>
+    <h2>Real reviews from <span>Google</span></h2>
+    <p>⭐ 5.0 · Google Reviews</p>
+  </div>
+
+  <div class="reviews-track-wrap" id="reviewsCarousel">
+    <div class="reviews-track">
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Great experience for my beginner level certificate. Jiji is beyond amazing with her teaching skills, taking it step by step. I really improved throughout the 8 weeks. Fun classes with amazing people, pure girlhood and empowering energy 🤍 Can't wait for my next level with Jiji!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#FF6B9D,#C850C0)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">2 months ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"I absolutely loved the bellydance course! The instructor was incredibly kind, professional, and full of positive energy. She explained every move step by step, so even beginners felt confident and comfortable. Every session was enjoyable, and I always looked forward to the class. Highly recommended! 💕🙌✨"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#4FACFE,#00F2FE)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">8 months ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Thank you Jiji for everything: these classes were SO much fun. Can't wait to start the next round!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#43E97B,#38F9D7)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">2 months ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Taking bellydance classes with Jiji was an amazing experience! The classes were great, but the absolute best part was her energy: so positive and contagious that it makes you enjoy every second. Her enthusiasm and passion make you want to keep coming back. Highly recommend!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#F093FB,#F5576C)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">a year ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Your talent and passion for oriental dance are truly mesmerizing. You have an incredible ability to inspire and empower everyone around you. With your guidance, each movement becomes an art form, full of grace, beauty, and soul. You're not just a teacher but a true artist and motivator. I feel so lucky to learn from you! ❤️"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#FA709A,#FEE140)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">a year ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Very nice experience for those who want to start from the basics and move forward. Nice environment, beautiful ladies, great dancer Jiji. Thank you 🌸"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#A18CD1,#FBC2EB)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">a year ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"I am fond of dancing with Jiji 💕 Even though I am a beginner, her teaching methods are perfect and easy to learn. Jiji is an amazing dancer and I strongly suggest dancing with her 💃 You are an incredible dancer and the greatest coach 🌸🌸🌸"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#FFC3A0,#FFAFBD)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">2 years ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"I really enjoy my bellydance classes with Jiji! She is the best!!! Very patient, kind, and makes every class fun. I am learning a lot and feel more confident each time. I love her classes!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#667EEA,#764BA2)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">a year ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Amazing teacher! She teaches you everything in detail and makes sure you make the right moves. So dedicated and passionate about teaching dancing! Highly recommend her!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#F7971E,#FFD200)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">3 years ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"She is the best bellydance instructor, full of vitality and energy. Her dance is very beautiful and she masters all Arabic dances. And I do not forget the beautiful smile all the time 🌸"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#00C9FF,#92FE9D)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">3 years ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"The instructor is very skilled and teaches from scratch, and her atmosphere is great 🥰 Jiji is very sweet and really knows how to teach bellydance. I disconnect after work and her classes are exactly what I need: you will enjoy the music and the vibes 😘 Highly recommended!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#D4906A,#FF6B35)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">2 months ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+      
+
+    
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Gigi is a lovely coach: she is the best in town! Her classes are enjoyable and never boring. Great atmosphere, well organized schedules, easy and clear. Her classes are entertaining and you will never get bored. Love u Gigi ❤️"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#C850C0,#FF6B9D)">✨</div>
+          <div><div class="review-name">Verified Student</div><div class="review-date">2 years ago · Google</div></div>
+          <span class="review-source">Google</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="reviews-hint">← Swipe to see more →</p>
+</section>
+
+<!-- ── WHATSAPP ── -->
+<section class="whatsapp-section">
+  <div class="wa-inner">
+    <div class="wa-icon">💬</div>
+    <h2>Still have questions?</h2>
+    <p>I'm happy to help! Send me a message on WhatsApp and I'll get back to you as soon as possible.</p>
+    <a href="https://wa.me/971567750994" class="btn-wa" target="_blank" rel="noopener">
+      💬 &nbsp;Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+
+<section class="cta-final">
+  <div class="cta-blob"></div>
+  <span class="tag">Ready?</span>
+  <h2>Spots are<br><span>limited.</span></h2>
+  <p>Fill in the registration form and complete your payment to confirm your spot. Registration without payment does not reserve your place.</p>
+  <div class="cta-btns">
+    <a href="https://m815sjhn01s.typeform.com/to/I5AGGVwi" class="btn btn-teal" target="_blank" rel="noopener">Register Now →</a>
+    <a href="https://business.mamopay.com/pay/jijidance-e904bde82a41" class="btn btn-violet" target="_blank" rel="noopener">Pay by Card / Tabby</a>
+  </div>
+  <p style="color:var(--mid);font-size:.88rem;margin-top:2rem">🥳 Hope to see you dancing with us soon!</p>
+</section>
+
+
+<script>
+// Drag to scroll carousel
+const carousel = document.getElementById('reviewsCarousel');
+let isDown = false, startX, scrollLeft;
+carousel.addEventListener('mousedown', e => {
+  isDown = true; carousel.classList.add('dragging');
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+carousel.addEventListener('mouseleave', () => { isDown = false; carousel.classList.remove('dragging'); });
+carousel.addEventListener('mouseup', () => { isDown = false; carousel.classList.remove('dragging'); });
+carousel.addEventListener('mousemove', e => {
+  if (!isDown) return; e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  carousel.scrollLeft = scrollLeft - (x - startX) * 1.2;
+});
+
+// Bank details toggle
+function toggleBank(btn) {
+  const panel = document.getElementById('bankDetails');
+  const open = panel.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+}
+</script>
+
+</body>
+</html>
