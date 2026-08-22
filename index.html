@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Beginner Level – Jiji Bellydance</title>
+<title>Jiji Bellydance – Abu Dhabi</title>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -130,6 +130,23 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .br{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem}
 .br span:first-child{color:rgba(255,255,255,.3)}
 .br span:last-child{color:rgba(255,255,255,.65)}
+
+/* COURSES */
+.courses{background:var(--white);padding:6rem 6vw}
+.courses-inner{max-width:1000px;margin:0 auto}
+.courses h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.9;color:var(--text);margin-bottom:3rem}
+.courses h2 em{font-style:italic;color:var(--v1)}
+.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.course-card{background:var(--bg);border-radius:20px;padding:2.5rem 2rem;border:1px solid rgba(216,139,160,.15);transition:all .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.course-card:hover{border-color:var(--t1);transform:translateY(-4px);box-shadow:0 12px 32px rgba(216,139,160,.15)}
+.course-card h3{font-family:'Abril Fatface',serif;font-size:1.8rem;color:var(--text);margin:.6rem 0}
+.course-card .desc{font-size:.92rem;color:var(--mid);line-height:1.6;margin-bottom:1.2rem;flex-grow:1}
+.course-price{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--v1);margin-bottom:1.4rem}
+.course-price span{font-size:.85rem;color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:400}
+
+@media(max-width:768px){
+  .course-grid{grid-template-columns:1fr}
+}
 
 /* LOCATION */
 .location{background:linear-gradient(135deg,#E8A8B8 0%,#E0BC85 50%,#D88BA0 100%);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
@@ -346,30 +363,30 @@ main { padding: 0 !important; margin: 0 !important; }
   <div class="g1"></div><div class="g2"></div><div class="g3"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag"><div class="hero-tag-dot"></div><div style="display:flex;flex-direction:column;gap:.15rem;text-align:left"><span>Abu Dhabi &bull; Group Classes</span><span>Beginner &bull; Aug &amp; Sept 2026</span></div></div>
-      <h1>BEGINNER<br><span class="t">LEVEL</span><br>COURSE</h1>
-      <p class="hero-body">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space.</p>
+      <div class="hero-tag"><div class="hero-tag-dot"></div><div style="display:flex;flex-direction:column;gap:.15rem;text-align:left"><span>Abu Dhabi &bull; Ladies Only</span><span>Group Bellydance Classes</span></div></div>
+      <h1>JIJI<br><span class="t">BELLYDANCE</span></h1>
+      <p class="hero-body">Discover the art of bellydance in a warm, ladies-only space in Abu Dhabi. No experience needed - just curiosity and rhythm.</p>
       <div class="hero-ctas">
-        <a href="https://m815sjhn01s.typeform.com/to/I5AGGVwi" class="btn btn-teal" target="_blank">Register Now →</a>
-        <a href="#pricing" class="btn btn-outline-lt">See Pricing</a>
+        <a href="#courses" class="btn btn-teal">See Courses →</a>
+        <a href="https://wa.me/971567750994" class="btn btn-outline-lt" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
     <div class="hero-panel">
       <div class="panel-card">
-        <span class="panel-tag">Group A</span>
-        <h3>TUESDAY</h3>
-        <p>Every Tuesday · 7:00 PM</p>
-        <span class="panel-start">Starts August 11, 2026</span>
+        <span class="panel-tag">Studio</span>
+        <h3>ABU DHABI</h3>
+        <p>Inside a beautiful flower shop</p>
+        <span class="panel-start">Opposite Umm Al Emarat Park</span>
       </div>
       <div class="panel-card">
-        <span class="panel-tag">Group B</span>
-        <h3>WEDNESDAY</h3>
-        <p>Every Wednesday · 8:00 PM</p>
-        <span class="panel-start" style="color:var(--v2)">Starts August 12, 2026</span>
+        <span class="panel-tag">Community</span>
+        <h3>LADIES ONLY</h3>
+        <p>Full privacy guaranteed</p>
+        <span class="panel-start" style="color:var(--v2)">Supportive & fun</span>
       </div>
       <div class="panel-cta">
-        <p>⚡ Spots limited: registration open</p>
-        <a href="https://m815sjhn01s.typeform.com/to/I5AGGVwi" class="btn btn-outline-lt" target="_blank" style="padding:.7rem 1.8rem">Register →</a>
+        <p>⚡ New courses starting soon</p>
+        <a href="#courses" class="btn btn-outline-lt" style="padding:.7rem 1.8rem">See Courses →</a>
       </div>
     </div>
   </div>
@@ -377,30 +394,30 @@ main { padding: 0 !important; margin: 0 !important; }
 
 <div class="strip">
   <div class="strip-track">
-    <span>Beginner</span><span class="dot"> ✦ </span><span>8 Weeks</span><span class="dot"> ✦ </span><span>Ladies Only</span><span class="dot"> ✦ </span><span>August 2026</span><span class="dot"> ✦ </span><span>Tue & Wed</span><span class="dot"> ✦ </span><span>Spots Limited</span><span class="dot"> ✦ </span>
-    <span>Beginner</span><span class="dot"> ✦ </span><span>8 Weeks</span><span class="dot"> ✦ </span><span>Ladies Only</span><span class="dot"> ✦ </span><span>August 2026</span><span class="dot"> ✦ </span><span>Tue & Wed</span><span class="dot"> ✦ </span><span>Spots Limited</span><span class="dot"> ✦ </span>
+    <span>Bellydance</span><span class="dot"> ✦ </span><span>Abu Dhabi</span><span class="dot"> ✦ </span><span>Ladies Only</span><span class="dot"> ✦ </span><span>Beginner Friendly</span><span class="dot"> ✦ </span><span>Group Classes</span><span class="dot"> ✦ </span><span>Book Now</span><span class="dot"> ✦ </span>
+    <span>Bellydance</span><span class="dot"> ✦ </span><span>Abu Dhabi</span><span class="dot"> ✦ </span><span>Ladies Only</span><span class="dot"> ✦ </span><span>Beginner Friendly</span><span class="dot"> ✦ </span><span>Group Classes</span><span class="dot"> ✦ </span><span>Book Now</span><span class="dot"> ✦ </span>
   </div>
 </div>
 
-
-
-<section class="schedule">
-  <div class="schedule-inner">
-    <div>
-      <span class="tag">Schedule &bull; August &amp; September &bull; Beginner Level</span>
-      <h2>Choose your <em>group</em></h2>
-      <div class="gcard"><div class="gcard-bar"></div><div><div class="gcard-day">Tuesday</div><div class="gcard-time">7:00 PM</div><div class="gcard-start">Starts August 11, 2026</div></div></div>
-      <div class="gcard"><div class="gcard-bar" style="background:linear-gradient(180deg,var(--v1),var(--o1))"></div><div><div class="gcard-day">Wednesday</div><div class="gcard-time">8:00 PM</div><div class="gcard-start">Starts August 12, 2026</div></div></div>
-      <div class="recover" style="font-family:'Abril Fatface',serif;font-size:1.1rem;font-style:italic;background:transparent;border:none;padding:.5rem 0;color:var(--mid)">💡 Can't attend one week? Recover with the other group.</div>
-    </div>
-    <div>
-      <span class="tag">What to expect</span>
-      <div style="padding:1rem 0">
-        <h3 style="font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--text);margin-bottom:1rem;line-height:1.2">8 weeks of learning + dancing + having fun</h3>
-        <p style="font-size:1rem;color:var(--mid);margin-bottom:.8rem;line-height:1.7">Learn new bellydance steps every week, build rhythm and confidence in a safe, ladies-only space.</p>
-        <p style="font-size:1rem;color:var(--mid);margin-bottom:.8rem;line-height:1.7">Let's dance a full choreography together in our last class! 🎉</p>
-        <p style="font-size:.95rem;color:var(--mid)">‼️ No recording allowed - let's respect the privacy of all the ladies 🫶</p>
-      </div>
+<section class="courses" id="courses">
+  <div class="courses-inner">
+    <span class="tag">Courses</span>
+    <h2>Choose your <em>course</em></h2>
+    <div class="course-grid">
+      <a href="/beginner/" class="course-card">
+        <span class="tag">8-Week Track</span>
+        <h3>Beginner Level</h3>
+        <p class="desc">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space. Tuesday & Wednesday evenings.</p>
+        <span class="course-price">AED 800 <span>full course</span></span>
+        <span class="btn btn-teal">View Course →</span>
+      </a>
+      <a href="/beginner-4weeks/" class="course-card">
+        <span class="tag">4-Week Intensive</span>
+        <h3>Beginner Intensive</h3>
+        <p class="desc">Learn to dance in just 1 month. 8 classes, twice a week (Tuesday & Thursday), for a fast and fun start.</p>
+        <span class="course-price">AED 800 <span>full course</span></span>
+        <span class="btn btn-violet">View Course →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -421,42 +438,12 @@ main { padding: 0 !important; margin: 0 !important; }
   </div>
 </section>
 
-<section class="pricing" id="pricing">
-  <div class="pricing-inner">
-    <span class="tag" style="color:var(--t1)">Pricing</span>
-    <h2>Your <span>investment</span></h2>
-    <div class="price-cards">
-      <div class="pcard best">
-        <div class="best-tag">Save AED 50</div>
-        <span class="pl">Bank Transfer</span>
-        <span class="pa"><span class="pc">AED </span>800</span>
-        <span class="ps">Full course · 8 weeks</span>
-        <p class="pn">Pay by bank transfer and save AED 50.</p>
-      </div>
-      <div class="pcard">
-        <span class="pl">Card / Tabby</span>
-        <span class="pa"><span class="pc">AED </span>850</span>
-        <span class="ps">Full course · 8 weeks</span>
-        <p class="pn">Split in 4 installments with Tabby.</p>
-      </div>
-    </div>
-    <button class="bank-toggle" onclick="toggleBank(this)" aria-expanded="false">
-      <span>🏦 Bank transfer details</span>
-      <em class="arrow">▼</em>
-    </button>
-    <div class="bank-collapse" id="bankDetails">
-      <div class="bank" style="margin-top:1rem">
-        <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7">The bank transfer details will be provided in the registration form after you submit your registration.</p>
-      </div>
-    </div>
-    <a href="https://business.mamopay.com/pay/jijidance-e904bde82a41" class="btn btn-teal" target="_blank" rel="noopener" style="margin-top:1.5rem">Pay by Card / Tabby →</a>
-  </div>
-</section>
-
 <section class="location">
   <h2>📍 Find us in Abu Dhabi</h2>
+  <p>We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.</p>
   <p>🌸 <strong>Inside a beautiful flower shop</strong>: opposite to Umm Al Emarat Park.</p>
-  <p style="margin-bottom:2rem">Full privacy · Easy Mawaqif parking</p>
+  <p>Full privacy · Easy Mawaqif parking</p>
+  <p style="margin-bottom:2rem">📞 <strong>Jiji Dance</strong> · <a href="tel:+971567750994" style="color:#fff;text-decoration:underline">+971 56 7750994</a></p>
   <a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" class="btn btn-outline-lt" target="_blank" rel="noopener">Open in Google Maps →</a>
 </section>
 
@@ -602,11 +589,11 @@ main { padding: 0 !important; margin: 0 !important; }
 <section class="cta-final">
   <div class="cta-blob"></div>
   <span class="tag">Ready?</span>
-  <h2>Spots are<br><span>limited.</span></h2>
-  <p>Fill in the registration form and complete your payment to confirm your spot. Registration without payment does not reserve your place.</p>
+  <h2>Ready to<br><span>dance?</span></h2>
+  <p>Choose the course that fits your schedule and join our ladies-only bellydance community in Abu Dhabi.</p>
   <div class="cta-btns">
-    <a href="https://m815sjhn01s.typeform.com/to/I5AGGVwi" class="btn btn-teal" target="_blank" rel="noopener">Register Now →</a>
-    <a href="https://business.mamopay.com/pay/jijidance-e904bde82a41" class="btn btn-violet" target="_blank" rel="noopener">Pay by Card / Tabby</a>
+    <a href="#courses" class="btn btn-teal">See Courses →</a>
+    <a href="https://wa.me/971567750994" class="btn btn-violet" target="_blank" rel="noopener">Chat on WhatsApp</a>
   </div>
   <p style="color:var(--mid);font-size:.88rem;margin-top:2rem">🥳 Hope to see you dancing with us soon!</p>
 </section>
@@ -628,14 +615,6 @@ carousel.addEventListener('mousemove', e => {
   const x = e.pageX - carousel.offsetLeft;
   carousel.scrollLeft = scrollLeft - (x - startX) * 1.2;
 });
-
-// Bank details toggle
-function toggleBank(btn) {
-  const panel = document.getElementById('bankDetails');
-  const open = panel.classList.toggle('open');
-  btn.classList.toggle('open', open);
-  btn.setAttribute('aria-expanded', open);
-}
 </script>
 
 </body>
