@@ -44,6 +44,8 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .hero-bg-full{position:absolute;inset:0;background-size:cover;background-position:center 20%;animation:slowzoom 22s ease-out both}
 @keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.08)}}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,8,15,.94) 0%,rgba(42,17,33,.6) 45%,rgba(42,17,33,.3) 72%,rgba(74,32,56,.15) 100%)}
+.hero-light{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 58% 30% at 50% 46%,rgba(240,210,140,.55) 0%,rgba(201,151,74,.25) 45%,rgba(201,151,74,0) 75%);mix-blend-mode:soft-light}
+.hero-light::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.2) 48%,rgba(240,200,120,.32) 52%,transparent 62%);mix-blend-mode:screen}
 .hero-left{position:relative;z-index:2;padding:6rem 6vw 5rem;max-width:640px}
 .hero-intro{color:var(--o2);font-size:.9rem;font-style:italic;display:block;margin-bottom:.6rem}
 .hero-name{font-family:'Abril Fatface',serif;font-size:clamp(3.2rem,8vw,6rem);line-height:.95;color:#fff}
@@ -204,6 +206,7 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 <section class="hero-bio">
   <div class="hero-bg-full" style="background-image:url('/images/jiji-hero.jpg')"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-light"></div>
   <div class="hero-left">
     <span class="hero-intro">hello, i'm</span>
     <h1 class="hero-name">JIJI</h1>
@@ -285,8 +288,9 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
         <div class="diff-item">
           <span class="diff-item-num">03</span>
           <div class="diff-item-body">
-            <h3 class="diff-item-title">A real studio in Abu Dhabi</h3>
-            <p class="diff-item-desc">I run an active in-person school with students from 20+ nationalities. My method is tested live, every single day.</p>
+            <h3 class="diff-item-title">A dance studio in Abu Dhabi</h3>
+            <p class="diff-item-desc">I run an active in-person dance studio with students from different nationalities. My method is tested live, every single lady who decides to dance.</p>
+            <p class="diff-item-desc" style="margin-top:.6rem">And i believe every woman hold a great strength inside herself - and the dance is able to awaken it!</p>
           </div>
         </div>
         <div class="diff-item">
