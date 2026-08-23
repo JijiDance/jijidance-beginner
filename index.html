@@ -71,6 +71,19 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .section-heading-light em{font-style:italic;color:var(--o1)}
 .body-p{font-size:.96rem;color:var(--mid);line-height:1.8;margin-bottom:1rem}
 
+/* SERVICES */
+.services{background:var(--white);padding:7rem 6vw}
+.services-inner{max-width:1100px;margin:0 auto}
+.services-header{max-width:600px;margin-bottom:3rem}
+.services-header p{color:var(--mid);font-size:.95rem;margin-top:.8rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--bg);border-radius:20px;padding:2.2rem 2rem;border:1px solid rgba(139,68,104,.12);display:flex;flex-direction:column;transition:all .25s}
+.service-card:hover{border-color:var(--o1);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,151,74,.15)}
+.service-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.service-card h3{font-family:'Abril Fatface',serif;font-size:1.35rem;color:var(--text);margin-bottom:.6rem}
+.service-card p{font-size:.9rem;color:var(--mid);line-height:1.6;margin-bottom:1.4rem;flex-grow:1}
+.service-note{font-size:.75rem;color:var(--v1);font-weight:500;margin-bottom:1rem}
+
 /* ABOUT */
 .about{background:var(--white);padding:7rem 6vw}
 .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
@@ -179,6 +192,7 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
   .about-img-col{order:-1}
   .diff-body-grid{grid-template-columns:1fr;gap:2rem}
   .diff-photo{max-height:320px}
+  .services-grid{grid-template-columns:1fr}
   .course-grid{grid-template-columns:1fr}
   .benefits-cards{grid-template-columns:1fr}
   .mosaic-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
@@ -193,6 +207,7 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 <nav class="nav" id="nav">
   <a href="/" class="nav-logo">Jiji Bellydance</a>
   <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#why">Why Me</a></li>
     <li><a href="#benefits">Benefits</a></li>
@@ -241,6 +256,37 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
     <span class="ticker-item">Ladies-Only Classes</span>
   </div>
 </div>
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="services-header reveal">
+      <div class="eyebrow-with-line"><span class="section-eyebrow">What I Offer</span></div>
+      <h2 class="section-heading">My <em>services</em></h2>
+      <p>Three ways to bring bellydance into your life, your event, or your own journey.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <span class="service-icon">👯‍♀️</span>
+        <h3>Group Classes</h3>
+        <p>Weekly courses in a warm, ladies-only studio in Abu Dhabi. No experience needed - just curiosity and rhythm.</p>
+        <a href="#courses" class="btn btn-teal">See Courses →</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🩰</span>
+        <h3>Private Lessons</h3>
+        <p>One-on-one sessions tailored to your pace, your goals and your schedule.</p>
+        <a href="https://wa.me/971567750994" class="btn btn-violet" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💃</span>
+        <h3>Private Event Shows</h3>
+        <p>Book a live bellydance performance for your private event.</p>
+        <span class="service-note">✨ 15% off for my students</span>
+        <a href="https://wa.me/971567750994" class="btn btn-gold" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="about" id="about">
   <div class="about-inner">
