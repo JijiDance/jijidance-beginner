@@ -44,8 +44,6 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .hero-bg-full{position:absolute;inset:0;background-size:cover;background-position:center 20%;animation:slowzoom 22s ease-out both}
 @keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.08)}}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,8,15,.94) 0%,rgba(42,17,33,.6) 45%,rgba(42,17,33,.3) 72%,rgba(74,32,56,.15) 100%)}
-.hero-light{position:absolute;top:0;left:0;right:0;height:100vh;z-index:1;pointer-events:none;overflow:hidden}
-.hero-light svg{position:absolute;inset:0;width:100%;height:100%}
 .hero-left{position:relative;z-index:2;padding:6rem 6vw 5rem;max-width:640px}
 .hero-intro{color:var(--o2);font-size:.9rem;font-style:italic;display:block;margin-bottom:.6rem}
 .hero-name{font-family:'Abril Fatface',serif;font-size:clamp(3.2rem,8vw,6rem);line-height:.95;color:#fff}
@@ -206,33 +204,6 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 <section class="hero-bio">
   <div class="hero-bg-full" style="background-image:url('/images/jiji-hero.jpg')"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-light">
-    <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="60%">
-          <stop offset="0%" stop-color="#A8841E" stop-opacity="0"/>
-          <stop offset="22%" stop-color="#D9A64A" stop-opacity=".82"/>
-          <stop offset="50%" stop-color="#C9974A" stop-opacity=".9"/>
-          <stop offset="78%" stop-color="#A8841E" stop-opacity=".8"/>
-          <stop offset="100%" stop-color="#A8841E" stop-opacity="0"/>
-        </linearGradient>
-        <radialGradient id="goldVeil" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#C9974A" stop-opacity=".5"/>
-          <stop offset="60%" stop-color="#A8841E" stop-opacity=".28"/>
-          <stop offset="100%" stop-color="#A8841E" stop-opacity="0"/>
-        </radialGradient>
-        <filter id="goldBlur" x="-60%" y="-60%" width="220%" height="220%">
-          <feGaussianBlur stdDeviation="1.4"/>
-        </filter>
-      </defs>
-      <ellipse cx="50" cy="61" rx="22" ry="13" fill="url(#goldVeil)"/>
-      <g filter="url(#goldBlur)" fill="none" stroke-linecap="round">
-        <path d="M31,53 C39,49 45,57 51,53 C58,48 63,56 71,52" stroke="url(#goldRibbon)" stroke-width="6.5"/>
-        <path d="M29,60 C38,64 44,57 52,62 C59,66 65,59 73,63" stroke="url(#goldRibbon)" stroke-width="8"/>
-        <path d="M32,67 C41,71 47,65 55,69" stroke="url(#goldRibbon)" stroke-width="6"/>
-      </g>
-    </svg>
-  </div>
   <div class="hero-left">
     <span class="hero-intro">hello, i'm</span>
     <h1 class="hero-name">JIJI</h1>
