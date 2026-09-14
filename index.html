@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Jiji Bellydance – Abu Dhabi</title>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<title id="pageTitle">Jiji Bellydance – Abu Dhabi</title>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -17,6 +17,9 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+body.ar{font-family:'Tajawal',sans-serif;font-weight:400}
+body.ar h1,body.ar h2,body.ar .hero-name,body.ar .service-card h3,body.ar .course-card h3,body.ar .service-num,body.ar .diff-item-title,body.ar .diff-item-num,body.ar .benefit-card-title,body.ar .benefit-card-num,body.ar .mosaic-heading,body.ar .big-q,body.ar .location h2,body.ar .whatsapp-section h2,body.ar .cta-heading,body.ar .footer-logo{font-family:'Tajawal',sans-serif;font-weight:800}
+body.ar .nav-links a,body.ar .nav-cta,body.ar .btn,body.ar .section-eyebrow,body.ar .section-eyebrow-light,body.ar .hstat-label,body.ar .footer-col-title{text-transform:none;letter-spacing:normal}
 .btn{display:inline-block;font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;transition:all .25s;cursor:pointer;border:none}
 .btn-teal{background:var(--t1);color:var(--dark)}
 .btn-teal:hover{background:var(--t2);transform:translateY(-2px)}
@@ -27,8 +30,13 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
 .btn-outline:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
 
+/* LANG TOGGLE */
+.lang-toggle{background:linear-gradient(135deg,var(--v1),var(--t1));color:#fff;border:none;padding:.55rem 1.1rem;border-radius:40px;font-size:.68rem;font-weight:500;letter-spacing:.05em;cursor:pointer;box-shadow:0 4px 18px rgba(139,68,104,.4);font-family:'DM Sans',sans-serif;transition:transform .2s;white-space:nowrap}
+.lang-toggle:hover{transform:translateY(-2px)}
+
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 6vw;transition:all .3s}
+.nav-right{display:flex;align-items:center;gap:.8rem}
 .nav.scrolled{background:rgba(253,243,240,.92);backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(139,68,104,.1);padding:1.1rem 6vw}
 .nav-logo{font-family:'Abril Fatface',serif;font-size:1.25rem;color:#fff;text-decoration:none;letter-spacing:.02em;transition:color .3s}
 .nav.scrolled .nav-logo{color:var(--text)}
@@ -46,18 +54,21 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,8,15,.94) 0%,rgba(42,17,33,.6) 45%,rgba(42,17,33,.3) 72%,rgba(74,32,56,.15) 100%)}
 .hero-left{position:relative;z-index:2;padding:6rem 6vw 5rem;max-width:640px}
 .hero-intro{color:var(--o2);font-size:.9rem;font-style:italic;display:block;margin-bottom:.6rem}
+body.ar .hero-intro{font-style:normal}
 .hero-name{font-family:'Abril Fatface',serif;font-size:clamp(3.2rem,8vw,6rem);line-height:.95;color:#fff}
 .hero-location{color:rgba(255,255,255,.72);font-size:.95rem;margin:1rem 0 1.2rem;letter-spacing:.03em}
 .hero-desc{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.75;max-width:480px;margin-bottom:2.2rem}
 .hero-divider{width:60px;height:2px;background:var(--o1);margin-bottom:2rem}
 .hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
 .hstat-num{font-family:'Abril Fatface',serif;font-size:2.1rem;color:#fff}
+body.ar .hstat-num{font-family:'Tajawal',sans-serif;font-weight:800}
 .hstat-label{font-size:.66rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-top:.2rem;max-width:120px}
 
 /* TICKER */
 .ticker{background:linear-gradient(90deg,var(--dark),var(--v1),var(--dark));padding:.7rem 0;overflow:hidden;white-space:nowrap}
 .ticker-inner{display:inline-flex;gap:3rem;animation:tickermove 25s linear infinite}
 .ticker-item{font-family:'Abril Fatface',serif;font-size:.8rem;color:var(--o2);letter-spacing:.06em}
+body.ar .ticker-item{font-family:'Tajawal',sans-serif;font-weight:700}
 @keyframes tickermove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* SHARED SECTION HEADERS */
@@ -66,9 +77,13 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .section-eyebrow{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--v1)}
 .section-eyebrow-light{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--o2)}
 .section-heading{font-family:'Abril Fatface',serif;font-size:clamp(2.3rem,4.5vw,3.6rem);line-height:1.05;color:var(--text);margin-bottom:1.5rem}
+body.ar .section-heading{font-family:'Tajawal',sans-serif;font-weight:800}
 .section-heading em{font-style:italic;color:var(--v1)}
+body.ar .section-heading em{font-style:normal}
 .section-heading-light{font-family:'Abril Fatface',serif;font-size:clamp(2.3rem,4.5vw,3.6rem);line-height:1.05;color:#fff;margin-bottom:1.2rem}
+body.ar .section-heading-light{font-family:'Tajawal',sans-serif;font-weight:800}
 .section-heading-light em{font-style:italic;color:var(--o1)}
+body.ar .section-heading-light em{font-style:normal}
 .body-p{font-size:.96rem;color:var(--mid);line-height:1.8;margin-bottom:1rem}
 
 /* SERVICES */
@@ -87,7 +102,8 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 /* ABOUT */
 .about{background:var(--white);padding:7rem 6vw}
 .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
-.pullquote{font-family:'Abril Fatface',serif;font-size:1.25rem;font-style:italic;color:var(--v1);line-height:1.5;margin:1.5rem 0;padding-left:1.2rem;border-left:3px solid var(--o1)}
+.pullquote{font-family:'Abril Fatface',serif;font-size:1.25rem;font-style:italic;color:var(--v1);line-height:1.5;margin:1.5rem 0;padding-inline-start:1.2rem;border-inline-start:3px solid var(--o1)}
+body.ar .pullquote{font-family:'Tajawal',sans-serif;font-weight:700;font-style:normal}
 .about-img-frame{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(139,68,104,.18)}
 .about-img{width:100%;display:block;object-fit:cover}
 
@@ -103,6 +119,7 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .diff-item-title{font-family:'Abril Fatface',serif;font-size:1.1rem;color:#fff;margin-bottom:.4rem}
 .diff-item-desc{font-size:.86rem;color:rgba(255,255,255,.5);line-height:1.65}
 .diff-item-desc em{color:var(--o2);font-style:italic}
+body.ar .diff-item-desc em{font-style:normal}
 .diff-photo{border-radius:20px;overflow:hidden;min-height:260px}
 .diff-photo img{width:100%;height:100%;object-fit:cover;display:block}
 
@@ -116,7 +133,9 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .course-card h3{font-family:'Abril Fatface',serif;font-size:1.8rem;color:var(--text);margin:.6rem 0}
 .course-card .desc{font-size:.92rem;color:var(--mid);line-height:1.6;margin-bottom:1.2rem;flex-grow:1}
 .course-price{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--o1);margin-bottom:1.4rem}
+body.ar .course-price{font-family:'Tajawal',sans-serif;font-weight:800}
 .course-price span{font-size:.85rem;color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:400}
+body.ar .course-price span{font-family:'Tajawal',sans-serif;font-weight:400}
 
 /* BENEFITS */
 .benefits{background:var(--bg);padding:7rem 6vw}
@@ -132,6 +151,7 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .mosaic-header{text-align:center;max-width:600px;margin:0 auto 3rem}
 .mosaic-heading{font-family:'Abril Fatface',serif;font-size:clamp(2.2rem,4.2vw,3.2rem);color:var(--text);line-height:1.1}
 .mosaic-heading em{font-style:italic;color:var(--v1)}
+body.ar .mosaic-heading em{font-style:normal}
 .mosaic-sub{color:var(--mid);font-size:.92rem;margin-top:.8rem}
 .mosaic-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;grid-auto-rows:180px;gap:1rem}
 .m-item{border-radius:16px;overflow:hidden}
@@ -158,12 +178,15 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 .whatsapp-section h2{font-family:'Abril Fatface',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;margin-bottom:.8rem;line-height:1.1}
 .whatsapp-section p{color:rgba(255,255,255,.5);font-size:.95rem;margin-bottom:2rem}
 .btn-wa{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .25s}
+body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-transform:none}
 .btn-wa:hover{background:#20BA5C;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45)}
 
 /* CTA FINAL */
 .cta-block{background:linear-gradient(150deg,#3D1B30,#2A1121);padding:7rem 6vw;text-align:center}
 .cta-heading{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;line-height:1.05;margin-bottom:1rem}
+body.ar .cta-heading{font-family:'Tajawal',sans-serif;font-weight:800}
 .cta-heading em{font-style:italic;color:var(--o1)}
+body.ar .cta-heading em{font-style:normal}
 .cta-sub{color:rgba(255,255,255,.55);font-size:.95rem;margin-bottom:2.5rem}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
@@ -207,82 +230,74 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 <nav class="nav" id="nav">
   <a href="/" class="nav-logo">Jiji Bellydance</a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#why">Why Me</a></li>
-    <li><a href="#benefits">Benefits</a></li>
-    <li><a href="#courses">Courses</a></li>
+    <li><a href="#services" data-i18n="navServices">Services</a></li>
+    <li><a href="#about" data-i18n="navAbout">About</a></li>
+    <li><a href="#why" data-i18n="navWhy">Why Me</a></li>
+    <li><a href="#benefits" data-i18n="navBenefits">Benefits</a></li>
+    <li><a href="#courses" data-i18n="navCourses">Courses</a></li>
   </ul>
-  <a href="#courses" class="nav-cta"><span>See Courses</span></a>
+  <div class="nav-right">
+    <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
+    <a href="#courses" class="nav-cta"><span data-i18n="navCta">See Courses</span></a>
+  </div>
 </nav>
 
 <section class="hero-bio">
   <div class="hero-bg-full" style="background-image:url('/images/jiji-hero.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="hero-left">
-    <span class="hero-intro">hello, i'm</span>
-    <h1 class="hero-name">JIJI</h1>
-    <p class="hero-location">International Bellydancer · Abu Dhabi, UAE</p>
-    <p class="hero-desc">A Brazilian dancer who crossed borders to live bellydance in the heart of the Middle East - and who now teaches women from all over the world to discover their own strength, right here in Abu Dhabi.</p>
+    <span class="hero-intro" data-i18n="heroIntro">hello, i'm</span>
+    <h1 class="hero-name" data-i18n="heroName">JIJI</h1>
+    <p class="hero-location" data-i18n="heroLocation">International Bellydancer · Abu Dhabi, UAE</p>
+    <p class="hero-desc" data-i18n="heroDesc">A Brazilian dancer who crossed borders to live bellydance in the heart of the Middle East - and who now teaches women from all over the world to discover their own strength, right here in Abu Dhabi.</p>
     <div class="hero-divider"></div>
     <div class="hero-stats">
       <div>
         <div class="hstat-num">+13</div>
-        <div class="hstat-label">Years in the Arab World</div>
+        <div class="hstat-label" data-i18n="hstat1">Years in the Arab World</div>
       </div>
       <div>
         <div class="hstat-num">+400</div>
-        <div class="hstat-label">Students Taught</div>
+        <div class="hstat-label" data-i18n="hstat2">Students Taught</div>
       </div>
       <div>
         <div class="hstat-num">+9</div>
-        <div class="hstat-label">Countries Reached</div>
+        <div class="hstat-label" data-i18n="hstat3">Countries Reached</div>
       </div>
     </div>
   </div>
 </section>
 
 <div class="ticker" aria-hidden="true">
-  <div class="ticker-inner">
-    <span class="ticker-item">International Dancer</span>
-    <span class="ticker-item">School in Abu Dhabi</span>
-    <span class="ticker-item">+13 Years in the Arab World</span>
-    <span class="ticker-item">Postgraduate in Exercise Physiology</span>
-    <span class="ticker-item">Ladies Only Classes</span>
-    <span class="ticker-item">International Dancer</span>
-    <span class="ticker-item">School in Abu Dhabi</span>
-    <span class="ticker-item">+13 Years in the Arab World</span>
-    <span class="ticker-item">Postgraduate in Exercise Physiology</span>
-    <span class="ticker-item">Ladies Only Classes</span>
-  </div>
+  <div class="ticker-inner" id="tickerInner"></div>
 </div>
 
 <section class="services" id="services">
   <div class="services-inner">
     <div class="services-header reveal">
-      <div class="eyebrow-with-line"><span class="section-eyebrow">What I Offer</span></div>
-      <h2 class="section-heading">How can I <em>help you?</em></h2>
-      <p>Three ways to bring bellydance into your life, your event or your own journey.</p>
+      <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="servicesEyebrow">What I Offer</span></div>
+      <h2 class="section-heading" data-i18n="servicesHeading">How can I <em>help you?</em></h2>
+      <p data-i18n="servicesSub">Three ways to bring bellydance into your life, your event or your own journey.</p>
     </div>
     <div class="services-grid reveal">
       <div class="service-card">
         <span class="service-num">01</span>
-        <h3>Group Classes</h3>
-        <p>Weekly courses in a warm, ladies only studio in Abu Dhabi. No experience needed - be ready to have fun and learn a lot!</p>
-        <a href="#courses" class="btn btn-teal">See Courses →</a>
+        <h3 data-i18n="service1Title">Group Classes</h3>
+        <p data-i18n="service1Desc">Weekly courses in a warm, ladies only studio in Abu Dhabi. No experience needed - be ready to have fun and learn a lot!</p>
+        <a href="#courses" class="btn btn-teal" data-i18n="btnSeeCourses">See Courses →</a>
       </div>
       <div class="service-card">
         <span class="service-num">02</span>
-        <h3>Private Lessons</h3>
-        <p>One-on-one sessions tailored to your pace, your goals and your schedule.</p>
-        <a href="https://wa.me/971567750994" class="btn btn-violet" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+        <h3 data-i18n="service2Title">Private Lessons</h3>
+        <p data-i18n="service2Desc">One-on-one sessions tailored to your pace, your goals and your schedule.</p>
+        <a href="https://wa.me/971567750994" class="btn btn-violet" target="_blank" rel="noopener" data-i18n="btnChatWa">Chat on WhatsApp →</a>
       </div>
       <div class="service-card">
         <span class="service-num">03</span>
-        <h3>Shows - Private Events</h3>
-        <p>Book an exclusive bellydance performance for your event and surprise your guests.</p>
-        <span class="service-note">15% off for my students, T&C's apply</span>
-        <a href="https://wa.me/971567750994" class="btn btn-gold" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+        <h3 data-i18n="service3Title">Shows - Private Events</h3>
+        <p data-i18n="service3Desc">Book an exclusive bellydance performance for your event and surprise your guests.</p>
+        <span class="service-note" data-i18n="service3Note">15% off for my students, T&C's apply</span>
+        <a href="https://wa.me/971567750994" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="btnChatWa">Chat on WhatsApp →</a>
       </div>
     </div>
   </div>
@@ -291,12 +306,12 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 <section class="about" id="about">
   <div class="about-inner">
     <div class="reveal">
-      <div class="eyebrow-with-line"><span class="section-eyebrow">Who I Am</span></div>
-      <h2 class="section-heading">A girl from Brazil who<br>moved to the <em>desert…</em></h2>
-      <div class="pullquote">"I left Brazil on International Dance Day, in 2013, to experience bellydance at its origin - and without knowing it, I stepped into the biggest adventure of my life!"</div>
-      <p class="body-p">For over 13 years I've lived and worked across the Arab world, performed on prestigious stages, taught students of more than 20 nationalities, and opened my own dance school right here in Abu Dhabi.</p>
-      <p class="body-p">I'm a mother, postgraduate in Exercise Physiology, bellydancer and instructor from more then a decade.</p>
-      <p class="body-p">I believe every woman hold a great strength inside herself - and the dance is able to awaken it!</p>
+      <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="aboutEyebrow">Who I Am</span></div>
+      <h2 class="section-heading" data-i18n="aboutHeading">A girl from Brazil who<br>moved to the <em>desert…</em></h2>
+      <div class="pullquote" data-i18n="aboutQuote">"I left Brazil on International Dance Day, in 2013, to experience bellydance at its origin - and without knowing it, I stepped into the biggest adventure of my life!"</div>
+      <p class="body-p" data-i18n="aboutP1">For over 13 years I've lived and worked across the Arab world, performed on prestigious stages, taught students of more than 20 nationalities, and opened my own dance school right here in Abu Dhabi.</p>
+      <p class="body-p" data-i18n="aboutP2">I'm a mother, postgraduate in Exercise Physiology, bellydancer and instructor from more then a decade.</p>
+      <p class="body-p" data-i18n="aboutP3">I believe every woman hold a great strength inside herself - and the dance is able to awaken it!</p>
     </div>
     <div class="about-img-col reveal">
       <div class="about-img-frame">
@@ -309,38 +324,38 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 <section class="diff-section" id="why">
   <div class="diff-inner">
     <div class="diff-header reveal">
-      <div class="eyebrow-with-line"><span class="section-eyebrow-light">Why Learn With Me</span></div>
-      <h2 class="section-heading-light">What makes me<br><em>different</em></h2>
-      <p class="diff-intro">A journey built on stage, in practice, and in science - so you can learn in the best way possible.</p>
+      <div class="eyebrow-with-line"><span class="section-eyebrow-light" data-i18n="whyEyebrow">Why Learn With Me</span></div>
+      <h2 class="section-heading-light" data-i18n="whyHeading">What makes me<br><em>different</em></h2>
+      <p class="diff-intro" data-i18n="whyIntro">A journey built on stage, in practice, and in science - so you can learn in the best way possible.</p>
     </div>
     <div class="diff-body-grid">
       <div class="diff-list reveal">
         <div class="diff-item">
           <span class="diff-item-num">01</span>
           <div class="diff-item-body">
-            <h3 class="diff-item-title">Real experience in the Middle East</h3>
-            <p class="diff-item-desc">I learned by living alongside musicians, artists and Arab audiences for over a decade. It's <em>daily</em> lived experience, not theory.</p>
+            <h3 class="diff-item-title" data-i18n="diff1Title">Real experience in the Middle East</h3>
+            <p class="diff-item-desc" data-i18n="diff1Desc">I learned by living alongside musicians, artists and Arab audiences for over a decade. It's <em>daily</em> lived experience, not theory.</p>
           </div>
         </div>
         <div class="diff-item">
           <span class="diff-item-num">02</span>
           <div class="diff-item-body">
-            <h3 class="diff-item-title">Science-based method</h3>
-            <p class="diff-item-desc">My postgraduate degree in Exercise Physiology lets me teach your body to move with intelligence and safety, making learning easier.</p>
+            <h3 class="diff-item-title" data-i18n="diff2Title">Science-based method</h3>
+            <p class="diff-item-desc" data-i18n="diff2Desc">My postgraduate degree in Exercise Physiology lets me teach your body to move with intelligence and safety, making learning easier.</p>
           </div>
         </div>
         <div class="diff-item">
           <span class="diff-item-num">03</span>
           <div class="diff-item-body">
-            <h3 class="diff-item-title">A dance studio in Abu Dhabi</h3>
-            <p class="diff-item-desc">I run an active in-person dance studio with students from different nationalities. My method is tested live, every single lady who decides to dance.</p>
+            <h3 class="diff-item-title" data-i18n="diff3Title">A dance studio in Abu Dhabi</h3>
+            <p class="diff-item-desc" data-i18n="diff3Desc">I run an active in-person dance studio with students from different nationalities. My method is tested live, every single lady who decides to dance.</p>
           </div>
         </div>
         <div class="diff-item">
           <span class="diff-item-num">04</span>
           <div class="diff-item-body">
-            <h3 class="diff-item-title">Warmth, without losing respect</h3>
-            <p class="diff-item-desc">I teach with Brazilian warmth, without ever losing the respect this dance and its Arab culture deserve.</p>
+            <h3 class="diff-item-title" data-i18n="diff4Title">Warmth, without losing respect</h3>
+            <p class="diff-item-desc" data-i18n="diff4Desc">I teach with Brazilian warmth, without ever losing the respect this dance and its Arab culture deserve.</p>
           </div>
         </div>
       </div>
@@ -353,22 +368,22 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 
 <section class="courses" id="courses">
   <div class="courses-inner">
-    <div class="eyebrow-with-line"><span class="section-eyebrow">Courses</span></div>
-    <h2 class="section-heading">Choose your <em>course</em></h2>
+    <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="coursesEyebrow">Courses</span></div>
+    <h2 class="section-heading" data-i18n="coursesHeading">Choose your <em>course</em></h2>
     <div class="course-grid">
       <a href="/beginner/" class="course-card">
-        <span class="section-eyebrow">8-Week Track</span>
-        <h3>Beginner Level</h3>
-        <p class="desc">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space. Dates to be announced - stay tuned!</p>
-        <span class="course-price">AED 800 <span>full course</span></span>
-        <span class="btn btn-teal">View Course →</span>
+        <span class="section-eyebrow" data-i18n="course1Eyebrow">8-Week Track</span>
+        <h3 data-i18n="course1Title">Beginner Level</h3>
+        <p class="desc" data-i18n="course1Desc">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space. Dates to be announced - stay tuned!</p>
+        <span class="course-price" data-i18n="coursePrice">AED 800 <span>full course</span></span>
+        <span class="btn btn-teal" data-i18n="btnViewCourse">View Course →</span>
       </a>
       <a href="/beginner-intensive/" class="course-card">
-        <span class="section-eyebrow">4-Week Intensive</span>
-        <h3>Beginner Intensive</h3>
-        <p class="desc">Learn to dance in just 1 month. 8 classes, twice a week (Tuesday & Thursday), for a fast and fun start.</p>
-        <span class="course-price">AED 800 <span>full course</span></span>
-        <span class="btn btn-violet">View Course →</span>
+        <span class="section-eyebrow" data-i18n="course2Eyebrow">4-Week Intensive</span>
+        <h3 data-i18n="course2Title">Beginner Intensive</h3>
+        <p class="desc" data-i18n="course2Desc">Learn to dance in just 1 month. 8 classes, twice a week (Tuesday & Thursday), for a fast and fun start.</p>
+        <span class="course-price" data-i18n="coursePrice">AED 800 <span>full course</span></span>
+        <span class="btn btn-violet" data-i18n="btnViewCourse">View Course →</span>
       </a>
     </div>
   </div>
@@ -377,39 +392,39 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 <section class="benefits" id="benefits">
   <div class="benefits-inner">
     <div class="reveal">
-      <div class="eyebrow-with-line"><span class="section-eyebrow">What Dance Transforms</span></div>
-      <h2 class="section-heading">Benefits you <em>feel</em><br>in body and soul</h2>
+      <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="benefitsEyebrow">What Dance Transforms</span></div>
+      <h2 class="section-heading" data-i18n="benefitsHeading">Benefits you <em>feel</em><br>in body and soul</h2>
     </div>
     <div class="benefits-cards reveal">
       <div class="benefit-card">
         <div class="benefit-card-num">1</div>
-        <h3 class="benefit-card-title">Self-esteem & confidence</h3>
-        <p class="benefit-card-desc">Bellydance reconnects you with your femininity, from the inside out.</p>
+        <h3 class="benefit-card-title" data-i18n="b1Title">Self-esteem & confidence</h3>
+        <p class="benefit-card-desc" data-i18n="b1Desc">Bellydance reconnects you with your femininity, from the inside out.</p>
       </div>
       <div class="benefit-card">
         <div class="benefit-card-num">2</div>
-        <h3 class="benefit-card-title">Posture & elegance</h3>
-        <p class="benefit-card-desc">You change the way you move through daily life, not just in class.</p>
+        <h3 class="benefit-card-title" data-i18n="b2Title">Posture & elegance</h3>
+        <p class="benefit-card-desc" data-i18n="b2Desc">You change the way you move through daily life, not just in class.</p>
       </div>
       <div class="benefit-card">
         <div class="benefit-card-num">3</div>
-        <h3 class="benefit-card-title">Flexibility & strength</h3>
-        <p class="benefit-card-desc">A complete physical practice that tones and strengthens the body.</p>
+        <h3 class="benefit-card-title" data-i18n="b3Title">Flexibility & strength</h3>
+        <p class="benefit-card-desc" data-i18n="b3Desc">A complete physical practice that tones and strengthens the body.</p>
       </div>
       <div class="benefit-card">
         <div class="benefit-card-num">4</div>
-        <h3 class="benefit-card-title">Cultural connection</h3>
-        <p class="benefit-card-desc">Immerse yourself in an ancient art that connects music, emotion and expression.</p>
+        <h3 class="benefit-card-title" data-i18n="b4Title">Cultural connection</h3>
+        <p class="benefit-card-desc" data-i18n="b4Desc">Immerse yourself in an ancient art that connects music, emotion and expression.</p>
       </div>
       <div class="benefit-card">
         <div class="benefit-card-num">5</div>
-        <h3 class="benefit-card-title">Well-being & lightness</h3>
-        <p class="benefit-card-desc">One hour of dance that releases tension, lifts your mood and renews your energy.</p>
+        <h3 class="benefit-card-title" data-i18n="b5Title">Well-being & lightness</h3>
+        <p class="benefit-card-desc" data-i18n="b5Desc">One hour of dance that releases tension, lifts your mood and renews your energy.</p>
       </div>
       <div class="benefit-card">
         <div class="benefit-card-num">6</div>
-        <h3 class="benefit-card-title">Community & connection</h3>
-        <p class="benefit-card-desc">Join a community of amazing women and build bonds that go far beyond dance.</p>
+        <h3 class="benefit-card-title" data-i18n="b6Title">Community & connection</h3>
+        <p class="benefit-card-desc" data-i18n="b6Desc">Join a community of amazing women and build bonds that go far beyond dance.</p>
       </div>
     </div>
   </div>
@@ -417,8 +432,8 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
 
 <section class="mosaic">
   <div class="mosaic-header reveal">
-    <h2 class="mosaic-heading">A career <em>built</em><br>on stage</h2>
-    <p class="mosaic-sub">From the desert to the world's most luxurious hotels.</p>
+    <h2 class="mosaic-heading" data-i18n="mosaicHeading">A career <em>built</em><br>on stage</h2>
+    <p class="mosaic-sub" data-i18n="mosaicSub">From the desert to the world's most luxurious hotels.</p>
   </div>
   <div class="mosaic-grid">
     <div class="m-item tall"><img class="m-img" src="/images/jiji-mosaic1.jpg" alt="Jiji Bellydance performance"></div>
@@ -433,43 +448,43 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
       <img class="personal-img" src="/images/jiji-maternity.jpg" alt="Jiji with her son">
     </div>
     <div class="reveal">
-      <div class="eyebrow-with-line"><span class="section-eyebrow">Beyond the Dancer</span></div>
+      <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="personalEyebrow">Beyond the Dancer</span></div>
       <span class="big-q">"</span>
-      <h2 class="section-heading">Mother, woman,<br><em>dancer</em></h2>
-      <p class="body-p">Motherhood didn't take me away from dance - it deepened my connection to it. I learned firsthand that the female body is extraordinary, and that caring for yourself is an act of love.</p>
-      <p class="body-p">I teach from that place: respect for your pace, your body and your story. You don't need to be perfect to start dancing. You just need to start.</p>
+      <h2 class="section-heading" data-i18n="personalHeading">Mother, woman,<br><em>dancer</em></h2>
+      <p class="body-p" data-i18n="personalP1">Motherhood didn't take me away from dance - it deepened my connection to it. I learned firsthand that the female body is extraordinary, and that caring for yourself is an act of love.</p>
+      <p class="body-p" data-i18n="personalP2">I teach from that place: respect for your pace, your body and your story. You don't need to be perfect to start dancing. You just need to start.</p>
       <div style="margin-top:36px">
-        <a href="#courses" class="btn btn-gold"><span>I Want to Start Now →</span></a>
+        <a href="#courses" class="btn btn-gold"><span data-i18n="personalCta">I Want to Start Now →</span></a>
       </div>
     </div>
   </div>
 </section>
 
 <section class="location">
-  <h2>📍 Find us in Abu Dhabi</h2>
-  <p>We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.</p>
-  <p>🌸 <strong>Inside a beautiful flower shop</strong>: opposite to Umm Al Emarat Park.</p>
-  <p>Full privacy · Easy Mawaqif parking</p>
-  <p style="margin-bottom:2rem">📞 <strong>Jiji Dance</strong> · <a href="tel:+971567750994" style="color:#fff;text-decoration:underline">+971 56 7750994</a></p>
-  <a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" class="btn btn-outline" target="_blank" rel="noopener">Open in Google Maps →</a>
+  <h2 data-i18n="locH2">📍 Find us in Abu Dhabi</h2>
+  <p data-i18n="locP1">We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.</p>
+  <p data-i18n="locP2">🌸 <strong>Inside a beautiful flower shop</strong>: opposite to Umm Al Emarat Park.</p>
+  <p data-i18n="locP3">Full privacy · Easy Mawaqif parking</p>
+  <p style="margin-bottom:2rem" data-i18n="locP4">📞 <strong>Jiji Dance</strong> · <a href="tel:+971567750994" style="color:#fff;text-decoration:underline">+971 56 7750994</a></p>
+  <a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="locBtn">Open in Google Maps →</a>
 </section>
 
 <section class="whatsapp-section">
   <div class="wa-inner">
     <div class="wa-icon">💬</div>
-    <h2>Still have questions?</h2>
-    <p>I'm happy to help! Send me a message on WhatsApp and I'll get back to you as soon as possible.</p>
-    <a href="https://wa.me/971567750994" class="btn-wa" target="_blank" rel="noopener">💬 &nbsp;Chat on WhatsApp</a>
+    <h2 data-i18n="waH2">Still have questions?</h2>
+    <p data-i18n="waP">I'm happy to help! Send me a message on WhatsApp and I'll get back to you as soon as possible.</p>
+    <a href="https://wa.me/971567750994" class="btn-wa" target="_blank" rel="noopener" data-i18n="waBtn">💬 &nbsp;Chat on WhatsApp</a>
   </div>
 </section>
 
 <section class="cta-block">
-  <span class="section-eyebrow-light">Ready?</span>
-  <h2 class="cta-heading">Ready for your<br><em>first step?</em></h2>
-  <p class="cta-sub">Choose how you want to start your bellydance journey in Abu Dhabi.</p>
+  <span class="section-eyebrow-light" data-i18n="ctaTag">Ready?</span>
+  <h2 class="cta-heading" data-i18n="ctaHeading">Ready for your<br><em>first step?</em></h2>
+  <p class="cta-sub" data-i18n="ctaSub">Choose how you want to start your bellydance journey in Abu Dhabi.</p>
   <div class="cta-btns">
-    <a href="#courses" class="btn btn-gold">See Courses →</a>
-    <a href="https://wa.me/971567750994" class="btn btn-outline" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    <a href="#courses" class="btn btn-gold" data-i18n="btnSeeCourses">See Courses →</a>
+    <a href="https://wa.me/971567750994" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="waBtnPlain">Chat on WhatsApp</a>
   </div>
 </section>
 
@@ -477,33 +492,157 @@ body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;
   <div class="footer-top">
     <div>
       <span class="footer-logo">Jiji Bellydance</span>
-      <span class="footer-tagline">International Dancer · Abu Dhabi, UAE</span>
+      <span class="footer-tagline" data-i18n="footerTagline">International Dancer · Abu Dhabi, UAE</span>
       <a href="tel:+971567750994" class="footer-contact">📞 +971 56 7750994</a>
     </div>
     <div>
-      <span class="footer-col-title">Navigate</span>
+      <span class="footer-col-title" data-i18n="footerNavTitle">Navigate</span>
       <ul class="footer-link-list">
-        <li><a href="#about">Who I Am</a></li>
-        <li><a href="#why">Why Me</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about" data-i18n="aboutEyebrow">Who I Am</a></li>
+        <li><a href="#why" data-i18n="navWhy">Why Me</a></li>
+        <li><a href="#benefits" data-i18n="navBenefits">Benefits</a></li>
+        <li><a href="#courses" data-i18n="navCourses">Courses</a></li>
       </ul>
     </div>
     <div>
-      <span class="footer-col-title">Find Us</span>
+      <span class="footer-col-title" data-i18n="footerFindTitle">Find Us</span>
       <ul class="footer-link-list">
-        <li><a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" target="_blank" rel="noopener">Abu Dhabi, UAE</a></li>
+        <li><a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" target="_blank" rel="noopener" data-i18n="footerAbuDhabi">Abu Dhabi, UAE</a></li>
         <li><a href="https://wa.me/971567750994" target="_blank" rel="noopener">WhatsApp</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Jiji Bellydance · All rights reserved</span>
+    <span class="footer-copy" data-i18n="footerCopy">© 2026 Jiji Bellydance · All rights reserved</span>
     <span class="footer-copy">jijidance.com</span>
   </div>
 </footer>
 
 <script>
+const dict = {
+  navServices:{en:"Services",ar:"خدماتي"},
+  navAbout:{en:"About",ar:"من أنا"},
+  navWhy:{en:"Why Me",ar:"لماذا أنا"},
+  navBenefits:{en:"Benefits",ar:"الفوائد"},
+  navCourses:{en:"Courses",ar:"الدورات"},
+  navCta:{en:"See Courses",ar:"شاهدي الدورات"},
+  heroIntro:{en:"hello, i'm",ar:"مرحباً، أنا"},
+  heroName:{en:"JIJI",ar:"جيجي"},
+  heroLocation:{en:"International Bellydancer · Abu Dhabi, UAE",ar:"راقصة شرقية عالمية · أبوظبي، الإمارات"},
+  heroDesc:{en:"A Brazilian dancer who crossed borders to live bellydance in the heart of the Middle East - and who now teaches women from all over the world to discover their own strength, right here in Abu Dhabi.",ar:"راقصة برازيلية عبرت الحدود لتعيش الرقص الشرقي في قلب الشرق الأوسط - وتُعلّم اليوم نساءً من مختلف أنحاء العالم كيف يكتشفن قوتهن الخاصة، هنا في أبوظبي."},
+  hstat1:{en:"Years in the Arab World",ar:"سنة في العالم العربي"},
+  hstat2:{en:"Students Taught",ar:"طالبة تعلّمت معي"},
+  hstat3:{en:"Countries Reached",ar:"دولة وصلت إليها"},
+  servicesEyebrow:{en:"What I Offer",ar:"ماذا أقدم"},
+  servicesHeading:{en:"How can I <em>help you?</em>",ar:"كيف يمكنني <em>مساعدتك؟</em>"},
+  servicesSub:{en:"Three ways to bring bellydance into your life, your event or your own journey.",ar:"ثلاث طرق لإدخال الرقص الشرقي إلى حياتك، مناسبتك، أو رحلتك الخاصة."},
+  service1Title:{en:"Group Classes",ar:"دروس جماعية"},
+  service1Desc:{en:"Weekly courses in a warm, ladies only studio in Abu Dhabi. No experience needed - be ready to have fun and learn a lot!",ar:"دورات أسبوعية في استوديو دافئ مخصص للنساء فقط في أبوظبي. لا حاجة لخبرة سابقة - استعدي للمرح وتعلم الكثير!"},
+  service2Title:{en:"Private Lessons",ar:"دروس خاصة"},
+  service2Desc:{en:"One-on-one sessions tailored to your pace, your goals and your schedule.",ar:"حصص فردية مصممة حسب وتيرتك وأهدافك وجدولك."},
+  service3Title:{en:"Shows - Private Events",ar:"عروض - مناسبات خاصة"},
+  service3Desc:{en:"Book an exclusive bellydance performance for your event and surprise your guests.",ar:"احجزي عرض رقص شرقي حصري لمناسبتك وفاجئي ضيوفك."},
+  service3Note:{en:"15% off for my students, T&C's apply",ar:"خصم 15% لطالباتي، تُطبّق الشروط والأحكام"},
+  btnSeeCourses:{en:"See Courses →",ar:"شاهدي الدورات ←"},
+  btnChatWa:{en:"Chat on WhatsApp →",ar:"تحدثي عبر واتساب ←"},
+  aboutEyebrow:{en:"Who I Am",ar:"من أنا"},
+  aboutHeading:{en:"A girl from Brazil who<br>moved to the <em>desert…</em>",ar:"فتاة من البرازيل<br>انتقلت إلى <em>الصحراء…</em>"},
+  aboutQuote:{en:'"I left Brazil on International Dance Day, in 2013, to experience bellydance at its origin - and without knowing it, I stepped into the biggest adventure of my life!"',ar:'"غادرت البرازيل في اليوم العالمي للرقص، عام 2013، لأعيش تجربة الرقص الشرقي في مهده - ودون أن أدري، دخلت أكبر مغامرة في حياتي!"'},
+  aboutP1:{en:"For over 13 years I've lived and worked across the Arab world, performed on prestigious stages, taught students of more than 20 nationalities, and opened my own dance school right here in Abu Dhabi.",ar:"منذ أكثر من 13 عامًا وأنا أعيش وأعمل في العالم العربي، قدمت عروضًا على مسارح مرموقة، علّمت طالبات من أكثر من 20 جنسية، وافتتحت مدرستي الخاصة للرقص هنا في أبوظبي."},
+  aboutP2:{en:"I'm a mother, postgraduate in Exercise Physiology, bellydancer and instructor from more then a decade.",ar:"أنا أم، حاصلة على ماجستير في علم وظائف الأعضاء الرياضي، وراقصة ومعلمة رقص شرقي منذ أكثر من عقد."},
+  aboutP3:{en:"I believe every woman hold a great strength inside herself - and the dance is able to awaken it!",ar:"أؤمن بأن كل امرأة تحمل بداخلها قوة عظيمة - والرقص قادر على إيقاظها!"},
+  whyEyebrow:{en:"Why Learn With Me",ar:"لماذا تتعلمين معي"},
+  whyHeading:{en:"What makes me<br><em>different</em>",ar:"ما الذي يميّزني<br><em>عن غيري</em>"},
+  whyIntro:{en:"A journey built on stage, in practice, and in science - so you can learn in the best way possible.",ar:"رحلة بُنيت على المسرح، في الممارسة، والعلم - لتتعلمي بأفضل طريقة ممكنة."},
+  diff1Title:{en:"Real experience in the Middle East",ar:"خبرة حقيقية في الشرق الأوسط"},
+  diff1Desc:{en:"I learned by living alongside musicians, artists and Arab audiences for over a decade. It's <em>daily</em> lived experience, not theory.",ar:"تعلمت بالعيش جنبًا إلى جنب مع الموسيقيين والفنانين والجمهور العربي لأكثر من عقد. إنها تجربة <em>يومية</em> حقيقية، لا مجرد نظرية."},
+  diff2Title:{en:"Science-based method",ar:"منهج علمي"},
+  diff2Desc:{en:"My postgraduate degree in Exercise Physiology lets me teach your body to move with intelligence and safety, making learning easier.",ar:"درجتي العليا في علم وظائف الأعضاء الرياضي تتيح لي تعليم جسدك الحركة بذكاء وأمان، مما يجعل التعلم أسهل."},
+  diff3Title:{en:"A dance studio in Abu Dhabi",ar:"استوديو رقص في أبوظبي"},
+  diff3Desc:{en:"I run an active in-person dance studio with students from different nationalities. My method is tested live, every single lady who decides to dance.",ar:"أدير استوديو رقص نشط حضوريًا مع طالبات من جنسيات مختلفة. أسلوبي مُختبر حيًا مع كل امرأة تقرر الرقص."},
+  diff4Title:{en:"Warmth, without losing respect",ar:"دفء، دون فقدان الاحترام"},
+  diff4Desc:{en:"I teach with Brazilian warmth, without ever losing the respect this dance and its Arab culture deserve.",ar:"أعلّم بدفء برازيلي، دون أن أفقد أبدًا الاحترام الذي يستحقه هذا الرقص وثقافته العربية."},
+  coursesEyebrow:{en:"Courses",ar:"الدورات"},
+  coursesHeading:{en:"Choose your <em>course</em>",ar:"اختاري <em>دورتك</em>"},
+  course1Eyebrow:{en:"8-Week Track",ar:"مسار 8 أسابيع"},
+  course1Title:{en:"Beginner Level",ar:"مستوى المبتدئات"},
+  course1Desc:{en:"No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space. Dates to be announced - stay tuned!",ar:"لا حاجة لخبرة سابقة. 8 أسابيع لاكتشاف قوة الرقص الشرقي - جسدكِ، إيقاعكِ، مساحتكِ. المواعيد قريبًا - ترقبوا!"},
+  course2Eyebrow:{en:"4-Week Intensive",ar:"مكثفة 4 أسابيع"},
+  course2Title:{en:"Beginner Intensive",ar:"مبتدئات مكثف"},
+  course2Desc:{en:"Learn to dance in just 1 month. 8 classes, twice a week (Tuesday & Thursday), for a fast and fun start.",ar:"تعلّمي الرقص في شهر واحد فقط. 8 حصص، مرتين أسبوعيًا (الثلاثاء والخميس)، لبداية سريعة وممتعة."},
+  coursePrice:{en:'AED 800 <span>full course</span>',ar:'800 درهم <span>الدورة كاملة</span>'},
+  btnViewCourse:{en:"View Course →",ar:"شاهدي الدورة ←"},
+  benefitsEyebrow:{en:"What Dance Transforms",ar:"ما الذي يغيره الرقص"},
+  benefitsHeading:{en:"Benefits you <em>feel</em><br>in body and soul",ar:"فوائد <em>تشعرين</em> بها<br>في الجسد والروح"},
+  b1Title:{en:"Self-esteem & confidence",ar:"الثقة بالنفس والاعتزاز"},
+  b1Desc:{en:"Bellydance reconnects you with your femininity, from the inside out.",ar:"الرقص الشرقي يعيد ربطك بأنوثتك، من الداخل إلى الخارج."},
+  b2Title:{en:"Posture & elegance",ar:"القوام والأناقة"},
+  b2Desc:{en:"You change the way you move through daily life, not just in class.",ar:"تتغير طريقة حركتك في حياتك اليومية، وليس فقط في الحصة."},
+  b3Title:{en:"Flexibility & strength",ar:"المرونة والقوة"},
+  b3Desc:{en:"A complete physical practice that tones and strengthens the body.",ar:"تمرين بدني متكامل ينحت الجسد ويقويه."},
+  b4Title:{en:"Cultural connection",ar:"ارتباط ثقافي"},
+  b4Desc:{en:"Immerse yourself in an ancient art that connects music, emotion and expression.",ar:"انغمسي في فن عريق يجمع بين الموسيقى والمشاعر والتعبير."},
+  b5Title:{en:"Well-being & lightness",ar:"الراحة والخفة"},
+  b5Desc:{en:"One hour of dance that releases tension, lifts your mood and renews your energy.",ar:"ساعة رقص تُخلّص من التوتر، وترفع مزاجك، وتجدد طاقتك."},
+  b6Title:{en:"Community & connection",ar:"مجتمع وتواصل"},
+  b6Desc:{en:"Join a community of amazing women and build bonds that go far beyond dance.",ar:"انضمي إلى مجتمع من نساء رائعات وابني علاقات تتجاوز الرقص."},
+  mosaicHeading:{en:"A career <em>built</em><br>on stage",ar:"مسيرة <em>بُنيت</em><br>على المسرح"},
+  mosaicSub:{en:"From the desert to the world's most luxurious hotels.",ar:"من الصحراء إلى أفخم فنادق العالم."},
+  personalEyebrow:{en:"Beyond the Dancer",ar:"أبعد من مجرد راقصة"},
+  personalHeading:{en:"Mother, woman,<br><em>dancer</em>",ar:"أم، امرأة،<br><em>راقصة</em>"},
+  personalP1:{en:"Motherhood didn't take me away from dance - it deepened my connection to it. I learned firsthand that the female body is extraordinary, and that caring for yourself is an act of love.",ar:"الأمومة لم تُبعدني عن الرقص - بل عمّقت ارتباطي به. تعلمت بنفسي أن جسد المرأة استثنائي، وأن الاعتناء بنفسك هو فعل حب."},
+  personalP2:{en:"I teach from that place: respect for your pace, your body and your story. You don't need to be perfect to start dancing. You just need to start.",ar:"أعلّم من هذا المكان: احترام وتيرتك وجسدك وقصتك. لست بحاجة لأن تكوني مثالية لتبدئي الرقص. كل ما تحتاجينه هو أن تبدئي."},
+  personalCta:{en:"I Want to Start Now →",ar:"أريد أن أبدأ الآن ←"},
+  locH2:{en:"📍 Find us in Abu Dhabi",ar:"📍 موقعنا في أبوظبي"},
+  locP1:{en:"We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.",ar:"نحن في <strong>أبوظبي، الإمارات العربية المتحدة</strong>."},
+  locP2:{en:"🌸 <strong>Inside a beautiful flower shop</strong>: opposite to Umm Al Emarat Park.",ar:"🌸 <strong>داخل محل زهور جميل</strong>: مقابل حديقة أم العمار."},
+  locP3:{en:"Full privacy · Easy Mawaqif parking",ar:"خصوصية كاملة · موقف سيارات Mawaqif سهل"},
+  locP4:{en:'📞 <strong>Jiji Dance</strong> · <a href="tel:+971567750994" style="color:#fff;text-decoration:underline">+971 56 7750994</a>',ar:'📞 <strong>جيجي دانس</strong> · <a href="tel:+971567750994" style="color:#fff;text-decoration:underline">+971 56 7750994</a>'},
+  locBtn:{en:"Open in Google Maps →",ar:"افتحي في خرائط جوجل ←"},
+  waH2:{en:"Still have questions?",ar:"لديكِ أسئلة؟"},
+  waP:{en:"I'm happy to help! Send me a message on WhatsApp and I'll get back to you as soon as possible.",ar:"يسعدني مساعدتك! أرسلي لي رسالة على واتساب وسأرد عليكِ بأقرب وقت."},
+  waBtn:{en:"💬 &nbsp;Chat on WhatsApp",ar:"💬 &nbsp;تحدثي عبر واتساب"},
+  waBtnPlain:{en:"Chat on WhatsApp",ar:"تحدثي عبر واتساب"},
+  ctaTag:{en:"Ready?",ar:"جاهزة؟"},
+  ctaHeading:{en:"Ready for your<br><em>first step?</em>",ar:"جاهزة لخطوتك<br><em>الأولى؟</em>"},
+  ctaSub:{en:"Choose how you want to start your bellydance journey in Abu Dhabi.",ar:"اختاري كيف تريدين بدء رحلتك في الرقص الشرقي في أبوظبي."},
+  footerTagline:{en:"International Dancer · Abu Dhabi, UAE",ar:"راقصة عالمية · أبوظبي، الإمارات"},
+  footerNavTitle:{en:"Navigate",ar:"التنقل"},
+  footerFindTitle:{en:"Find Us",ar:"موقعنا"},
+  footerAbuDhabi:{en:"Abu Dhabi, UAE",ar:"أبوظبي، الإمارات"},
+  footerCopy:{en:"© 2026 Jiji Bellydance · All rights reserved",ar:"© 2026 جيجي بيلي دانس · جميع الحقوق محفوظة"},
+  pageTitle:{en:"Jiji Bellydance – Abu Dhabi",ar:"جيجي بيلي دانس – أبوظبي"}
+};
+const tickerItems = {
+  en:["International Dancer","School in Abu Dhabi","+13 Years in the Arab World","Postgraduate in Exercise Physiology","Ladies Only Classes"],
+  ar:["راقصة عالمية","مدرسة في أبوظبي","+13 عامًا في العالم العربي","ماجستير في علم وظائف الأعضاء الرياضي","دروس نسائية فقط"]
+};
+function renderTicker(lang){
+  const items = tickerItems[lang];
+  const html = items.map(i => `<span class="ticker-item">${i}</span>`).join('');
+  document.getElementById('tickerInner').innerHTML = html + html;
+}
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('ar', lang === 'ar');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.innerHTML = dict[key][lang];
+  });
+  document.title = dict.pageTitle[lang];
+  renderTicker(lang);
+  document.getElementById('langToggle').textContent = lang === 'en' ? '🌐 العربية' : '🌐 English';
+  try { localStorage.setItem('jiji_lang', lang); } catch(e){}
+}
+function toggleLang(){
+  const current = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  setLang(current === 'en' ? 'ar' : 'en');
+}
+let initialLang = 'en';
+try { initialLang = localStorage.getItem('jiji_lang') || 'en'; } catch(e){}
+setLang(initialLang);
+
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
