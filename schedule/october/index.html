@@ -115,6 +115,20 @@ body.ar .giveaway-title{font-family:'Tajawal',sans-serif}
 .giveaway-note{display:block;margin-top:.7rem;font-size:.76rem;color:rgba(255,255,255,.45)}
 .anniv-cta{margin-top:2rem}
 
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(20,4,16,.72);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.open{display:flex}
+.modal-card{background:var(--white);border-radius:24px;padding:2.2rem;max-width:420px;width:100%;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.modal-close{position:absolute;top:1rem;inset-inline-end:1rem;background:var(--bg);border:none;width:32px;height:32px;border-radius:50%;font-size:1rem;color:var(--mid);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:var(--t3)}
+.modal-title{font-family:'Fraunces',serif;font-weight:800;font-size:1.4rem;color:var(--text);margin-bottom:.6rem;padding-inline-end:2rem}
+body.ar .modal-title{font-family:'Tajawal',sans-serif}
+.modal-text{font-size:.88rem;color:var(--mid);line-height:1.65;margin-bottom:1.6rem}
+.modal-btns{display:flex;flex-direction:column;gap:.8rem}
+.modal-btns .btn{width:100%;text-align:center}
+.modal-step{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--v1);margin-bottom:.3rem}
+body.ar .modal-step{text-transform:none;letter-spacing:normal}
+
 /* CALENDAR */
 .calendar-section{background:var(--bg)}
 .cal-legend{display:flex;flex-wrap:wrap;gap:1.2rem;margin-bottom:2rem}
@@ -293,7 +307,7 @@ body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-tran
       </div>
     </div>
     <div class="anniv-cta">
-      <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%203rd%20Anniversary%20class%20on%20October%203rd!" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="anniversaryCta">Reserve Your Spot →</a>
+      <button type="button" class="btn btn-gold" onclick="openModal('anniversaryModal')" data-i18n="anniversaryCta">Register Now →</button>
     </div>
   </div>
 </section>
@@ -339,6 +353,24 @@ body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-tran
 </section>
 
 <div class="footer-mini"><span>© 2026 Jiji Bellydance · jijidance.com/schedule/october</span></div>
+
+<div class="modal-overlay" id="anniversaryModal" onclick="if(event.target===this) closeModal('anniversaryModal')">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal('anniversaryModal')" aria-label="Close">✕</button>
+    <div class="modal-title" data-i18n="modalTitle">Confirm Your Spot</div>
+    <p class="modal-text" data-i18n="modalText">To confirm your spot for the 3rd Anniversary Class, please complete your payment below, then send us your payment receipt on WhatsApp.</p>
+    <div class="modal-btns">
+      <div>
+        <div class="modal-step" data-i18n="modalStep1">Step 1 · Pay</div>
+        <a href="https://business.mamopay.com/pay/jijidance-2498fd62b1ad" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="modalPayBtn">Pay AED 160 →</a>
+      </div>
+      <div>
+        <div class="modal-step" data-i18n="modalStep2">Step 2 · Send Receipt</div>
+        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27ve%20just%20paid%20for%20the%203rd%20Anniversary%20Class%20on%20October%203rd.%20Here%27s%20my%20payment%20receipt%3A" class="btn btn-violet" target="_blank" rel="noopener" data-i18n="modalWaBtn">Send Receipt on WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 const dict = {
@@ -391,7 +423,13 @@ const dict = {
   anniversaryCapacity:{en:"⚡ Spots are limited",ar:"⚡ الأماكن محدودة"},
   giveawayTitle:{en:"🎁✨ Anniversary Giveaway!",ar:"🎁✨ هدية الذكرى السنوية!"},
   giveawayText:{en:'One lucky lady will win <strong>FULL ACCESS</strong> to all Jiji Dance courses from the next edition 🎉 — plus <strong>complimentary access</strong> to every Open Level class in December 2026 & January 2027! 💃<span class="giveaway-note">Workshops are not included.</span>',ar:'ستفوز إحدى المحظوظات بـ<strong>وصول كامل</strong> لجميع دورات جيجي دانس في الدورة القادمة 🎉 — بالإضافة إلى <strong>وصول مجاني</strong> لكل حصص المستوى المفتوح في ديسمبر 2026 ويناير 2027! 💃<span class="giveaway-note">لا تشمل ورش العمل.</span>'},
-  anniversaryCta:{en:"Reserve Your Spot →",ar:"احجزي مكانكِ ←"},
+  anniversaryCta:{en:"Register Now →",ar:"سجّلي الآن ←"},
+  modalTitle:{en:"Confirm Your Spot",ar:"أكّدي مكانكِ"},
+  modalText:{en:"To confirm your spot for the 3rd Anniversary Class, please complete your payment below, then send us your payment receipt on WhatsApp.",ar:"لتأكيد مكانكِ في حصة الذكرى الثالثة، يُرجى إتمام الدفع أدناه، ثم إرسال إيصال الدفع لنا عبر واتساب."},
+  modalStep1:{en:"Step 1 · Pay",ar:"الخطوة 1 · الدفع"},
+  modalPayBtn:{en:"Pay AED 160 →",ar:"ادفعي 160 درهم ←"},
+  modalStep2:{en:"Step 2 · Send Receipt",ar:"الخطوة 2 · إرسال الإيصال"},
+  modalWaBtn:{en:"Send Receipt on WhatsApp →",ar:"أرسلي الإيصال عبر واتساب ←"},
   calTag:{en:"Calendar",ar:"التقويم"},
   calH2:{en:"October <em>at a glance</em>",ar:"أكتوبر <em>بنظرة واحدة</em>"},
   calSub:{en:"Every class day this edition, at a glance.",ar:"جميع أيام الحصص لهذه الدورة، بنظرة واحدة."},
@@ -465,6 +503,18 @@ function toggleLang(){
 let initialLang = 'en';
 try { initialLang = localStorage.getItem('jiji_lang') || 'en'; } catch(e){}
 setLang(initialLang);
+
+function openModal(id){
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+});
 </script>
 
 </body>
