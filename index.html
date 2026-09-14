@@ -98,6 +98,17 @@ body.ar .section-heading-light em{font-style:normal}
 .service-card h3{font-family:'Abril Fatface',serif;font-size:1.35rem;color:var(--text);margin-bottom:.6rem}
 .service-card p{font-size:.9rem;color:var(--mid);line-height:1.6;margin-bottom:1.4rem;flex-grow:1}
 .service-note{font-size:.75rem;color:var(--v1);font-weight:500;margin-bottom:1rem}
+.service-note-btn{background:none;border:none;padding:0;font-family:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer;text-align:start}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(20,8,15,.7);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.open{display:flex}
+.modal-card{background:var(--white);border-radius:20px;padding:2.2rem;max-width:420px;width:100%;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.modal-close{position:absolute;top:1rem;inset-inline-end:1rem;background:var(--bg);border:none;width:32px;height:32px;border-radius:50%;font-size:1rem;color:var(--mid);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:var(--t3)}
+.modal-title{font-family:'Abril Fatface',serif;font-size:1.3rem;color:var(--text);margin-bottom:1rem;padding-inline-end:2rem}
+body.ar .modal-title{font-family:'Tajawal',sans-serif;font-weight:800}
+.modal-text{font-size:.9rem;color:var(--mid);line-height:1.75}
 
 /* ABOUT */
 .about{background:var(--white);padding:7rem 6vw}
@@ -296,7 +307,7 @@ body.ar .cta-heading em{font-style:normal}
         <span class="service-num">03</span>
         <h3 data-i18n="service3Title">Shows - Private Events</h3>
         <p data-i18n="service3Desc">Book an exclusive bellydance performance for your event and surprise your guests.</p>
-        <span class="service-note" data-i18n="service3Note">15% off for my students, T&C's apply</span>
+        <button type="button" class="service-note service-note-btn" onclick="openModal('tcModal')" data-i18n="service3Note">15% off for my students, T&C's apply</button>
         <a href="https://wa.me/971567750994" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="btnChatWa">Chat on WhatsApp →</a>
       </div>
     </div>
@@ -519,6 +530,14 @@ body.ar .cta-heading em{font-style:normal}
   </div>
 </footer>
 
+<div class="modal-overlay" id="tcModal" onclick="if(event.target===this) closeModal('tcModal')">
+  <div class="modal-card">
+    <button type="button" class="modal-close" onclick="closeModal('tcModal')" aria-label="Close">✕</button>
+    <div class="modal-title" data-i18n="tcTitle">Student Discount — Terms & Conditions</div>
+    <p class="modal-text" data-i18n="tcText">This 15% discount is available to students who are currently enrolled in a course, and only from their second course onward — or who have already completed their 2nd package of private lessons.</p>
+  </div>
+</div>
+
 <script>
 const dict = {
   navServices:{en:"Services",ar:"خدماتي"},
@@ -544,6 +563,8 @@ const dict = {
   service3Title:{en:"Shows - Private Events",ar:"عروض - مناسبات خاصة"},
   service3Desc:{en:"Book an exclusive bellydance performance for your event and surprise your guests.",ar:"احجزي عرض رقص شرقي حصري لمناسبتك وفاجئي ضيوفك."},
   service3Note:{en:"15% off for my students, T&C's apply",ar:"خصم 15% لطالباتي، تُطبّق الشروط والأحكام"},
+  tcTitle:{en:"Student Discount — Terms & Conditions",ar:"خصم الطالبات — الشروط والأحكام"},
+  tcText:{en:"This 15% discount is available to students who are currently enrolled in a course, and only from their second course onward — or who have already completed their 2nd package of private lessons.",ar:"هذا الخصم بنسبة 15% متاح للطالبات المسجلات حاليًا في إحدى الدورات، ابتداءً من دورتهن الثانية فما فوق - أو اللواتي أكملن بالفعل باقتهن الثانية من الدروس الخاصة."},
   btnSeeCourses:{en:"See Courses →",ar:"شاهدي الدورات ←"},
   btnChatWa:{en:"Chat on WhatsApp →",ar:"تحدثي عبر واتساب ←"},
   aboutEyebrow:{en:"Who I Am",ar:"من أنا"},
@@ -660,6 +681,18 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 reveals.forEach(el => obs.observe(el));
+
+function openModal(id){
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+});
 </script>
 
 </body>
