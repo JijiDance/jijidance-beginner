@@ -58,6 +58,7 @@ body.ar .home-link{font-family:'Tajawal',sans-serif}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
 
 .hero-panel{display:flex;flex-direction:column;gap:1rem}
+.hero-panel-wa{justify-content:center;width:100%}
 .panel-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.14);padding:1.4rem 1.6rem;border-radius:16px;position:relative;overflow:hidden}
 .panel-card-link{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
 .panel-card-link:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.11)}
@@ -216,10 +217,6 @@ body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-tran
       <div class="hero-tag"><div class="hero-tag-dot"></div><span data-i18n="heroTag">Abu Dhabi &bull; Ladies Only &bull; October 2026</span></div>
       <h1 data-i18n="heroH1">OCTOBER<br><span class="t">SCHEDULE</span></h1>
       <p class="hero-body" data-i18n="heroBody">Our next edition is fully intensive: two levels running throughout October, plus a special class to celebrate 3 years of Jiji Dance. Find your track and mark your calendar.</p>
-      <div class="hero-ctas">
-        <a href="#calendar" class="btn btn-teal" data-i18n="ctaSeeCalendar">See the Calendar →</a>
-        <a href="https://wa.me/971567750994" class="btn btn-outline-lt" target="_blank" rel="noopener" data-i18n="ctaChatWa">Chat on WhatsApp</a>
-      </div>
     </div>
     <div class="hero-panel">
       <a href="#levels" class="panel-card panel-card-link">
@@ -236,6 +233,7 @@ body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-tran
         <p data-i18n="panelCtaText">📅 See exactly which days each class runs</p>
         <a href="#calendar" class="btn btn-outline-lt btn-sm" data-i18n="panelCtaBtn">View Calendar →</a>
       </div>
+      <a href="https://wa.me/971567750994" class="btn-wa hero-panel-wa" target="_blank" rel="noopener" data-i18n="ctaChatWa">💬 &nbsp;Chat on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -389,8 +387,7 @@ const dict = {
   heroTag:{en:"Abu Dhabi &bull; Ladies Only &bull; October 2026",ar:"أبوظبي &bull; دروس نسائية فقط &bull; أكتوبر 2026"},
   heroH1:{en:'OCTOBER<br><span class="t">SCHEDULE</span>',ar:'جدول<br><span class="t">أكتوبر</span>'},
   heroBody:{en:"Our next edition is fully intensive: two levels running throughout October, plus a special class to celebrate 3 years of Jiji Dance. Find your track and mark your calendar.",ar:"الدورة القادمة مكثفة بالكامل: مستويان طوال شهر أكتوبر، بالإضافة إلى حصة خاصة للاحتفال بمرور 3 سنوات على جيجي دانس. اختاري مسارك وسجّلي التواريخ في تقويمك."},
-  ctaSeeCalendar:{en:"See the Calendar →",ar:"شاهدي التقويم ←"},
-  ctaChatWa:{en:"Chat on WhatsApp",ar:"تحدثي عبر واتساب"},
+  ctaChatWa:{en:"💬 &nbsp;Chat on WhatsApp",ar:"💬 &nbsp;تحدثي عبر واتساب"},
   panel1Tag:{en:"Running in October",ar:"تُقام في أكتوبر"},
   panel1Title:{en:"2 Levels · Intensive",ar:"مستويان · مكثف"},
   panel1Text:{en:"Beginner Level + Pre-Intermediate 2",ar:"مبتدئات + ما قبل المتوسط 2"},
