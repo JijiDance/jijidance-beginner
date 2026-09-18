@@ -113,6 +113,7 @@ body.en .pullquote{font-family:'Fraunces',serif;font-style:italic;font-weight:60
 .course-inner{max-width:1000px;margin:0 auto}
 .course-header{max-width:600px;margin-bottom:2.8rem}
 .course-header p{color:var(--mid);font-size:.98rem;font-weight:500}
+.lang-note{display:inline-flex;align-items:center;gap:.5rem;background:var(--bg);border:1px solid rgba(201,151,74,.3);padding:.55rem 1.1rem;border-radius:40px;margin-top:1rem;font-size:.82rem;color:var(--v1);font-weight:600}
 .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
 .course-item{background:var(--bg);border-radius:20px;padding:1.9rem;border:1px solid rgba(91,26,94,.14);display:flex;gap:1.1rem}
 .course-num{font-family:'Fraunces',serif;font-weight:800;font-size:1.5rem;color:var(--g1);flex-shrink:0}
@@ -221,6 +222,7 @@ body.en .btn-wa{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:60
       <div class="stat-chips">
         <span class="stat-chip" data-i18n="chip1">⭐ ٥.٠ تقييم جوجل</span>
         <span class="stat-chip" data-i18n="chip2">+٤٠٠ طالبة</span>
+        <span class="stat-chip" data-i18n="chip3">🗣️ الدروس بالإنجليزية</span>
       </div>
     </div>
   </div>
@@ -286,6 +288,7 @@ body.en .btn-wa{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:60
       <span class="tag" data-i18n="courseTag">دورة المبتدئات</span>
       <h2 data-i18n="courseH2">كل ما تحتاجينه لتبدئي الرقص</h2>
       <p data-i18n="courseP">منهج متكامل صممته لمن لم يرقصن من قبل، يأخذكِ خطوة بخطوة نحو رقصة كاملة.</p>
+      <div class="lang-note"><span>🗣️</span><span data-i18n="courseLangNote">الدروس مُقدَّمة باللغة الإنجليزية، مع شرح مرئي واضح خطوة بخطوة يسهل متابعته.</span></div>
     </div>
     <div class="course-grid reveal">
       <div class="course-item">
@@ -374,6 +377,10 @@ body.en .btn-wa{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:60
         <p class="faq-a" data-i18n="faq4A">التطبيق متوفر حاليًا على آيفون عبر App Store. نسخة أندرويد قادمة قريبًا.</p>
       </div>
       <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq7Q">بأي لغة تُقدَّم الدروس؟</h3>
+        <p class="faq-a" data-i18n="faq7A">جميع دروس التطبيق باللغة الإنجليزية، بشرح مرئي واضح يسهل متابعته خطوة بخطوة حتى دون إتقان تام للغة.</p>
+      </div>
+      <div class="faq-item">
         <h3 class="faq-q" data-i18n="faq5Q">هل الوصول فعلاً مدى الحياة؟</h3>
         <p class="faq-a" data-i18n="faq5A">نعم، تدفعين مرة واحدة فقط للحصول على دخول دائم لدورة المبتدئات.</p>
       </div>
@@ -418,6 +425,7 @@ const dict = {
   ctaSeePricing:{ar:"شاهدي الدورة",en:"See The Course"},
   chip1:{ar:"⭐ ٥.٠ تقييم جوجل",en:"⭐ 5.0 Google Rating"},
   chip2:{ar:"+٤٠٠ طالبة",en:"+400 Students"},
+  chip3:{ar:"🗣️ الدروس بالإنجليزية",en:"🗣️ Lessons in English"},
   whyTag:{ar:"لماذا التطبيق",en:"Why The App"},
   whyH2:{ar:"خصوصيتك، وتيرتك، مساحتك",en:"Your privacy. Your pace. Your space."},
   whyP:{ar:"أعرف كم الخصوصية مهمة بالنسبة لكِ - لهذا صممت تطبيقًا يتيح لكِ تعلّم الرقص الشرقي وحدك، في راحة منزلك.",en:"I know how much privacy matters to you - that's why I built an app that lets you learn bellydance alone, in the comfort of your home."},
@@ -438,6 +446,7 @@ const dict = {
   courseTag:{ar:"دورة المبتدئات",en:"Beginner Course"},
   courseH2:{ar:"كل ما تحتاجينه لتبدئي الرقص",en:"Everything you need to start dancing"},
   courseP:{ar:"منهج متكامل صممته لمن لم يرقصن من قبل، يأخذكِ خطوة بخطوة نحو رقصة كاملة.",en:"A complete curriculum designed for total beginners, taking you step by step to a full dance."},
+  courseLangNote:{ar:"الدروس مُقدَّمة باللغة الإنجليزية، مع شرح مرئي واضح خطوة بخطوة يسهل متابعته.",en:"Lessons are delivered in English, with clear step-by-step visual instruction that's easy to follow."},
   course1Title:{ar:"خطوة أساسية",en:"Basic Steps"},
   course1Desc:{ar:"تعلّمي حركات الرقص الشرقي الأساسية، خطوة بخطوة وبالتفصيل.",en:"Master the foundational bellydance movements, explained step by step."},
   course2Title:{ar:"كوريغرافيا كاملة",en:"Full Choreography"},
@@ -471,6 +480,8 @@ const dict = {
   faq3A:{ar:"نعم. التطبيق مخصص للاستمتاع واللياقة والتعبير عن الذات في خصوصية منزلك، دون أي أداء أو ظهور أمام أحد.",en:"Yes. The app is for enjoyment, fitness, and self-expression in the privacy of your own home - no performing or appearing in front of anyone required."},
   faq4Q:{ar:"ما الأجهزة المتوفرة؟",en:"What devices are supported?"},
   faq4A:{ar:"التطبيق متوفر حاليًا على آيفون عبر App Store. نسخة أندرويد قادمة قريبًا.",en:"The app is currently available on iPhone via the App Store. Android is coming soon."},
+  faq7Q:{ar:"بأي لغة تُقدَّم الدروس؟",en:"What language are the lessons in?"},
+  faq7A:{ar:"جميع دروس التطبيق باللغة الإنجليزية، بشرح مرئي واضح يسهل متابعته خطوة بخطوة حتى دون إتقان تام للغة.",en:"All lessons in the app are taught in English, with clear visual step-by-step instruction that's easy to follow even without perfect fluency."},
   faq5Q:{ar:"هل الوصول فعلاً مدى الحياة؟",en:"Is access really lifetime?"},
   faq5A:{ar:"نعم، تدفعين مرة واحدة فقط للحصول على دخول دائم لدورة المبتدئات.",en:"Yes - a single one-time payment gives you permanent access to the Beginner Course."},
   faq6Q:{ar:"عندي سؤال آخر؟",en:"I have another question?"},
