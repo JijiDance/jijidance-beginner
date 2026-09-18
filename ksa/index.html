@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title id="pageTitle">تطبيق جيجي لتعليم الرقص الشرقي - بخصوصية تامة</title>
+<meta name="description" content="تعلّمي الرقص الشرقي من بيتك بخصوصية تامة عبر تطبيق جيجي. ٢٠ خطوة أساسية وكوريغرافيا كاملة، بسعر إطلاق ٤٩ دولارًا فقط - دخول مدى الحياة."/>
+<meta property="og:title" content="تطبيق جيجي لتعليم الرقص الشرقي - بخصوصية تامة"/>
+<meta property="og:description" content="تعلّمي الرقص الشرقي من بيتك، خطوة بخطوة، من مدرّبة عالمية بخبرة +١٣ عامًا في الخليج. عرض إطلاق محدود."/>
+<meta property="og:image" content="https://jijidance.com/images/jiji-app-icon.png"/>
+<meta property="og:type" content="website"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Poppins:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g1:#C9974A;--g2:#E8C177;--g3:#F7E6C4;
+  --p1:#D4145A;--p2:#FF4D85;
+  --v1:#5B1A5E;--v2:#8A17A8;
+  --black:#120C0E;--black2:#1F1417;
+  --bg:#FFF8F1;--white:#FFFFFF;
+  --text:#241812;--mid:#6B564A;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Tajawal',sans-serif;font-weight:400;line-height:1.8;overflow-x:hidden}
+body.en{font-family:'Poppins',sans-serif;font-weight:400}
+h1,h2,h3{font-family:'Tajawal',sans-serif;font-weight:800}
+body.en h1,body.en h2,body.en h3{font-family:'Fraunces',serif;font-weight:800}
+.tag,.btn,.panel-tag,.pl,.hero-tag span,.best-tag,.review-source,.faq-q{letter-spacing:normal}
+body.en .tag,body.en .panel-tag,body.en .pl,body.en .hero-tag span,body.en .best-tag{letter-spacing:.16em;text-transform:uppercase}
+
+.btn{display:inline-block;font-family:'Tajawal',sans-serif;font-size:.92rem;font-weight:700;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;transition:all .25s;cursor:pointer}
+body.en .btn{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.btn-gold{background:linear-gradient(135deg,var(--g1),var(--g2));color:var(--black);border:none;box-shadow:0 4px 24px rgba(201,151,74,.45)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,151,74,.55)}
+.btn-pink{background:var(--p1);color:#fff;border:none;box-shadow:0 4px 20px rgba(212,20,90,.35)}
+.btn-pink:hover{background:var(--p2);transform:translateY(-2px)}
+.btn-outline-lt{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-outline-lt:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-outline-dark{background:transparent;color:var(--text);border:2px solid var(--text)}
+.btn-outline-dark:hover{background:var(--text);color:#fff;transform:translateY(-2px)}
+
+/* LANG TOGGLE */
+.lang-toggle{position:fixed;top:1rem;inset-inline-start:1rem;z-index:999;background:linear-gradient(135deg,var(--v1),var(--p1));color:#fff;border:none;padding:.6rem 1.3rem;border-radius:40px;font-size:.78rem;font-weight:700;cursor:pointer;box-shadow:0 4px 18px rgba(91,26,94,.45);font-family:'Tajawal',sans-serif;transition:transform .2s}
+body.en .lang-toggle{font-family:'Poppins',sans-serif;font-weight:600;font-size:.72rem}
+.lang-toggle:hover{transform:translateY(-2px)}
+
+/* HERO */
+.hero{min-height:100vh;background:radial-gradient(ellipse at 30% 0%,#3A2410 0%,var(--black) 55%),linear-gradient(150deg,#241512 0%,var(--black) 100%);display:flex;align-items:center;padding:5.5rem 6vw 3rem;position:relative;overflow:hidden}
+.g1{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,151,74,.22) 0%,transparent 70%);top:-100px;inset-inline-start:-100px;pointer-events:none}
+.g2{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(212,20,90,.16) 0%,transparent 70%);bottom:-60px;inset-inline-end:-60px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:1100px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:3.5rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.6rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:.5rem 1.1rem;border-radius:40px}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--g2);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-tag span{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.85)}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.4rem);line-height:1.15;color:#fff;margin-bottom:1.3rem}
+.hero h1 .t{color:var(--g2)}
+.hero-body{color:rgba(255,255,255,.85);font-size:1.05rem;font-weight:500;max-width:480px;margin-bottom:1.3rem;line-height:1.75}
+.hero-bio-mini{max-width:480px;margin-bottom:1.8rem;padding-inline-start:1rem;border-inline-start:3px solid var(--g1)}
+body.en .hero-bio-mini{padding-inline-start:1rem;padding-inline-end:0}
+.hero-bio-mini p{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.7}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+
+.hero-panel{display:flex;flex-direction:column;align-items:center;gap:1.1rem}
+.phone-mock{width:230px;border-radius:34px;background:#000;padding:9px;box-shadow:0 30px 70px rgba(0,0,0,.55);position:relative;border:1px solid rgba(255,255,255,.1)}
+.phone-mock img{width:100%;border-radius:26px;display:block}
+.phone-home{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:70px;height:4px;border-radius:4px;background:rgba(255,255,255,.5)}
+.phone-icon-badge{position:absolute;bottom:-16px;inset-inline-end:-16px;width:58px;height:58px;border-radius:15px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.5);border:3px solid var(--black)}
+.phone-icon-badge img{width:100%;height:100%;display:block}
+.stat-chips{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center}
+.stat-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:.55rem 1rem;border-radius:40px;font-size:.78rem;color:#fff;font-weight:600;white-space:nowrap}
+
+/* STRIP */
+.strip{background:linear-gradient(90deg,var(--g1),var(--p1),var(--v1),var(--g1));background-size:300% 100%;animation:gs 6s linear infinite;padding:.7rem 0;overflow:hidden;white-space:nowrap}
+@keyframes gs{0%{background-position:0%}100%{background-position:300%}}
+.strip-track{display:inline-flex;gap:2rem;animation:marquee 22s linear infinite}
+.strip-track span{font-weight:800;font-size:.85rem;color:#fff;letter-spacing:.02em;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.strip-track .dot{opacity:.6}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+[dir="rtl"] .strip-track{animation-direction:reverse}
+
+/* SHARED */
+.tag{font-size:.75rem;font-weight:700;color:var(--v1);display:block;margin-bottom:1rem}
+body.en .tag{font-size:.68rem}
+section h2{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.15;color:var(--text);margin-bottom:1rem}
+body.en section h2{line-height:.98}
+section h2 em,section h2 span{font-style:normal;color:var(--v1)}
+
+/* WHY */
+.why{background:var(--white);padding:6rem 6vw}
+.why-inner{max-width:1100px;margin:0 auto}
+.why-header{max-width:640px;margin-bottom:2.8rem}
+.why-header p{color:var(--mid);font-size:.98rem;font-weight:500}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.why-card{background:var(--bg);border-radius:20px;padding:1.8rem 1.5rem;border:1px solid rgba(201,151,74,.22);transition:all .25s}
+.why-card:hover{border-color:var(--g1);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,151,74,.18)}
+.why-icon{font-size:1.9rem;margin-bottom:.9rem;display:block}
+.why-card h3{font-size:1.08rem;color:var(--text);margin-bottom:.5rem}
+.why-card p{font-size:.86rem;color:var(--mid);font-weight:500;line-height:1.65}
+
+/* ABOUT */
+.about{background:var(--bg);padding:6.5rem 6vw}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:center}
+.about-img-frame{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(36,24,18,.2)}
+.about-img{width:100%;display:block;object-fit:cover}
+.pullquote{font-size:1.15rem;font-weight:700;color:var(--v1);line-height:1.6;margin:1.3rem 0;padding-inline-start:1.1rem;border-inline-start:3px solid var(--g1)}
+body.en .pullquote{font-family:'Fraunces',serif;font-style:italic;font-weight:600}
+.about p{font-size:.96rem;color:var(--mid);font-weight:500;line-height:1.8;margin-bottom:.9rem}
+
+/* COURSE */
+.course{background:var(--white);padding:6.5rem 6vw}
+.course-inner{max-width:1000px;margin:0 auto}
+.course-header{max-width:600px;margin-bottom:2.8rem}
+.course-header p{color:var(--mid);font-size:.98rem;font-weight:500}
+.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.course-item{background:var(--bg);border-radius:20px;padding:1.9rem;border:1px solid rgba(91,26,94,.14);display:flex;gap:1.1rem}
+.course-num{font-family:'Fraunces',serif;font-weight:800;font-size:1.5rem;color:var(--g1);flex-shrink:0}
+.course-item h3{font-size:1.1rem;color:var(--text);margin-bottom:.4rem}
+.course-item p{font-size:.86rem;color:var(--mid);font-weight:500;line-height:1.6}
+
+/* PRICING */
+.pricing{background:var(--black);padding:6.5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.pricing::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,151,74,.16) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.pricing-inner{max-width:560px;margin:0 auto;position:relative;z-index:1}
+.pricing .tag{color:var(--g2)}
+.pricing h2{color:#fff}
+.pcard{background:rgba(255,255,255,.06);border:1px solid var(--g1);padding:2.6rem 2rem;border-radius:24px;position:relative;margin-top:1rem}
+.best-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--g1),var(--g2));color:var(--black);font-size:.7rem;font-weight:800;padding:.3rem 1.1rem;border-radius:40px;white-space:nowrap}
+.old-price{font-size:1.3rem;color:rgba(255,255,255,.45);text-decoration:line-through;display:block;margin-bottom:.3rem}
+.pa{font-family:'Fraunces',serif;font-weight:800;font-size:4rem;color:#fff;line-height:1;display:block}
+.ps{font-size:.85rem;color:rgba(255,255,255,.65);display:block;margin-top:.7rem;font-weight:600}
+.pn{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:1rem}
+
+/* REVIEWS */
+.reviews{background:var(--bg);padding:6rem 6vw}
+.reviews-inner{max-width:1000px;margin:0 auto}
+.reviews-sub{color:var(--mid);font-weight:600;font-size:.92rem;margin-top:.4rem;margin-bottom:2.4rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.review-card{background:var(--white);border-radius:20px;border:1px solid rgba(201,151,74,.2);padding:1.7rem}
+.review-stars{display:flex;gap:3px;margin-bottom:.7rem}
+.review-stars span{color:var(--g1);font-size:1rem}
+.review-text{font-size:.88rem;color:var(--mid);font-weight:500;line-height:1.65;margin-bottom:1rem}
+.review-author{font-size:.8rem;color:var(--text);font-weight:700}
+.review-source{color:var(--mid);font-weight:500}
+
+/* FAQ */
+.faq{background:var(--white);padding:6rem 6vw}
+.faq-inner{max-width:760px;margin:0 auto}
+.faq-header{margin-bottom:2.4rem}
+.faq-item{padding:1.5rem 0;border-bottom:1px solid rgba(91,26,94,.14)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:1.05rem;color:var(--text);margin-bottom:.5rem;display:flex;gap:.6rem}
+.faq-q::before{content:'س.';color:var(--g1);flex-shrink:0}
+body.en .faq-q::before{content:'Q.'}
+.faq-a{font-size:.92rem;color:var(--mid);font-weight:500;line-height:1.75;padding-inline-start:1.4rem}
+
+/* WHATSAPP */
+.whatsapp-section{background:linear-gradient(150deg,var(--black),var(--black2));padding:5.5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.whatsapp-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,211,102,.12) 0%,transparent 60%);pointer-events:none}
+.wa-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.wa-icon{width:64px;height:64px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2rem;box-shadow:0 0 32px rgba(37,211,102,.4)}
+.whatsapp-section h2{color:#fff;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.7rem}
+.whatsapp-section p{color:rgba(255,255,255,.75);font-weight:500;font-size:.94rem;margin-bottom:2rem}
+.btn-wa{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;font-family:'Tajawal',sans-serif;font-size:.92rem;font-weight:700;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:all .25s}
+body.en .btn-wa{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.btn-wa:hover{background:#20BA5C;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.55)}
+
+/* CTA FINAL */
+.cta-final{background:var(--bg);padding:6.5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.cta-blob{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,151,74,.2) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-final h2{position:relative;z-index:1}
+.cta-final p{color:var(--mid);font-weight:500;max-width:440px;margin:0 auto 2.2rem;font-size:.94rem;position:relative;z-index:1}
+.cta-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
+.cta-foot{color:var(--mid);font-weight:500;font-size:.88rem;margin-top:1.6rem;position:relative;z-index:1}
+
+.footer-mini{background:var(--black);padding:1.6rem 6vw;text-align:center}
+.footer-mini span{color:rgba(255,255,255,.5);font-size:.72rem}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .hero{padding:4.5rem 1.5rem 2.5rem;min-height:auto}
+  .hero-inner{grid-template-columns:1fr;gap:2rem}
+  .phone-mock{width:190px}
+  .why-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .about-inner{grid-template-columns:1fr;gap:2rem}
+  .course-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .why,.about,.course,.pricing,.reviews,.faq,.cta-final,.whatsapp-section{padding:3.5rem 1.5rem}
+}
+@media(max-width:480px){
+  .why-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 English</button>
+
+<section class="hero">
+  <div class="g1"></div><div class="g2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><div class="hero-tag-dot"></div><span data-i18n="heroTag">📱 متوفر الآن على آيفون · السعودية</span></div>
+      <h1 data-i18n="heroH1">تعلّمي الرقص الشرقي<br><span class="t">من بيتك، بخصوصية تامة</span></h1>
+      <p class="hero-body" data-i18n="heroBody">تطبيق جيجي لتعليم الرقص الشرقي - دروس فيديو خطوة بخطوة، من مدرّبة عالمية عاشت وعلّمت في الخليج لأكثر من ١٣ عامًا.</p>
+      <div class="hero-bio-mini"><p data-i18n="heroBio">لا حاجة للسفر أو حضور استوديو. حمّلي التطبيق وابدئي رحلتك اليوم، أنتِ وهاتفك فقط.</p></div>
+      <div class="hero-ctas">
+        <a href="https://apps.apple.com/ae/app/jiji-bellydance-school/id6774510794" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="ctaDownload">حمّلي التطبيق مجانًا ←</a>
+        <a href="#pricing" class="btn btn-outline-lt" data-i18n="ctaSeePricing">شاهدي الدورة</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="phone-mock">
+        <img src="/images/jiji-app-screen1.jpg" alt="Jiji Bellydance School app"/>
+        <div class="phone-home"></div>
+        <div class="phone-icon-badge"><img src="/images/jiji-app-icon.png" alt="Jiji Bellydance School icon"/></div>
+      </div>
+      <div class="stat-chips">
+        <span class="stat-chip" data-i18n="chip1">⭐ ٥.٠ تقييم جوجل</span>
+        <span class="stat-chip" data-i18n="chip2">+٤٠٠ طالبة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-track" id="stripTrack"></div>
+</div>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-header reveal">
+      <span class="tag" data-i18n="whyTag">لماذا التطبيق</span>
+      <h2 data-i18n="whyH2">خصوصيتك، وتيرتك، مساحتك</h2>
+      <p data-i18n="whyP">أعرف كم الخصوصية مهمة بالنسبة لكِ - لهذا صممت تطبيقًا يتيح لكِ تعلّم الرقص الشرقي وحدك، في راحة منزلك.</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <span class="why-icon">🔒</span>
+        <h3 data-i18n="why1Title">خصوصية كاملة</h3>
+        <p data-i18n="why1Desc">تعلّمي وحدكِ في المنزل، دون كاميرات أو زيارة استوديو أو أن يراكِ أحد.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📱</span>
+        <h3 data-i18n="why2Title">تعلّمي في أي وقت</h3>
+        <p data-i18n="why2Desc">مارسي الرقص متى ناسبكِ، أوقفي الفيديو وأعيديه كما تشائين.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🌍</span>
+        <h3 data-i18n="why3Title">احترام كامل للثقافة</h3>
+        <p data-i18n="why3Desc">مدرّبة عاشت وعملت في العالم العربي لأكثر من ١٣ عامًا، وتُقدّر هذا الفن وثقافته.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💃</span>
+        <h3 data-i18n="why4Title">نتائج حقيقية</h3>
+        <p data-i18n="why4Desc">منهج مصمم بعناية يأخذكِ من الصفر إلى رقص كوريغرافيا كاملة بثقة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-img-col reveal">
+      <div class="about-img-frame">
+        <img class="about-img" src="/images/jiji-about.jpg" alt="Jiji, founder of Jiji Bellydance"/>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="tag" data-i18n="aboutTag">من ستقوم بتدريبك</span>
+      <h2 data-i18n="aboutH2">مدرّبة وثقت بها نساء من العالم العربي</h2>
+      <div class="pullquote" data-i18n="aboutQuote">"غادرت البرازيل في اليوم العالمي للرقص، عام ٢٠١٣، لأعيش تجربة الرقص الشرقي في مهده - ودون أن أدري، دخلت أكبر مغامرة في حياتي!"</div>
+      <p data-i18n="aboutP1">منذ أكثر من ١٣ عامًا وأنا أعيش وأعمل في العالم العربي، علّمت أكثر من ٤٠٠ طالبة من أكثر من ٢٠ جنسية، وافتتحت مدرستي الخاصة في أبوظبي.</p>
+      <p data-i18n="aboutP2">أنا حاصلة على دراسات عليا في علم وظائف الأعضاء الرياضي، لأعلّمكِ الرقص بطريقة آمنة وذكية لجسدك.</p>
+      <p data-i18n="aboutP3">والآن، حملت كل خبرتي إلى تطبيق يمكنكِ الوصول إليه من أي مكان في السعودية - بخصوصية تامة.</p>
+    </div>
+  </div>
+</section>
+
+<section class="course" id="course">
+  <div class="course-inner">
+    <div class="course-header reveal">
+      <span class="tag" data-i18n="courseTag">دورة المبتدئات</span>
+      <h2 data-i18n="courseH2">كل ما تحتاجينه لتبدئي الرقص</h2>
+      <p data-i18n="courseP">منهج متكامل صممته لمن لم يرقصن من قبل، يأخذكِ خطوة بخطوة نحو رقصة كاملة.</p>
+    </div>
+    <div class="course-grid reveal">
+      <div class="course-item">
+        <span class="course-num">٢٠</span>
+        <div><h3 data-i18n="course1Title">خطوة أساسية</h3><p data-i18n="course1Desc">تعلّمي حركات الرقص الشرقي الأساسية، خطوة بخطوة وبالتفصيل.</p></div>
+      </div>
+      <div class="course-item">
+        <span class="course-num">١</span>
+        <div><h3 data-i18n="course2Title">كوريغرافيا كاملة</h3><p data-i18n="course2Desc">اجمعي كل ما تعلمتِه في رقصة متكاملة يمكنكِ أداؤها بثقة.</p></div>
+      </div>
+      <div class="course-item">
+        <span class="course-num">💫</span>
+        <div><h3 data-i18n="course3Title">القوام والإطالة</h3><p data-i18n="course3Desc">تمارين إحماء وإطالة آمنة، مبنية على خلفيتي العلمية في علم وظائف الأعضاء.</p></div>
+      </div>
+      <div class="course-item">
+        <span class="course-num">∞</span>
+        <div><h3 data-i18n="course4Title">دخول مدى الحياة</h3><p data-i18n="course4Desc">ادفعي مرة واحدة، وشاهدي الدروس بلا حدود، في أي وقت تريدين.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <span class="tag" data-i18n="priceTag">عرض الإطلاق</span>
+    <h2 data-i18n="priceH2">ابدئي اليوم بسعر الإطلاق</h2>
+    <div class="pcard reveal">
+      <div class="best-tag" data-i18n="bestTag">وفّري ٤٨ دولارًا</div>
+      <span class="old-price" data-i18n="oldPrice">٩٧ دولارًا</span>
+      <span class="pa" data-i18n="newPrice">٤٩ دولارًا</span>
+      <span class="ps" data-i18n="priceSub">دورة المبتدئات الكاملة · دخول مدى الحياة</span>
+      <div style="margin-top:1.6rem">
+        <a href="https://apps.apple.com/ae/app/jiji-bellydance-school/id6774510794" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="priceBtn">حمّلي التطبيق وابدئي ←</a>
+      </div>
+      <p class="pn" data-i18n="priceNote">يُعرض السعر ويُدفع داخل التطبيق بعملتك المحلية عبر App Store.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="reviews-inner">
+    <span class="tag" data-i18n="revTag">ماذا يقلن عني</span>
+    <h2 data-i18n="revH2">تقييمات حقيقية من طالباتي</h2>
+    <p class="reviews-sub" data-i18n="revRating">⭐ ٥.٠ · تقييمات جوجل</p>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev1Text">"جيجي معلمة مذهلة، تشرح خطوة بخطوة. حصص ممتعة مع أشخاص رائعين، وطاقة نسائية حقيقية 🤍"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">طالبة موثقة</span> · <span class="review-source">Google</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev2Text">"لطيفة جدًا ومحترفة ومليئة بالطاقة الإيجابية. حتى المبتدئات يشعرن بالثقة. أنصح بشدة! 💕"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">طالبة موثقة</span> · <span class="review-source">Google</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev3Text">"طاقة إيجابية ومعدية تجعلك تستمتعين بكل لحظة. أنصح بشدة!"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">طالبة موثقة</span> · <span class="review-source">Google</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="faq-inner">
+    <div class="faq-header reveal">
+      <span class="tag" data-i18n="faqTag">الأسئلة الشائعة</span>
+      <h2 data-i18n="faqH2">عندكِ سؤال؟</h2>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq1Q">هل خصوصيتي مضمونة؟</h3>
+        <p class="faq-a" data-i18n="faq1A">نعم تمامًا. تتعلمين وحدك من خلال هاتفك، لا كاميرا ولا أحد يراكِ.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq2Q">هل أحتاج خبرة سابقة؟</h3>
+        <p class="faq-a" data-i18n="faq2A">لا إطلاقًا. دورة المبتدئات مصممة لمن لم يرقصن من قبل - ابدئي من الصفر.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq3Q">هل الرقص للمتعة الشخصية فقط؟</h3>
+        <p class="faq-a" data-i18n="faq3A">نعم. التطبيق مخصص للاستمتاع واللياقة والتعبير عن الذات في خصوصية منزلك، دون أي أداء أو ظهور أمام أحد.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq4Q">ما الأجهزة المتوفرة؟</h3>
+        <p class="faq-a" data-i18n="faq4A">التطبيق متوفر حاليًا على آيفون عبر App Store. نسخة أندرويد قادمة قريبًا.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq5Q">هل الوصول فعلاً مدى الحياة؟</h3>
+        <p class="faq-a" data-i18n="faq5A">نعم، تدفعين مرة واحدة فقط للحصول على دخول دائم لدورة المبتدئات.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q" data-i18n="faq6Q">عندي سؤال آخر؟</h3>
+        <p class="faq-a" data-i18n="faq6A">تواصلي معي مباشرة عبر واتساب، يسعدني الرد عليكِ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="whatsapp-section">
+  <div class="wa-inner">
+    <div class="wa-icon">💬</div>
+    <h2 data-i18n="waH2">لديكِ أسئلة؟</h2>
+    <p data-i18n="waP">يسعدني مساعدتك! أرسلي لي رسالة على واتساب وسأرد عليكِ بأقرب وقت.</p>
+    <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%20have%20a%20question%20about%20the%20Bellydance%20app." class="btn-wa" target="_blank" rel="noopener" data-i18n="waBtn">💬 &nbsp;تحدثي عبر واتساب</a>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-blob"></div>
+  <span class="tag" data-i18n="ctaTag">جاهزة؟</span>
+  <h2 data-i18n="ctaH2">جاهزة تبدئي<br><em>رحلتك؟</em></h2>
+  <p data-i18n="ctaP">حمّلي تطبيق جيجي اليوم، واستمتعي بسعر الإطلاق قبل انتهائه.</p>
+  <div class="cta-btns">
+    <a href="https://apps.apple.com/ae/app/jiji-bellydance-school/id6774510794" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="ctaBtn1">حمّلي التطبيق الآن ←</a>
+    <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%20have%20a%20question%20about%20the%20Bellydance%20app." class="btn btn-outline-dark" target="_blank" rel="noopener" data-i18n="ctaBtn2">تحدثي عبر واتساب</a>
+  </div>
+  <p class="cta-foot" data-i18n="ctaFoot">🥳 أتمنى رؤيتك ترقصين قريبًا!</p>
+</section>
+
+<div class="footer-mini"><span>© 2026 Jiji Bellydance School · jijidance.com/ksa</span></div>
+
+<script>
+const dict = {
+  heroTag:{ar:"📱 متوفر الآن على آيفون · السعودية",en:"📱 Now on iPhone · Saudi Arabia"},
+  heroH1:{ar:'تعلّمي الرقص الشرقي<br><span class="t">من بيتك، بخصوصية تامة</span>',en:'LEARN BELLYDANCE<br><span class="t">FROM HOME, 100% PRIVATE</span>'},
+  heroBody:{ar:"تطبيق جيجي لتعليم الرقص الشرقي - دروس فيديو خطوة بخطوة، من مدرّبة عالمية عاشت وعلّمت في الخليج لأكثر من ١٣ عامًا.",en:"The Jiji Bellydance app - step-by-step video lessons from an international instructor who has lived and taught across the Gulf for 13+ years."},
+  heroBio:{ar:"لا حاجة للسفر أو حضور استوديو. حمّلي التطبيق وابدئي رحلتك اليوم، أنتِ وهاتفك فقط.",en:"No studio visits, no travel needed. Download the app and start today - just you and your phone."},
+  ctaDownload:{ar:"حمّلي التطبيق مجانًا ←",en:"Download Free on App Store →"},
+  ctaSeePricing:{ar:"شاهدي الدورة",en:"See The Course"},
+  chip1:{ar:"⭐ ٥.٠ تقييم جوجل",en:"⭐ 5.0 Google Rating"},
+  chip2:{ar:"+٤٠٠ طالبة",en:"+400 Students"},
+  whyTag:{ar:"لماذا التطبيق",en:"Why The App"},
+  whyH2:{ar:"خصوصيتك، وتيرتك، مساحتك",en:"Your privacy. Your pace. Your space."},
+  whyP:{ar:"أعرف كم الخصوصية مهمة بالنسبة لكِ - لهذا صممت تطبيقًا يتيح لكِ تعلّم الرقص الشرقي وحدك، في راحة منزلك.",en:"I know how much privacy matters to you - that's why I built an app that lets you learn bellydance alone, in the comfort of your home."},
+  why1Title:{ar:"خصوصية كاملة",en:"Complete Privacy"},
+  why1Desc:{ar:"تعلّمي وحدكِ في المنزل، دون كاميرات أو زيارة استوديو أو أن يراكِ أحد.",en:"Learn alone at home - no cameras, no studio visits, no one watching."},
+  why2Title:{ar:"تعلّمي في أي وقت",en:"Learn Anytime"},
+  why2Desc:{ar:"مارسي الرقص متى ناسبكِ، أوقفي الفيديو وأعيديه كما تشائين.",en:"Practice whenever suits you - pause and repeat any lesson as many times as you like."},
+  why3Title:{ar:"احترام كامل للثقافة",en:"Culturally Respectful"},
+  why3Desc:{ar:"مدرّبة عاشت وعملت في العالم العربي لأكثر من ١٣ عامًا، وتُقدّر هذا الفن وثقافته.",en:"Taught by an instructor who has lived and worked across the Arab world for 13+ years."},
+  why4Title:{ar:"نتائج حقيقية",en:"Real Results"},
+  why4Desc:{ar:"منهج مصمم بعناية يأخذكِ من الصفر إلى رقص كوريغرافيا كاملة بثقة.",en:"A structured curriculum that takes you from zero to a full choreography, with confidence."},
+  aboutTag:{ar:"من ستقوم بتدريبك",en:"Who's Teaching You"},
+  aboutH2:{ar:"مدرّبة وثقت بها نساء من العالم العربي",en:"A dancer trusted by women across the Arab world"},
+  aboutQuote:{ar:'"غادرت البرازيل في اليوم العالمي للرقص، عام ٢٠١٣، لأعيش تجربة الرقص الشرقي في مهده - ودون أن أدري، دخلت أكبر مغامرة في حياتي!"',en:'"I left Brazil on International Dance Day, in 2013, to experience bellydance at its origin - and without knowing it, I stepped into the biggest adventure of my life!"'},
+  aboutP1:{ar:"منذ أكثر من ١٣ عامًا وأنا أعيش وأعمل في العالم العربي، علّمت أكثر من ٤٠٠ طالبة من أكثر من ٢٠ جنسية، وافتتحت مدرستي الخاصة في أبوظبي.",en:"For over 13 years I've lived and worked across the Arab world, taught more than 400 students of 20+ nationalities, and opened my own dance school in Abu Dhabi."},
+  aboutP2:{ar:"أنا حاصلة على دراسات عليا في علم وظائف الأعضاء الرياضي، لأعلّمكِ الرقص بطريقة آمنة وذكية لجسدك.",en:"I hold a postgraduate degree in Exercise Physiology, so I can teach your body to move safely and intelligently."},
+  aboutP3:{ar:"والآن، حملت كل خبرتي إلى تطبيق يمكنكِ الوصول إليه من أي مكان في السعودية - بخصوصية تامة.",en:"And now, I've brought all that experience into an app you can access from anywhere in Saudi Arabia - with complete privacy."},
+  courseTag:{ar:"دورة المبتدئات",en:"Beginner Course"},
+  courseH2:{ar:"كل ما تحتاجينه لتبدئي الرقص",en:"Everything you need to start dancing"},
+  courseP:{ar:"منهج متكامل صممته لمن لم يرقصن من قبل، يأخذكِ خطوة بخطوة نحو رقصة كاملة.",en:"A complete curriculum designed for total beginners, taking you step by step to a full dance."},
+  course1Title:{ar:"خطوة أساسية",en:"Basic Steps"},
+  course1Desc:{ar:"تعلّمي حركات الرقص الشرقي الأساسية، خطوة بخطوة وبالتفصيل.",en:"Master the foundational bellydance movements, explained step by step."},
+  course2Title:{ar:"كوريغرافيا كاملة",en:"Full Choreography"},
+  course2Desc:{ar:"اجمعي كل ما تعلمتِه في رقصة متكاملة يمكنكِ أداؤها بثقة.",en:"Put everything together into one complete routine you can perform with confidence."},
+  course3Title:{ar:"القوام والإطالة",en:"Posture & Stretching"},
+  course3Desc:{ar:"تمارين إحماء وإطالة آمنة، مبنية على خلفيتي العلمية في علم وظائف الأعضاء.",en:"Safe warmup and stretching guidance, built on a sports-science background."},
+  course4Title:{ar:"دخول مدى الحياة",en:"Lifetime Access"},
+  course4Desc:{ar:"ادفعي مرة واحدة، وشاهدي الدروس بلا حدود، في أي وقت تريدين.",en:"Pay once, rewatch every lesson anytime, with no time limit."},
+  priceTag:{ar:"عرض الإطلاق",en:"Launch Offer"},
+  priceH2:{ar:"ابدئي اليوم بسعر الإطلاق",en:"Start today at our launch price"},
+  bestTag:{ar:"وفّري ٤٨ دولارًا",en:"Save $48"},
+  oldPrice:{ar:"٩٧ دولارًا",en:"$97"},
+  newPrice:{ar:"٤٩ دولارًا",en:"$49"},
+  priceSub:{ar:"دورة المبتدئات الكاملة · دخول مدى الحياة",en:"Full Beginner Course · Lifetime Access"},
+  priceBtn:{ar:"حمّلي التطبيق وابدئي ←",en:"Download the App to Start →"},
+  priceNote:{ar:"يُعرض السعر ويُدفع داخل التطبيق بعملتك المحلية عبر App Store.",en:"Price is shown and charged in-app, in your local currency, via the App Store."},
+  revTag:{ar:"ماذا يقلن عني",en:"What They Say"},
+  revH2:{ar:"تقييمات حقيقية من طالباتي",en:"Real reviews from my students"},
+  revRating:{ar:"⭐ ٥.٠ · تقييمات جوجل",en:"⭐ 5.0 · Google Reviews"},
+  rev1Text:{ar:'"جيجي معلمة مذهلة، تشرح خطوة بخطوة. حصص ممتعة مع أشخاص رائعين، وطاقة نسائية حقيقية 🤍"',en:'"Jiji is beyond amazing with her teaching skills, step by step. Fun classes, amazing people, pure empowering energy 🤍"'},
+  rev2Text:{ar:'"لطيفة جدًا ومحترفة ومليئة بالطاقة الإيجابية. حتى المبتدئات يشعرن بالثقة. أنصح بشدة! 💕"',en:'"Incredibly kind, professional, full of positive energy. Even beginners felt confident and comfortable. Highly recommended! 💕"'},
+  rev3Text:{ar:'"طاقة إيجابية ومعدية تجعلك تستمتعين بكل لحظة. أنصح بشدة!"',en:'"So positive and contagious energy that it makes you enjoy every second. Highly recommend!"'},
+  revAuthorLabel:{ar:"طالبة موثقة",en:"Verified Student"},
+  faqTag:{ar:"الأسئلة الشائعة",en:"FAQ"},
+  faqH2:{ar:"عندكِ سؤال؟",en:"Have a question?"},
+  faq1Q:{ar:"هل خصوصيتي مضمونة؟",en:"Is my privacy guaranteed?"},
+  faq1A:{ar:"نعم تمامًا. تتعلمين وحدك من خلال هاتفك، لا كاميرا ولا أحد يراكِ.",en:"Completely. You learn alone through your phone - no camera, no one watching you."},
+  faq2Q:{ar:"هل أحتاج خبرة سابقة؟",en:"Do I need experience?"},
+  faq2A:{ar:"لا إطلاقًا. دورة المبتدئات مصممة لمن لم يرقصن من قبل - ابدئي من الصفر.",en:"Not at all. The Beginner Course is designed for those who have never danced before - start from zero."},
+  faq3Q:{ar:"هل الرقص للمتعة الشخصية فقط؟",en:"Is this just for personal enjoyment?"},
+  faq3A:{ar:"نعم. التطبيق مخصص للاستمتاع واللياقة والتعبير عن الذات في خصوصية منزلك، دون أي أداء أو ظهور أمام أحد.",en:"Yes. The app is for enjoyment, fitness, and self-expression in the privacy of your own home - no performing or appearing in front of anyone required."},
+  faq4Q:{ar:"ما الأجهزة المتوفرة؟",en:"What devices are supported?"},
+  faq4A:{ar:"التطبيق متوفر حاليًا على آيفون عبر App Store. نسخة أندرويد قادمة قريبًا.",en:"The app is currently available on iPhone via the App Store. Android is coming soon."},
+  faq5Q:{ar:"هل الوصول فعلاً مدى الحياة؟",en:"Is access really lifetime?"},
+  faq5A:{ar:"نعم، تدفعين مرة واحدة فقط للحصول على دخول دائم لدورة المبتدئات.",en:"Yes - a single one-time payment gives you permanent access to the Beginner Course."},
+  faq6Q:{ar:"عندي سؤال آخر؟",en:"I have another question?"},
+  faq6A:{ar:"تواصلي معي مباشرة عبر واتساب، يسعدني الرد عليكِ.",en:"Reach out to me directly on WhatsApp - I'm happy to help."},
+  waH2:{ar:"لديكِ أسئلة؟",en:"Still have questions?"},
+  waP:{ar:"يسعدني مساعدتك! أرسلي لي رسالة على واتساب وسأرد عليكِ بأقرب وقت.",en:"I'm happy to help! Send me a message on WhatsApp and I'll get back to you as soon as possible."},
+  waBtn:{ar:"💬 &nbsp;تحدثي عبر واتساب",en:"💬 &nbsp;Chat on WhatsApp"},
+  ctaTag:{ar:"جاهزة؟",en:"Ready?"},
+  ctaH2:{ar:"جاهزة تبدئي<br><em>رحلتك؟</em>",en:"Ready to start<br><em>your journey?</em>"},
+  ctaP:{ar:"حمّلي تطبيق جيجي اليوم، واستمتعي بسعر الإطلاق قبل انتهائه.",en:"Download the Jiji app today, and enjoy the launch price before it ends."},
+  ctaBtn1:{ar:"حمّلي التطبيق الآن ←",en:"Download Now →"},
+  ctaBtn2:{ar:"تحدثي عبر واتساب",en:"Chat on WhatsApp"},
+  ctaFoot:{ar:"🥳 أتمنى رؤيتك ترقصين قريبًا!",en:"🥳 Hope to see you dancing soon!"},
+  pageTitle:{ar:"تطبيق جيجي لتعليم الرقص الشرقي - بخصوصية تامة",en:"Jiji Bellydance School App - 100% Private"}
+};
+const stripItems = {
+  ar:["خصوصية تامة","تطبيق آيفون","+١٣ عام خبرة","دخول مدى الحياة","عرض إطلاق محدود"],
+  en:["100% Private","iPhone App","+13 Years Experience","Lifetime Access","Limited Launch Offer"]
+};
+function renderStrip(lang){
+  const items = stripItems[lang];
+  const html = items.map(i=>`<span>${i}</span><span class="dot"> ✦ </span>`).join('');
+  document.getElementById('stripTrack').innerHTML = html+html;
+}
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('en', lang === 'en');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.innerHTML = dict[key][lang];
+  });
+  document.title = dict.pageTitle[lang];
+  renderStrip(lang);
+  document.getElementById('langToggle').textContent = lang === 'ar' ? '🌐 English' : '🌐 العربية';
+  try { localStorage.setItem('jiji_lang_ksa', lang); } catch(e){}
+}
+function toggleLang(){
+  const current = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  setLang(current === 'ar' ? 'en' : 'ar');
+}
+let initialLang = 'ar';
+try { initialLang = localStorage.getItem('jiji_lang_ksa') || 'ar'; } catch(e){}
+setLang(initialLang);
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
