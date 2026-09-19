@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title id="pageTitle">Courses - Jiji Bellydance</title>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --t1:#D88BA0;--t2:#E8A8B8;--t3:#F7D9E0;
+  --v1:#8B4468;--v2:#B06B8F;--v3:#EAD9E8;
+  --o1:#C9974A;--o2:#D9B36C;
+  --dark:#4A2038;--dark2:#5E2C46;
+  --bg:#FDF3F0;--white:#FFFBF9;
+  --text:#3D1F30;--mid:#8A6478;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+body.ar{font-family:'Tajawal',sans-serif;font-weight:400}
+body.ar h1,body.ar h2,body.ar .hero-name,body.ar .service-card h3,body.ar .course-card h3,body.ar .service-num,body.ar .diff-item-title,body.ar .diff-item-num,body.ar .benefit-card-title,body.ar .benefit-card-num,body.ar .mosaic-heading,body.ar .big-q,body.ar .location h2,body.ar .whatsapp-section h2,body.ar .cta-heading,body.ar .footer-logo{font-family:'Tajawal',sans-serif;font-weight:800}
+body.ar .nav-links a,body.ar .nav-cta,body.ar .btn,body.ar .section-eyebrow,body.ar .section-eyebrow-light,body.ar .hstat-label,body.ar .footer-col-title{text-transform:none;letter-spacing:normal}
+.btn{display:inline-block;font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;transition:all .25s;cursor:pointer;border:none}
+.btn-teal{background:var(--t1);color:var(--dark)}
+.btn-teal:hover{background:var(--t2);transform:translateY(-2px)}
+.btn-violet{background:var(--v1);color:#fff}
+.btn-violet:hover{background:var(--v2);transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--o1),var(--o2));color:var(--dark);box-shadow:0 4px 20px rgba(201,151,74,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,151,74,.45)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-outline:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+
+/* LANG TOGGLE */
+.lang-toggle{background:linear-gradient(135deg,var(--v1),var(--t1));color:#fff;border:none;padding:.55rem 1.1rem;border-radius:40px;font-size:.68rem;font-weight:500;letter-spacing:.05em;cursor:pointer;box-shadow:0 4px 18px rgba(139,68,104,.4);font-family:'DM Sans',sans-serif;transition:transform .2s;white-space:nowrap}
+.lang-toggle:hover{transform:translateY(-2px)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 6vw;transition:all .3s}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.nav.scrolled{background:rgba(253,243,240,.92);backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(139,68,104,.1);padding:1.1rem 6vw}
+.nav-logo{font-family:'Abril Fatface',serif;font-size:1.25rem;color:#fff;text-decoration:none;letter-spacing:.02em;transition:color .3s}
+.nav.scrolled .nav-logo{color:var(--text)}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav.scrolled .nav-links a{color:var(--mid)}
+.nav-links a:hover{color:var(--o1)}
+.nav-cta{background:linear-gradient(135deg,var(--o1),var(--v1));color:#fff;padding:.65rem 1.5rem;border-radius:40px;text-decoration:none;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:768px){.nav-links{display:none}}
+
+/* HERO */
+.hero-bio{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg-full{position:absolute;inset:0;background-size:cover;background-position:center 20%;animation:slowzoom 22s ease-out both}
+@keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,8,15,.94) 0%,rgba(42,17,33,.6) 45%,rgba(42,17,33,.3) 72%,rgba(74,32,56,.15) 100%)}
+.hero-left{position:relative;z-index:2;padding:6rem 6vw 5rem;max-width:640px}
+.hero-intro{color:var(--o2);font-size:.9rem;font-style:italic;display:block;margin-bottom:.6rem}
+body.ar .hero-intro{font-style:normal}
+.hero-name{font-family:'Abril Fatface',serif;font-size:clamp(3.2rem,8vw,6rem);line-height:.95;color:#fff}
+.hero-location{color:rgba(255,255,255,.72);font-size:.95rem;margin:1rem 0 1.2rem;letter-spacing:.03em}
+.hero-desc{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.75;max-width:480px;margin-bottom:2.2rem}
+.hero-divider{width:60px;height:2px;background:var(--o1);margin-bottom:2rem}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
+.hstat-num{font-family:'Abril Fatface',serif;font-size:2.1rem;color:#fff}
+body.ar .hstat-num{font-family:'Tajawal',sans-serif;font-weight:800}
+.hstat-label{font-size:.66rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-top:.2rem;max-width:120px}
+
+/* TICKER */
+.ticker{background:linear-gradient(90deg,var(--dark),var(--v1),var(--dark));padding:.7rem 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;gap:3rem;animation:tickermove 25s linear infinite}
+.ticker-item{font-family:'Abril Fatface',serif;font-size:.8rem;color:var(--o2);letter-spacing:.06em}
+body.ar .ticker-item{font-family:'Tajawal',sans-serif;font-weight:700}
+@keyframes tickermove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SHARED SECTION HEADERS */
+.eyebrow-with-line{display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
+.eyebrow-with-line::before{content:'';width:32px;height:1px;background:var(--o1)}
+.section-eyebrow{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--v1)}
+.section-eyebrow-light{font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--o2)}
+.section-heading{font-family:'Abril Fatface',serif;font-size:clamp(2.3rem,4.5vw,3.6rem);line-height:1.05;color:var(--text);margin-bottom:1.5rem}
+body.ar .section-heading{font-family:'Tajawal',sans-serif;font-weight:800}
+.section-heading em{font-style:italic;color:var(--v1)}
+body.ar .section-heading em{font-style:normal}
+.section-heading-light{font-family:'Abril Fatface',serif;font-size:clamp(2.3rem,4.5vw,3.6rem);line-height:1.05;color:#fff;margin-bottom:1.2rem}
+body.ar .section-heading-light{font-family:'Tajawal',sans-serif;font-weight:800}
+.section-heading-light em{font-style:italic;color:var(--o1)}
+body.ar .section-heading-light em{font-style:normal}
+.body-p{font-size:.96rem;color:var(--mid);line-height:1.8;margin-bottom:1rem}
+
+/* SERVICES */
+.services{background:var(--white);padding:7rem 6vw}
+.services-inner{max-width:1100px;margin:0 auto}
+.services-header{max-width:600px;margin-bottom:3rem}
+.services-header p{color:var(--mid);font-size:.95rem;margin-top:.8rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--bg);border-radius:20px;padding:2.2rem 2rem;border:1px solid rgba(139,68,104,.12);display:flex;flex-direction:column;transition:all .25s}
+.service-card:hover{border-color:var(--o1);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,151,74,.15)}
+.service-num{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--o1);margin-bottom:1rem;display:block;letter-spacing:.05em}
+.service-card h3{font-family:'Abril Fatface',serif;font-size:1.35rem;color:var(--text);margin-bottom:.6rem}
+.service-card p{font-size:.9rem;color:var(--mid);line-height:1.6;margin-bottom:1.4rem;flex-grow:1}
+.service-note{font-size:.75rem;color:var(--v1);font-weight:500;margin-bottom:1rem}
+.service-note-btn{background:none;border:none;padding:0;font-family:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer;text-align:start}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(20,8,15,.7);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.open{display:flex}
+.modal-card{background:var(--white);border-radius:20px;padding:2.2rem;max-width:420px;width:100%;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.modal-close{position:absolute;top:1rem;inset-inline-end:1rem;background:var(--bg);border:none;width:32px;height:32px;border-radius:50%;font-size:1rem;color:var(--mid);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:var(--t3)}
+.modal-title{font-family:'Abril Fatface',serif;font-size:1.3rem;color:var(--text);margin-bottom:1rem;padding-inline-end:2rem}
+body.ar .modal-title{font-family:'Tajawal',sans-serif;font-weight:800}
+.modal-text{font-size:.9rem;color:var(--mid);line-height:1.75}
+
+/* ABOUT */
+.about{background:var(--white);padding:7rem 6vw}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.pullquote{font-family:'Abril Fatface',serif;font-size:1.25rem;font-style:italic;color:var(--v1);line-height:1.5;margin:1.5rem 0;padding-inline-start:1.2rem;border-inline-start:3px solid var(--o1)}
+body.ar .pullquote{font-family:'Tajawal',sans-serif;font-weight:700;font-style:normal}
+.about-img-frame{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(139,68,104,.18)}
+.about-img{width:100%;display:block;object-fit:cover}
+
+/* WHY ME (dark) */
+.diff-section{background:linear-gradient(150deg,#3D1B30 0%,#2A1121 100%);padding:7rem 6vw}
+.diff-inner{max-width:1100px;margin:0 auto}
+.diff-header{max-width:600px;margin-bottom:3rem}
+.diff-intro{color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.7}
+.diff-body-grid{display:grid;grid-template-columns:1fr .8fr;gap:3rem;align-items:stretch}
+.diff-item{display:flex;gap:1.2rem;padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.diff-item:last-child{border-bottom:none}
+.diff-item-num{font-family:'Abril Fatface',serif;font-size:1.25rem;color:var(--o1);flex-shrink:0}
+.diff-item-title{font-family:'Abril Fatface',serif;font-size:1.1rem;color:#fff;margin-bottom:.4rem}
+.diff-item-desc{font-size:.86rem;color:rgba(255,255,255,.5);line-height:1.65}
+.diff-item-desc em{color:var(--o2);font-style:italic}
+body.ar .diff-item-desc em{font-style:normal}
+.diff-photo{border-radius:20px;overflow:hidden;min-height:260px}
+.diff-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* COURSES */
+.courses{background:var(--white);padding:9rem 6vw 7rem;min-height:70vh}
+.courses-inner{max-width:1000px;margin:0 auto}
+.courses-inner .section-eyebrow{display:block}
+.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
+.course-card{background:var(--bg);border-radius:20px;padding:2.5rem 2rem;border:1px solid rgba(139,68,104,.12);transition:all .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.course-card:hover{border-color:var(--o1);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,151,74,.15)}
+.course-card h3{font-family:'Abril Fatface',serif;font-size:1.8rem;color:var(--text);margin:.6rem 0}
+.course-card .desc{font-size:.92rem;color:var(--mid);line-height:1.6;margin-bottom:1.2rem;flex-grow:1}
+.course-price{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--o1);margin-bottom:1.4rem}
+body.ar .course-price{font-family:'Tajawal',sans-serif;font-weight:800}
+.course-price span{font-size:.85rem;color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:400}
+body.ar .course-price span{font-family:'Tajawal',sans-serif;font-weight:400}
+
+/* BENEFITS */
+.benefits{background:var(--bg);padding:7rem 6vw}
+.benefits-inner{max-width:1100px;margin:0 auto}
+.benefits-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.benefit-card{background:var(--white);padding:2rem;border-radius:18px;border:1px solid rgba(139,68,104,.1)}
+.benefit-card-num{font-family:'Abril Fatface',serif;font-size:1.7rem;color:var(--o1);opacity:.55;margin-bottom:.6rem}
+.benefit-card-title{font-family:'Abril Fatface',serif;font-size:1.1rem;color:var(--text);margin-bottom:.4rem}
+.benefit-card-desc{font-size:.86rem;color:var(--mid);line-height:1.6}
+
+/* MOSAIC */
+.mosaic{background:var(--white);padding:7rem 6vw}
+.mosaic-header{text-align:center;max-width:600px;margin:0 auto 3rem}
+.mosaic-heading{font-family:'Abril Fatface',serif;font-size:clamp(2.2rem,4.2vw,3.2rem);color:var(--text);line-height:1.1}
+.mosaic-heading em{font-style:italic;color:var(--v1)}
+body.ar .mosaic-heading em{font-style:normal}
+.mosaic-sub{color:var(--mid);font-size:.92rem;margin-top:.8rem}
+.mosaic-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;grid-auto-rows:180px;gap:1rem}
+.m-item{border-radius:16px;overflow:hidden}
+.m-item.tall{grid-row:span 2}
+.m-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.m-item:hover .m-img{transform:scale(1.05)}
+
+/* PERSONAL / MATERNITY */
+.personal{background:var(--bg);padding:7rem 6vw}
+.personal-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:.8fr 1.1fr;gap:4rem;align-items:center}
+.personal-img{width:100%;border-radius:20px;display:block;box-shadow:0 20px 50px rgba(139,68,104,.15)}
+.big-q{font-family:'Abril Fatface',serif;font-size:3rem;color:var(--o1);opacity:.4;line-height:1;display:block}
+
+/* LOCATION */
+.location{background:linear-gradient(135deg,#8B4468 0%,#C9974A 100%);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.location h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);color:#fff;margin-bottom:1rem}
+.location p{color:rgba(255,255,255,.85);margin-bottom:.5rem}
+
+/* WHATSAPP */
+.whatsapp-section{background:linear-gradient(150deg,#3D1B30,#2A1121);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.whatsapp-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,211,102,.08) 0%,transparent 60%);pointer-events:none}
+.wa-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.wa-icon{width:64px;height:64px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2rem;box-shadow:0 0 32px rgba(37,211,102,.3)}
+.whatsapp-section h2{font-family:'Abril Fatface',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;margin-bottom:.8rem;line-height:1.1}
+.whatsapp-section p{color:rgba(255,255,255,.5);font-size:.95rem;margin-bottom:2rem}
+.btn-wa{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .25s}
+body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-transform:none}
+.btn-wa:hover{background:#20BA5C;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45)}
+
+/* CTA FINAL */
+.cta-block{background:linear-gradient(150deg,#3D1B30,#2A1121);padding:7rem 6vw;text-align:center}
+.cta-heading{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;line-height:1.05;margin-bottom:1rem}
+body.ar .cta-heading{font-family:'Tajawal',sans-serif;font-weight:800}
+.cta-heading em{font-style:italic;color:var(--o1)}
+body.ar .cta-heading em{font-style:normal}
+.cta-sub{color:rgba(255,255,255,.55);font-size:.95rem;margin-bottom:2.5rem}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.footer{background:#1E0F17;padding:4rem 6vw 2rem}
+.footer-top{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-logo{font-family:'Abril Fatface',serif;font-size:1.4rem;color:#fff;display:block;margin-bottom:.4rem}
+.footer-tagline{color:rgba(255,255,255,.4);font-size:.82rem;display:block;margin-bottom:1rem}
+.footer-contact{color:var(--o2);font-size:.85rem;text-decoration:none}
+.footer-col-title{font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:1rem}
+.footer-link-list{list-style:none}
+.footer-link-list li{margin-bottom:.6rem}
+.footer-link-list a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;transition:color .2s}
+.footer-link-list a:hover{color:var(--o1)}
+.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;padding-top:2rem;flex-wrap:wrap;gap:.5rem}
+.footer-copy{color:rgba(255,255,255,.3);font-size:.75rem}
+
+/* REVEAL ON SCROLL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .hero-left{padding:5rem 1.5rem 3rem}
+  .hero-stats{gap:1.5rem}
+  .about-inner{grid-template-columns:1fr;gap:2.5rem}
+  .about-img-col{order:-1}
+  .diff-body-grid{grid-template-columns:1fr;gap:2rem}
+  .diff-photo{max-height:320px}
+  .services-grid{grid-template-columns:1fr}
+  .course-grid{grid-template-columns:1fr}
+  .benefits-cards{grid-template-columns:1fr}
+  .mosaic-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+  .personal-inner{grid-template-columns:1fr;gap:2.5rem}
+  .footer-top{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <a href="/" class="nav-logo">Jiji Bellydance</a>
+  <ul class="nav-links">
+    <li><a href="/#services" data-i18n="navServices">Services</a></li>
+    <li><a href="/#about" data-i18n="navAbout">About</a></li>
+    <li><a href="/#why" data-i18n="navWhy">Why Me</a></li>
+    <li><a href="/#benefits" data-i18n="navBenefits">Benefits</a></li>
+    <li><a href="#courses" data-i18n="navCourses">Courses</a></li>
+  </ul>
+  <div class="nav-right">
+    <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
+    <a href="#courses" class="nav-cta"><span data-i18n="navCta">See Courses</span></a>
+  </div>
+</nav>
+
+<section class="courses" id="courses">
+  <div class="courses-inner">
+    <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="coursesEyebrow">Courses</span></div>
+    <h2 class="section-heading" data-i18n="coursesHeading">Choose your <em>course</em></h2>
+    <div class="course-grid">
+      <a href="/beginner/" class="course-card">
+        <span class="section-eyebrow" data-i18n="course1Eyebrow">8-Week Track</span>
+        <h3 data-i18n="course1Title">Beginner Level</h3>
+        <p class="desc" data-i18n="course1Desc">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space. Dates to be announced - stay tuned!</p>
+        <span class="course-price" data-i18n="coursePrice">AED 800 <span>full course</span></span>
+        <span class="btn btn-teal" data-i18n="btnViewCourse">View Course →</span>
+      </a>
+      <a href="/beginner-intensive/" class="course-card">
+        <span class="section-eyebrow" data-i18n="course2Eyebrow">4-Week Intensive</span>
+        <h3 data-i18n="course2Title">Beginner Intensive</h3>
+        <p class="desc" data-i18n="course2Desc">Learn to dance in just 1 month. 8 classes, twice a week (Tuesday & Thursday), for a fast and fun start.</p>
+        <span class="course-price" data-i18n="coursePrice">AED 800 <span>full course</span></span>
+        <span class="btn btn-violet" data-i18n="btnViewCourse">View Course →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <span class="footer-logo">Jiji Bellydance</span>
+      <span class="footer-tagline" data-i18n="footerTagline">International Dancer · Abu Dhabi, UAE</span>
+      <a href="tel:+971567750994" class="footer-contact">📞 +971 56 7750994</a>
+    </div>
+    <div>
+      <span class="footer-col-title" data-i18n="footerNavTitle">Navigate</span>
+      <ul class="footer-link-list">
+        <li><a href="/#about" data-i18n="aboutEyebrow">Who I Am</a></li>
+        <li><a href="/#why" data-i18n="navWhy">Why Me</a></li>
+        <li><a href="/#benefits" data-i18n="navBenefits">Benefits</a></li>
+        <li><a href="#courses" data-i18n="navCourses">Courses</a></li>
+        <li><a href="/schedule/october/" data-i18n="footerSchedule">October Schedule</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title" data-i18n="footerFindTitle">Find Us</span>
+      <ul class="footer-link-list">
+        <li><a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" target="_blank" rel="noopener" data-i18n="footerAbuDhabi">Abu Dhabi, UAE</a></li>
+        <li><a href="https://wa.me/971567750994" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy" data-i18n="footerCopy">© 2026 Jiji Bellydance · All rights reserved</span>
+    <span class="footer-copy">jijidance.com</span>
+  </div>
+</footer>
+
+<script>
+const dict = {
+  navServices:{en:"Services",ar:"خدماتي"},
+  navAbout:{en:"About",ar:"من أنا"},
+  navWhy:{en:"Why Me",ar:"لماذا أنا"},
+  navBenefits:{en:"Benefits",ar:"الفوائد"},
+  navCourses:{en:"Courses",ar:"الدورات"},
+  navCta:{en:"See Courses",ar:"شاهدي الدورات"},
+  aboutEyebrow:{en:"Who I Am",ar:"من أنا"},
+  coursesEyebrow:{en:"Courses",ar:"الدورات"},
+  coursesHeading:{en:"Choose your <em>course</em>",ar:"اختاري <em>دورتك</em>"},
+  course1Eyebrow:{en:"8-Week Track",ar:"مسار 8 أسابيع"},
+  course1Title:{en:"Beginner Level",ar:"مستوى المبتدئات"},
+  course1Desc:{en:"No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space. Dates to be announced - stay tuned!",ar:"لا حاجة لخبرة سابقة. 8 أسابيع لاكتشاف قوة الرقص الشرقي - جسدكِ، إيقاعكِ، مساحتكِ. المواعيد قريبًا - ترقبوا!"},
+  course2Eyebrow:{en:"4-Week Intensive",ar:"مكثفة 4 أسابيع"},
+  course2Title:{en:"Beginner Intensive",ar:"مبتدئات مكثف"},
+  course2Desc:{en:"Learn to dance in just 1 month. 8 classes, twice a week (Tuesday & Thursday), for a fast and fun start.",ar:"تعلّمي الرقص في شهر واحد فقط. 8 حصص، مرتين أسبوعيًا (الثلاثاء والخميس)، لبداية سريعة وممتعة."},
+  coursePrice:{en:'AED 800 <span>full course</span>',ar:'800 درهم <span>الدورة كاملة</span>'},
+  btnViewCourse:{en:"View Course →",ar:"شاهدي الدورة ←"},
+  footerTagline:{en:"International Dancer · Abu Dhabi, UAE",ar:"راقصة عالمية · أبوظبي، الإمارات"},
+  footerNavTitle:{en:"Navigate",ar:"التنقل"},
+  footerSchedule:{en:"October Schedule",ar:"جدول أكتوبر"},
+  footerFindTitle:{en:"Find Us",ar:"موقعنا"},
+  footerAbuDhabi:{en:"Abu Dhabi, UAE",ar:"أبوظبي، الإمارات"},
+  footerCopy:{en:"© 2026 Jiji Bellydance · All rights reserved",ar:"© 2026 جيجي بيلي دانس · جميع الحقوق محفوظة"},
+  pageTitle:{en:"Courses - Jiji Bellydance",ar:"الدورات - جيجي بيلي دانس"}
+};
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('ar', lang === 'ar');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.innerHTML = dict[key][lang];
+  });
+  document.title = dict.pageTitle[lang];
+  document.getElementById('langToggle').textContent = lang === 'en' ? '🌐 العربية' : '🌐 English';
+  try { localStorage.setItem('jiji_lang', lang); } catch(e){}
+}
+function toggleLang(){
+  const current = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  setLang(current === 'en' ? 'ar' : 'en');
+}
+let initialLang = 'en';
+try { initialLang = localStorage.getItem('jiji_lang') || 'en'; } catch(e){}
+setLang(initialLang);
+
+</script>
+
+</body>
+</html>
