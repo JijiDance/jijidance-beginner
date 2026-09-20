@@ -140,6 +140,13 @@ body.ar .diff-item-desc em{font-style:normal}
 .courses-inner .section-eyebrow{display:block}
 .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
 .fav-note{font-size:.82rem;color:var(--mid);background:var(--bg);border:1px solid rgba(139,68,104,.12);border-radius:14px;padding:1rem 1.3rem;margin:0 0 2.5rem;line-height:1.7}
+.fav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:1.2rem 0 3rem}
+.fav-cat{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--text);margin:2rem 0 .2rem}
+body.ar .fav-cat{font-family:'Tajawal',sans-serif;font-weight:800}
+.fav-img-ph{display:flex;align-items:center;justify-content:center;font-size:3.2rem;background:linear-gradient(135deg,var(--bg),#F3DFE9)}
+.fav-card .btn{align-self:flex-start;margin-top:auto}
+.fav-card-soon:hover{transform:none;box-shadow:none;border-color:rgba(139,68,104,.12)}
+.btn-soon{background:transparent;color:var(--mid);border:1.5px dashed rgba(139,68,104,.35);cursor:default}
 .fav-empty{grid-column:1/-1;text-align:center;color:var(--mid);font-size:.95rem;padding:3rem 1rem;border:1px dashed rgba(139,68,104,.25);border-radius:20px}
 .fav-card{background:var(--bg);border-radius:20px;padding:1.5rem;border:1px solid rgba(139,68,104,.12);transition:all .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
 .fav-card:hover{border-color:var(--o1);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,151,74,.15)}
@@ -237,6 +244,7 @@ body.ar .cta-heading em{font-style:normal}
   .diff-photo{max-height:320px}
   .services-grid{grid-template-columns:1fr}
   .course-grid{grid-template-columns:1fr}
+  .fav-grid{grid-template-columns:1fr}
   .benefits-cards{grid-template-columns:1fr}
   .mosaic-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
   .personal-inner{grid-template-columns:1fr;gap:2.5rem}
@@ -267,18 +275,67 @@ body.ar .cta-heading em{font-style:normal}
     <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="favEyebrow">What I Wear &amp; Use</span></div>
     <h2 class="section-heading" data-i18n="favHeading">My <em>favorites</em></h2>
     <p class="fav-note" data-i18n="favDisclosure">This page contains affiliate links. If you buy through them I may earn a small commission, at no extra cost to you. I only share things I truly use and love.</p>
-    <div class="course-grid">
-      <!-- Product card template - copy, paste above the empty message and fill in, then delete the "fav-empty" block once there is at least one card:
-      <a href="AFFILIATE_LINK" class="fav-card" target="_blank" rel="sponsored noopener">
-        <div class="fav-img"><img src="/images/PRODUCT_IMAGE.jpg" alt="PRODUCT NAME"></div>
-        <span class="section-eyebrow">CATEGORY</span>
-        <h3>PRODUCT NAME</h3>
-        <p class="desc">Why I love it.</p>
-        <span class="btn btn-gold">Shop Now →</span>
+    <h3 class="fav-cat" data-i18n="catAccessories">Accessories</h3>
+    <div class="fav-grid">
+      <a href="https://onelink.shein.com/51/617e2jr0n78k?ismg_ol=8aTSxzr5ymM_01_KOC-C" class="fav-card" target="_blank" rel="sponsored noopener">
+        <div class="fav-img fav-img-ph">🧦</div>
+        <span class="section-eyebrow">SHEIN</span>
+        <h3 data-i18n="p8Name">Non-Slip Pilates &amp; Yoga Grip Socks</h3>
+        <span class="btn btn-gold" data-i18n="btnShop">Shop on SHEIN →</span>
       </a>
-      -->
-      <div class="fav-empty" data-i18n="favEmpty">My picks are coming soon - stay tuned!</div>
     </div>
+    <h3 class="fav-cat" data-i18n="catClothes">Outfits &amp; Clothes</h3>
+    <div class="fav-grid">
+      <!-- TODO: add affiliate link - change this div to <a href="LINK" target="_blank" rel="sponsored noopener"> and the "Link coming soon" span to class="btn btn-gold" data-i18n="btnShop" -->
+      <div class="fav-card fav-card-soon">
+        <div class="fav-img fav-img-ph">🩱</div>
+        <span class="section-eyebrow">Slayform</span>
+        <h3 data-i18n="p1Name">Brown Striped Backless Jumpsuit</h3>
+        <span class="btn btn-soon" data-i18n="btnSoon">Link coming soon</span>
+      </div>
+      <!-- TODO: add affiliate link - change this div to <a href="LINK" target="_blank" rel="sponsored noopener"> and the "Link coming soon" span to class="btn btn-gold" data-i18n="btnShop" -->
+      <div class="fav-card fav-card-soon">
+        <div class="fav-img fav-img-ph">👚</div>
+        <span class="section-eyebrow">Dewbera</span>
+        <h3 data-i18n="p2Name">Halter Top &amp; High-Waist Leggings Set</h3>
+        <span class="btn btn-soon" data-i18n="btnSoon">Link coming soon</span>
+      </div>
+      <!-- TODO: add affiliate link - change this div to <a href="LINK" target="_blank" rel="sponsored noopener"> and the "Link coming soon" span to class="btn btn-gold" data-i18n="btnShop" -->
+      <div class="fav-card fav-card-soon">
+        <div class="fav-img fav-img-ph">🩱</div>
+        <span class="section-eyebrow">Dewbera</span>
+        <h3 data-i18n="p3Name">Black Zip-Front Short Sleeve Jumpsuit</h3>
+        <span class="btn btn-soon" data-i18n="btnSoon">Link coming soon</span>
+      </div>
+      <!-- TODO: add affiliate link - change this div to <a href="LINK" target="_blank" rel="sponsored noopener"> and the "Link coming soon" span to class="btn btn-gold" data-i18n="btnShop" -->
+      <div class="fav-card fav-card-soon">
+        <div class="fav-img fav-img-ph">👚</div>
+        <span class="section-eyebrow">Innovista</span>
+        <h3 data-i18n="p4Name">Purple Knit Cut-Out Two-Piece Set</h3>
+        <span class="btn btn-soon" data-i18n="btnSoon">Link coming soon</span>
+      </div>
+      <!-- TODO: add affiliate link - change this div to <a href="LINK" target="_blank" rel="sponsored noopener"> and the "Link coming soon" span to class="btn btn-gold" data-i18n="btnShop" -->
+      <div class="fav-card fav-card-soon">
+        <div class="fav-img fav-img-ph">👙</div>
+        <span class="section-eyebrow">SHEIN Sport</span>
+        <h3 data-i18n="p5Name">Seamless Skin-Friendly Sports Bra</h3>
+        <span class="btn btn-soon" data-i18n="btnSoon">Link coming soon</span>
+      </div>
+      <a href="https://onelink.shein.com/51/617doqj88o6h?ismg_ol=9FnA5Rxjkt4_01_KOC-C" class="fav-card" target="_blank" rel="sponsored noopener">
+        <div class="fav-img fav-img-ph">👗</div>
+        <span class="section-eyebrow">SHEIN Holidaya</span>
+        <h3 data-i18n="p6Name">Twist Front Cut-Out Maxi Dress</h3>
+        <span class="btn btn-gold" data-i18n="btnShop">Shop on SHEIN →</span>
+      </a>
+      <!-- TODO: add affiliate link - change this div to <a href="LINK" target="_blank" rel="sponsored noopener"> and the "Link coming soon" span to class="btn btn-gold" data-i18n="btnShop" -->
+      <div class="fav-card fav-card-soon">
+        <div class="fav-img fav-img-ph">👗</div>
+        <span class="section-eyebrow">SHEIN EZwear</span>
+        <h3 data-i18n="p7Name">Black Pleated Split Midi Skirt</h3>
+        <span class="btn btn-soon" data-i18n="btnSoon">Link coming soon</span>
+      </div>
+    </div>
+    <!-- To add a product with a photo: put the image in /images/ and replace the emoji div with <div class="fav-img"><img src="/images/NAME.jpg" alt="PRODUCT NAME"></div> -->
   </div>
 </section>
 
@@ -297,6 +354,7 @@ body.ar .cta-heading em{font-style:normal}
         <li><a href="/#benefits" data-i18n="navBenefits">Benefits</a></li>
         <li><a href="/courses/" data-i18n="navCourses">Courses</a></li>
         <li><a href="/schedule/october-november/" data-i18n="footerSchedule">October &amp; November Schedule</a></li>
+        <li><a href="/favorites/" data-i18n="footerFavorites">My Favorites</a></li>
       </ul>
     </div>
     <div>
@@ -331,6 +389,19 @@ const dict = {
   favEyebrow:{en:"What I Wear & Use",ar:"ما أرتديه وأستخدمه"},
   favHeading:{en:"My <em>favorites</em>",ar:"<em>مفضلاتي</em>"},
   favDisclosure:{en:"This page contains affiliate links. If you buy through them I may earn a small commission, at no extra cost to you. I only share things I truly use and love.",ar:"تحتوي هذه الصفحة على روابط تابعة. إذا اشتريتِ من خلالها قد أحصل على عمولة صغيرة، دون أي تكلفة إضافية عليكِ. أشارك فقط ما أستخدمه وأحبه حقًا."},
+  catAccessories:{en:"Accessories",ar:"الإكسسوارات"},
+  catClothes:{en:"Outfits &amp; Clothes",ar:"الملابس والإطلالات"},
+  btnShop:{en:"Shop on SHEIN →",ar:"تسوقي من شي إن ←"},
+  btnSoon:{en:"Link coming soon",ar:"الرابط قريبًا"},
+  footerFavorites:{en:"My Favorites",ar:"مفضلاتي"},
+  p1Name:{en:"Brown Striped Backless Jumpsuit",ar:"جامبسوت بني مخطط بظهر مكشوف"},
+  p2Name:{en:"Halter Top &amp; High-Waist Leggings Set",ar:"طقم توب هالتر وليقنز عالي الخصر"},
+  p3Name:{en:"Black Zip-Front Short Sleeve Jumpsuit",ar:"جامبسوت أسود بسحاب أمامي وأكمام قصيرة"},
+  p4Name:{en:"Purple Knit Cut-Out Two-Piece Set",ar:"طقم بنفسجي من قطعتين محبوك بقصات"},
+  p5Name:{en:"Seamless Skin-Friendly Sports Bra",ar:"حمالة رياضية سلسة ولطيفة على البشرة"},
+  p6Name:{en:"Twist Front Cut-Out Maxi Dress",ar:"فستان ماكسي بفتحة ولفة أمامية"},
+  p7Name:{en:"Black Pleated Split Midi Skirt",ar:"تنورة ميدي سوداء بكسرات وفتحة"},
+  p8Name:{en:"Non-Slip Pilates &amp; Yoga Grip Socks",ar:"جوارب بيلاتس ويوغا مانعة للانزلاق"},
   favEmpty:{en:"My picks are coming soon - stay tuned!",ar:"مختاراتي قادمة قريبًا - ترقبوا!"},
   pageTitle:{en:"My Favorites - Jiji Bellydance",ar:"مفضلاتي - جيجي بيلي دانس"}
 };
