@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title id="pageTitle">Pre-Intermediate 1 - October &amp; November 2026 - Jiji Bellydance</title>
+<meta name="description" content="Pre-Intermediate 1 bellydance course in Abu Dhabi, ladies only. Mondays at 7 PM, from October 5 to November 30, 2026. Learn variations of steps and dance with your first accessory."/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Poppins:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --t1:#E5195F;--t2:#FF4D85;--t3:#FFD6E4;
+  --v1:#8A17A8;--v2:#B23FD1;--v3:#F3D6F7;
+  --o1:#FFB300;--o2:#FFD166;
+  --dark:#2A0620;--dark2:#3D0930;
+  --bg:#FFF6F9;--white:#FFFFFF;
+  --text:#200418;--mid:#5E2350;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Poppins',sans-serif;font-weight:400;line-height:1.7;overflow-x:hidden}
+body.ar{font-family:'Tajawal',sans-serif;font-weight:400}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:800}
+body.ar h1,body.ar h2,body.ar h3,body.ar .pa{font-family:'Tajawal',sans-serif;font-weight:800}
+body.ar .tag,body.ar .btn,body.ar .panel-tag,body.ar .pl,body.ar .hero-tag span,body.ar .best-tag,body.ar .review-source,body.ar .bank-toggle span,body.ar .ps,body.ar .pc{text-transform:none;letter-spacing:normal}
+
+.btn{display:inline-block;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;transition:all .25s;cursor:pointer}
+.btn-teal{background:var(--t1);color:#fff;border:none;box-shadow:0 4px 20px rgba(229,25,95,.4)}
+.btn-teal:hover{background:var(--t2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(229,25,95,.5)}
+.btn-violet{background:var(--v1);color:#fff;border:none;box-shadow:0 4px 20px rgba(138,23,168,.35)}
+.btn-violet:hover{background:var(--v2);transform:translateY(-2px)}
+.btn-outline-lt{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn-outline-lt:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.btn-outline-dark{background:transparent;color:var(--dark);border:2px solid var(--dark)}
+.btn-outline-dark:hover{background:var(--dark);color:#fff;transform:translateY(-2px)}
+
+/* LANG TOGGLE */
+.lang-toggle{position:fixed;top:1rem;inset-inline-end:1rem;z-index:999;background:linear-gradient(135deg,var(--v1),var(--t1));color:#fff;border:none;padding:.6rem 1.3rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;cursor:pointer;box-shadow:0 4px 18px rgba(138,23,168,.45);font-family:'Poppins',sans-serif;transition:transform .2s}
+.lang-toggle:hover{transform:translateY(-2px)}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(150deg,#3D0A32 0%,#7A1B63 40%,#3D0A32 70%,#22041A 100%);display:flex;align-items:center;padding:5rem 6vw;position:relative;overflow:hidden}
+.g1{position:absolute;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(229,25,95,.25) 0%,transparent 70%);top:-80px;left:-80px;pointer-events:none}
+.g2{position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(138,23,168,.22) 0%,transparent 70%);bottom:-60px;right:-60px;pointer-events:none}
+.g3{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,0,.16) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+
+.hero-inner{position:relative;z-index:2;max-width:1100px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.8rem}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--t2);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-tag span{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);line-height:.95;color:#fff;margin-bottom:1.5rem}
+.hero h1 .t{color:var(--t2)}
+.hero-body{color:rgba(255,255,255,.9);font-size:1.02rem;font-weight:500;max-width:440px;margin-bottom:1.5rem;line-height:1.65}
+.hero-bio-mini{max-width:440px;margin-bottom:2rem;padding-inline-start:1rem;border-inline-start:3px solid var(--o1)}
+.hero-bio-mini p{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.6}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+
+.hero-panel{display:flex;flex-direction:column;gap:1rem}
+.panel-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.14);padding:1.4rem 1.6rem;border-radius:16px;position:relative;overflow:hidden}
+.panel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.panel-card:nth-child(1)::before{background:linear-gradient(90deg,var(--t1),var(--v1))}
+.panel-card:nth-child(2)::before{background:linear-gradient(90deg,var(--v1),var(--o1))}
+.panel-tag{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);display:block;margin-bottom:.5rem}
+.panel-card h3{font-size:1.4rem;color:#fff}
+.panel-card p{font-size:.85rem;color:rgba(255,255,255,.68);margin-top:.2rem}
+.panel-start{color:var(--t2);font-size:.76rem;font-weight:600;margin-top:.5rem;display:block}
+.panel-cta{background:linear-gradient(135deg,var(--t1),var(--v1));border-radius:16px;padding:1.4rem;text-align:center}
+.panel-cta p{color:#fff;font-weight:600;font-size:.86rem;margin-bottom:.8rem}
+
+/* STRIP */
+.strip{background:linear-gradient(90deg,var(--t1),var(--v1),var(--o1),var(--t1));background-size:300% 100%;animation:gs 5s linear infinite;padding:.7rem 0;overflow:hidden;white-space:nowrap}
+@keyframes gs{0%{background-position:0%}100%{background-position:300%}}
+.strip-track{display:inline-flex;gap:2rem;animation:marquee 20s linear infinite}
+.strip-track span{font-family:'Fraunces',serif;font-weight:800;font-size:.85rem;color:#fff;letter-spacing:.06em;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+body.ar .strip-track span{font-family:'Tajawal',sans-serif;font-weight:700}
+.strip-track .dot{opacity:.6}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SCHEDULE */
+.schedule{background:var(--white);padding:6rem 6vw}
+.schedule-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--v1);display:block;margin-bottom:1rem}
+.schedule h2{font-size:clamp(2.3rem,4.5vw,3.8rem);line-height:.95;color:var(--text);margin-bottom:1.8rem}
+.schedule h2 em{font-style:italic;color:var(--v1)}
+body.ar .schedule h2 em{font-style:normal}
+.gcard{border-radius:16px;background:var(--bg);padding:1.4rem;margin-bottom:1rem;display:flex;align-items:center;gap:1.2rem;border:1px solid rgba(229,25,95,.22)}
+.gcard-bar{width:4px;border-radius:4px;background:linear-gradient(180deg,var(--t1),var(--v1));flex-shrink:0;align-self:stretch;min-height:70px}
+.gcard-day{font-family:'Fraunces',serif;font-weight:800;font-size:1.15rem;color:var(--text)}
+body.ar .gcard-day{font-family:'Tajawal',sans-serif;font-weight:700}
+.gcard-time{font-size:.92rem;color:var(--mid);font-weight:500}
+.gcard-start{font-size:.74rem;color:var(--v1);font-weight:700;margin-top:.2rem}
+.date-list{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .55rem;font-size:.82rem;color:var(--mid);font-weight:500;margin:1rem 0 0}
+.date-list .date-list-label{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--v1);margin-inline-end:.2rem}
+body.ar .date-list .date-list-label{letter-spacing:normal;text-transform:none}
+.note-line{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;font-style:italic;color:var(--mid);padding:1rem 0}
+body.ar .note-line{font-family:'Tajawal',sans-serif;font-weight:500;font-style:normal}
+.what h3{font-size:1.55rem;color:var(--text);margin-bottom:1rem;line-height:1.25}
+body.ar .what h3{font-family:'Tajawal',sans-serif;font-weight:800}
+.what p{font-size:.96rem;color:var(--mid);font-weight:500;margin-bottom:.8rem;line-height:1.7}
+
+/* PRICING */
+.pricing{background:var(--dark);padding:6rem 6vw;text-align:center}
+.pricing-inner{max-width:780px;margin:0 auto}
+.pricing h2{font-size:clamp(2.3rem,5vw,4.5rem);line-height:.95;color:#fff;margin-bottom:2.5rem}
+.pricing h2 span{color:var(--t2)}
+.price-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem}
+.pcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:2.2rem 1.8rem;border-radius:20px;text-align:center;position:relative}
+.pcard.best{border:1px solid var(--t2);background:rgba(229,25,95,.1)}
+.best-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--t1),var(--v1));color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.25rem .9rem;border-radius:40px;white-space:nowrap}
+.pl{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-bottom:.8rem}
+.pa{font-family:'Fraunces',serif;font-weight:800;font-size:3.6rem;color:#fff;line-height:1;display:block}
+.pc{font-size:1.15rem;vertical-align:top;margin-top:.6rem;display:inline-block}
+.ps{font-size:.8rem;color:rgba(255,255,255,.6);display:block;margin-top:.4rem;font-weight:500}
+.pn{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.8rem}
+.bank-toggle{background:none;border:none;color:rgba(255,255,255,.55);font-family:'Poppins',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:.5rem;margin:1.5rem auto 0;padding:0;transition:color .2s}
+body.ar .bank-toggle{font-family:'Tajawal',sans-serif}
+.bank-toggle:hover{color:#fff}
+.bank-toggle .arrow{transition:transform .3s;font-style:normal;font-size:.7rem}
+.bank-toggle.open .arrow{transform:rotate(180deg)}
+.bank-collapse{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;opacity:0}
+.bank-collapse.open{max-height:200px;opacity:1}
+.bank{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:1.4rem 1.6rem;border-radius:14px;max-width:420px;margin:1rem auto 0;text-align:start}
+.bank p{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.65}
+
+/* PERKS */
+.perks{background:var(--bg);padding:6rem 6vw}
+.perks-inner{max-width:1100px;margin:0 auto}
+.perks h2{font-size:clamp(2.3rem,5vw,4.2rem);line-height:.95;color:var(--text);margin-bottom:2.8rem}
+.perks h2 span{color:var(--v1)}
+.perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.perk{background:var(--white);padding:1.8rem;border-radius:20px;border:1px solid rgba(229,25,95,.16);transition:all .25s}
+.perk:hover{border-color:var(--t1);transform:translateY(-4px);box-shadow:0 8px 24px rgba(229,25,95,.15)}
+.perk-icon{font-size:1.9rem;margin-bottom:.9rem;display:block}
+.perk h4{font-family:'Fraunces',serif;font-weight:800;font-size:1.05rem;color:var(--text);margin-bottom:.4rem}
+body.ar .perk h4{font-family:'Tajawal',sans-serif;font-weight:700}
+.perk p{font-size:.87rem;color:var(--mid);font-weight:500;line-height:1.6}
+
+/* LOCATION */
+.location{background:linear-gradient(135deg,#FF6FA0 0%,#FFC64B 50%,#E5195F 100%);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.location h2{font-size:clamp(2.2rem,5vw,4rem);color:var(--dark);margin-bottom:1rem}
+body.ar .location h2{font-family:'Tajawal',sans-serif;font-weight:800}
+.location p{color:rgba(42,6,32,.82);font-weight:500;margin-bottom:.5rem}
+
+/* REVIEWS */
+.reviews{background:var(--white);padding:5.5rem 6vw}
+.reviews-inner{max-width:1000px;margin:0 auto}
+.reviews h2{font-size:clamp(2rem,4vw,3.2rem);line-height:.95;color:var(--text)}
+body.ar .reviews h2{font-family:'Tajawal',sans-serif;font-weight:800}
+.reviews h2 span{color:var(--t1)}
+.reviews-sub{color:var(--mid);font-weight:500;font-size:.92rem;margin-top:.6rem;margin-bottom:2.5rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.review-card{background:var(--bg);border-radius:20px;border:1px solid rgba(229,25,95,.18);padding:1.7rem}
+.review-stars{display:flex;gap:3px;margin-bottom:.8rem}
+.review-stars span{color:#FFB300;font-size:1rem}
+.review-text{font-size:.89rem;color:var(--mid);font-weight:500;line-height:1.6;margin-bottom:1.1rem}
+.review-author{font-size:.8rem;color:var(--text);font-weight:600}
+.review-source{color:var(--mid);font-weight:500}
+
+/* WHATSAPP */
+.whatsapp-section{background:linear-gradient(135deg,var(--dark),var(--dark2));padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.whatsapp-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,211,102,.12) 0%,transparent 60%);pointer-events:none}
+.wa-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.wa-icon{width:64px;height:64px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2rem;box-shadow:0 0 32px rgba(37,211,102,.4)}
+.whatsapp-section h2{font-size:clamp(1.7rem,3.5vw,2.6rem);color:#fff;margin-bottom:.8rem;line-height:1.15}
+body.ar .whatsapp-section h2{font-family:'Tajawal',sans-serif;font-weight:800}
+.whatsapp-section p{color:rgba(255,255,255,.75);font-weight:500;font-size:.94rem;margin-bottom:2rem}
+.btn-wa{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:all .25s}
+body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-transform:none}
+.btn-wa:hover{background:#20BA5C;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.55)}
+
+/* CTA FINAL */
+.cta-final{background:var(--bg);padding:6.5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.cta-blob{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(229,25,95,.16) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-final h2{font-size:clamp(3rem,8vw,7rem);line-height:.92;color:var(--text);margin-bottom:1.3rem;position:relative;z-index:1}
+body.ar .cta-final h2{font-family:'Tajawal',sans-serif;font-weight:800}
+.cta-final h2 span{color:var(--v1)}
+.cta-final p{color:var(--mid);font-weight:500;max-width:420px;margin:0 auto 2.2rem;font-size:.92rem;position:relative;z-index:1}
+.cta-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
+.cta-foot{color:var(--mid);font-weight:500;font-size:.88rem;margin-top:1.8rem;position:relative;z-index:1}
+
+.footer-mini{background:#1E0620;padding:1.6rem 6vw;text-align:center}
+.footer-mini span{color:rgba(255,255,255,.5);font-size:.72rem}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem;padding-top:1rem}
+  .hero-panel{display:none}
+  .schedule-inner{grid-template-columns:1fr;gap:2rem}
+  .perks-grid,.reviews-grid{grid-template-columns:1fr}
+  .price-cards{grid-template-columns:1fr}
+  .perks,.pricing,.cta-final,.location,.schedule,.reviews{padding:4rem 1.5rem}
+  .hero{padding:5rem 1.5rem 3rem}
+}
+</style>
+</head>
+<body>
+
+<button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
+
+<section class="hero">
+  <div class="g1"></div><div class="g2"></div><div class="g3"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><div class="hero-tag-dot"></div><span data-i18n="heroTag">Abu Dhabi &bull; Ladies Only &bull; Pre-Intermediate 1</span></div>
+      <h1 data-i18n="heroH1">LEARN NEW<br><span class="t">VARIATIONS</span></h1>
+      <p class="hero-body" data-i18n="heroBody">Pre-Intermediate 1 &middot; 7 classes &middot; Mondays, 7 PM &middot; October 5 to November 30. Learn variations of steps &amp; dance with your first accessory.</p>
+      <div class="hero-bio-mini"><p data-i18n="heroBio">Hi, I'm Jiji - international bellydancer with 13+ years teaching across the Arab world. I'll guide you step by step, in a warm, ladies-only studio in Abu Dhabi.</p></div>
+      <div class="hero-ctas">
+        <a href="https://m815sjhn01s.typeform.com/to/dvt1lCsB" class="btn btn-teal" target="_blank" data-i18n="ctaRegister">Register Now →</a>
+        <a href="#pricing" class="btn btn-outline-lt" data-i18n="ctaSeePricing">See Pricing</a>
+        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%20have%20a%20question%20about%20the%20Pre-Intermediate%201%20course." class="btn-wa" target="_blank" rel="noopener" data-i18n="heroWaBtn">💬 &nbsp;Questions? Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="panel-card">
+        <span class="panel-tag" data-i18n="panel1Tag">Weekly Track</span>
+        <h3 data-i18n="panel1Title">MONDAYS</h3>
+        <p data-i18n="panel1Text">Every Monday · 7:00 PM</p>
+        <span class="panel-start" data-i18n="panel1Start">Starts October 5, 2026</span>
+      </div>
+      <div class="panel-card">
+        <span class="panel-tag" data-i18n="panel2Tag">Your Level</span>
+        <h3 data-i18n="panel2Title">7 CLASSES</h3>
+        <p data-i18n="panel2Text">Oct 5 - Nov 30</p>
+        <span class="panel-start" style="color:var(--o1)" data-i18n="panel2Start">No classes on Nov 2 &amp; 9</span>
+      </div>
+      <div class="panel-cta">
+        <p data-i18n="panelCtaText">⚡ Spots limited: registration open</p>
+        <a href="https://m815sjhn01s.typeform.com/to/dvt1lCsB" class="btn btn-outline-lt" target="_blank" style="padding:.7rem 1.8rem" data-i18n="panelCtaBtn">Register →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-track" id="stripTrack"></div>
+</div>
+
+<section class="schedule" id="schedule">
+  <div class="schedule-inner">
+    <div>
+      <span class="tag" data-i18n="schedTag">Schedule &bull; October &amp; November 2026</span>
+      <h2 data-i18n="schedH2">Your next <em>level</em></h2>
+      <div class="gcard"><div class="gcard-bar"></div><div><div class="gcard-day" data-i18n="schedDay">Mondays</div><div class="gcard-time" data-i18n="schedTime">7:00 PM</div><div class="gcard-start" data-i18n="schedStart">Starts October 5, 2026</div></div></div>
+      <div class="date-list"><span class="date-list-label" data-i18n="schedDatesLabel">Class Dates</span><span data-i18n="schedDates">Oct 5 &middot; 12 &middot; 19 &middot; 26 &middot; Nov 16 &middot; 23 &middot; 30</span></div>
+      <p class="note-line" data-i18n="schedNote">📌 No classes on November 2 &amp; 9.</p>
+    </div>
+    <div>
+      <span class="tag" data-i18n="whatTag">What to expect</span>
+      <div class="what">
+        <h3 data-i18n="whatH3">7 classes. New variations. Your first accessory.</h3>
+        <p data-i18n="whatP1">If you already know the basics: learn variations of steps &amp; dance with your first accessory.</p>
+        <p data-i18n="whatP2">Not sure if this is your level? Message us on WhatsApp and we'll help you choose. 💬</p>
+        <p data-i18n="whatP3">‼️ No recording allowed - let's respect the privacy of all the ladies 🫶</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <span class="tag" style="color:var(--t2)" data-i18n="priceTag">Pricing</span>
+    <h2 data-i18n="priceH2">Your <span>investment</span></h2>
+    <div class="price-cards">
+      <div class="pcard best">
+        <div class="best-tag" data-i18n="bestTag">Save AED 50</div>
+        <span class="pl" data-i18n="p1Label">Bank Transfer</span>
+        <span class="pa" data-i18n="p1Price"><span class="pc">AED </span>700</span>
+        <span class="ps" data-i18n="p1Sub">Full course · 7 classes</span>
+      </div>
+      <div class="pcard">
+        <span class="pl" data-i18n="p2Label">Card / Tabby</span>
+        <span class="pa" data-i18n="p2Price"><span class="pc">AED </span>750</span>
+        <span class="ps" data-i18n="p2Sub">Full course · 7 classes</span>
+      </div>
+    </div>
+    <button class="bank-toggle" onclick="toggleBank(this)" aria-expanded="false">
+      <span data-i18n="bankToggleLabel">🏦 Bank transfer details</span>
+      <em class="arrow">▼</em>
+    </button>
+    <div class="bank-collapse" id="bankDetails">
+      <div class="bank"><p data-i18n="bankText">Bank transfer details are sent in the registration form after you submit it.</p></div>
+    </div>
+    <div style="margin-top:1.5rem">
+      <a href="https://m815sjhn01s.typeform.com/to/dvt1lCsB" class="btn btn-teal" target="_blank" rel="noopener" data-i18n="ctaRegister">Register Now →</a>
+    </div>
+  </div>
+</section>
+
+<section class="perks">
+  <div class="perks-inner">
+    <span class="tag" data-i18n="perksTag">What's included</span>
+    <h2 data-i18n="perksH2">Everything to feel <span>at home</span></h2>
+    <div class="perks-grid">
+      <div class="perk"><span class="perk-icon">👗</span><h4 data-i18n="perk1Title">Belts Provided</h4><p data-i18n="perk1Desc">No need to buy anything: belts provided for all classes.</p></div>
+      <div class="perk"><span class="perk-icon">🌸</span><h4 data-i18n="perk2Title">Beautiful Studio</h4><p data-i18n="perk2Desc">Inside a gorgeous flower shop: full privacy guaranteed.</p></div>
+      <div class="perk"><span class="perk-icon">🅿️</span><h4 data-i18n="perk3Title">Easy Parking</h4><p data-i18n="perk3Desc">Mawaqif public parking in front and nearby the studio.</p></div>
+      <div class="perk"><span class="perk-icon">💃🏻</span><h4 data-i18n="perk4Title">Your First Accessory</h4><p data-i18n="perk4Desc">Learn to dance with your first accessory, on top of new variations of steps.</p></div>
+      <div class="perk"><span class="perk-icon">🫶</span><h4 data-i18n="perk5Title">Supportive Community</h4><p data-i18n="perk5Desc">No competition: we grow together, every single one of us.</p></div>
+      <div class="perk"><span class="perk-icon">💬</span><h4 data-i18n="perk6Title">WhatsApp Group</h4><p data-i18n="perk6Desc">Weekly videos to practice the steps learned in class, at home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="location">
+  <h2 data-i18n="locH2">📍 Find us in Abu Dhabi</h2>
+  <p data-i18n="locP1">We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.</p>
+  <p data-i18n="locP2">🌸 <strong>Inside a beautiful flower shop</strong>: opposite Umm Al Emarat Park.</p>
+  <p style="margin-bottom:1.5rem" data-i18n="locP3">Full privacy · Easy Mawaqif parking</p>
+  <a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" class="btn btn-outline-dark" target="_blank" rel="noopener" data-i18n="locBtn">Open in Google Maps →</a>
+</section>
+
+<section class="reviews">
+  <div class="reviews-inner">
+    <span class="tag" data-i18n="revTag">What our ladies say</span>
+    <h2 data-i18n="revH2">Real reviews from <span>Google</span></h2>
+    <p class="reviews-sub" data-i18n="revRating">⭐ 5.0 · Google Reviews</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev1Text">"Jiji is beyond amazing with her teaching skills, step by step. Fun classes, amazing people, pure empowering energy 🤍"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">Verified Student</span> · <span class="review-source">Google</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev2Text">"Incredibly kind, professional, full of positive energy. Even beginners felt confident and comfortable. Highly recommended! 💕"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">Verified Student</span> · <span class="review-source">Google</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev3Text">"So positive and contagious energy that it makes you enjoy every second. Highly recommend!"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">Verified Student</span> · <span class="review-source">Google</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="whatsapp-section">
+  <div class="wa-inner">
+    <div class="wa-icon">💬</div>
+    <h2 data-i18n="waH2">Still have questions?</h2>
+    <p data-i18n="waP">I'm happy to help! Send me a message on WhatsApp.</p>
+    <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27m%20interested%20in%20the%20Pre-Intermediate%201%20course" class="btn-wa" target="_blank" rel="noopener" data-i18n="waBtn">💬 &nbsp;Chat on WhatsApp</a>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-blob"></div>
+  <span class="tag" data-i18n="ctaTag">Ready?</span>
+  <h2 data-i18n="ctaH2">Spots are<br><span>limited.</span></h2>
+  <p data-i18n="ctaP">Register and complete your payment to confirm your spot. Registration without payment does not reserve your place.</p>
+  <div class="cta-btns">
+    <a href="https://m815sjhn01s.typeform.com/to/dvt1lCsB" class="btn btn-teal" target="_blank" rel="noopener" data-i18n="ctaBtn1">Register Now →</a>
+    <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27m%20interested%20in%20the%20Pre-Intermediate%201%20course" class="btn btn-violet" target="_blank" rel="noopener" data-i18n="ctaBtn2">Ask on WhatsApp</a>
+  </div>
+  <p class="cta-foot" data-i18n="ctaFoot">🥳 Hope to see you dancing with us soon!</p>
+</section>
+
+<div class="footer-mini"><span>© 2026 Jiji Bellydance · jijidance.com/pre-intermediate-1</span></div>
+
+<script>
+const dict = {
+  heroTag:{en:"Abu Dhabi &bull; Ladies Only &bull; Pre-Intermediate 1",ar:"أبوظبي &bull; دروس نسائية فقط &bull; ما قبل المتوسط 1"},
+  heroH1:{en:'LEARN NEW<br><span class="t">VARIATIONS</span>',ar:'تعلّمي<br><span class="t">تنويعات جديدة</span>'},
+  heroBody:{en:"Pre-Intermediate 1 &middot; 7 classes &middot; Mondays, 7 PM &middot; October 5 to November 30. Learn variations of steps &amp; dance with your first accessory.",ar:"ما قبل المتوسط 1 &middot; 7 حصص &middot; كل اثنين الساعة 7 مساءً &middot; من 5 أكتوبر إلى 30 نوفمبر. تعلّمي تنويعات الخطوات وارقصي بأول إكسسوار لكِ."},
+  heroBio:{en:"Hi, I'm Jiji - international bellydancer with 13+ years teaching across the Arab world. I'll guide you step by step, in a warm, ladies-only studio in Abu Dhabi.",ar:"مرحباً، أنا جيجي، راقصة شرقية عالمية بخبرة أكثر من 13 عامًا في تدريس النساء بالعالم العربي. سأرافقكِ خطوة بخطوة في استوديو دافئ مخصص للنساء فقط في أبوظبي."},
+  ctaRegister:{en:"Register Now →",ar:"سجّلي الآن ←"},
+  ctaSeePricing:{en:"See Pricing",ar:"شاهدي الأسعار"},
+  panel1Tag:{en:"Weekly Track",ar:"مسار أسبوعي"},
+  panel1Title:{en:"MONDAYS",ar:"أيام الاثنين"},
+  panel1Text:{en:"Every Monday · 7:00 PM",ar:"كل اثنين · 7:00 مساءً"},
+  panel1Start:{en:"Starts October 5, 2026",ar:"تبدأ 5 أكتوبر 2026"},
+  panel2Tag:{en:"Your Level",ar:"مستواكِ"},
+  panel2Title:{en:"7 CLASSES",ar:"7 حصص"},
+  panel2Text:{en:"Oct 5 - Nov 30",ar:"5 أكتوبر - 30 نوفمبر"},
+  panel2Start:{en:"No classes on Nov 2 &amp; 9",ar:"لا حصص يومي 2 و9 نوفمبر"},
+  panelCtaText:{en:"⚡ Spots limited: registration open",ar:"⚡ الأماكن محدودة: التسجيل مفتوح الآن"},
+  panelCtaBtn:{en:"Register →",ar:"سجّلي ←"},
+  schedTag:{en:"Schedule &bull; October &amp; November 2026",ar:"الجدول &bull; أكتوبر ونوفمبر 2026"},
+  schedH2:{en:"Your next <em>level</em>",ar:"مستواكِ <em>التالي</em>"},
+  schedDay:{en:"Mondays",ar:"أيام الاثنين"},
+  schedTime:{en:"7:00 PM",ar:"7:00 مساءً"},
+  schedStart:{en:"Starts October 5, 2026",ar:"تبدأ 5 أكتوبر 2026"},
+  schedDatesLabel:{en:"Class Dates",ar:"تواريخ الحصص"},
+  schedDates:{en:"Oct 5 &middot; 12 &middot; 19 &middot; 26 &middot; Nov 16 &middot; 23 &middot; 30",ar:"5 &middot; 12 &middot; 19 &middot; 26 أكتوبر &middot; 16 &middot; 23 &middot; 30 نوفمبر"},
+  schedNote:{en:"📌 No classes on November 2 &amp; 9.",ar:"📌 لا حصص يومي 2 و9 نوفمبر."},
+  whatTag:{en:"What to expect",ar:"ماذا تتوقعين"},
+  whatH3:{en:"7 classes. New variations. Your first accessory.",ar:"7 حصص. تنويعات جديدة. أول إكسسوار لكِ."},
+  whatP1:{en:"If you already know the basics: learn variations of steps &amp; dance with your first accessory.",ar:"إذا كنتِ تعرفين الأساسيات: تعلّمي تنويعات الخطوات وارقصي بأول إكسسوار لكِ."},
+  whatP2:{en:"Not sure if this is your level? Message us on WhatsApp and we'll help you choose. 💬",ar:"لستِ متأكدة أن هذا مستواكِ؟ راسلينا عبر واتساب وسنساعدكِ على الاختيار. 💬"},
+  whatP3:{en:"‼️ No recording allowed - let's respect the privacy of all the ladies 🫶",ar:"‼️ ممنوع التصوير - احترامًا لخصوصية جميع المشاركات 🫶"},
+  priceTag:{en:"Pricing",ar:"الأسعار"},
+  priceH2:{en:"Your <span>investment</span>",ar:"استثمارك <span>في نفسك</span>"},
+  bestTag:{en:"Save AED 50",ar:"وفّري 50 درهم"},
+  p1Label:{en:"Bank Transfer",ar:"تحويل بنكي"},
+  p1Price:{en:'<span class="pc">AED </span>700',ar:'700 <span class="pc">درهم</span>'},
+  p1Sub:{en:"Full course · 7 classes",ar:"الدورة كاملة · 7 حصص"},
+  p2Label:{en:"Card / Tabby",ar:"بطاقة / تابي"},
+  p2Price:{en:'<span class="pc">AED </span>750',ar:'750 <span class="pc">درهم</span>'},
+  p2Sub:{en:"Full course · 7 classes",ar:"الدورة كاملة · 7 حصص"},
+  bankToggleLabel:{en:"🏦 Bank transfer details",ar:"🏦 تفاصيل التحويل البنكي"},
+  bankText:{en:"Bank transfer details are sent in the registration form after you submit it.",ar:"سيتم إرسال تفاصيل التحويل البنكي ضمن نموذج التسجيل بعد إرساله."},
+  payBtn:{en:"Pay by Card / Tabby →",ar:"ادفعي بالبطاقة / تابي ←"},
+  perksTag:{en:"What's included",ar:"ما يشمله الاشتراك"},
+  perksH2:{en:"Everything to feel <span>at home</span>",ar:"كل ما تحتاجينه لتشعري <span>بالراحة</span>"},
+  perk1Title:{en:"Belts Provided",ar:"أحزمة الرقص متوفرة"},
+  perk1Desc:{en:"No need to buy anything: belts provided for all classes.",ar:"لا حاجة لشراء أي شيء: الأحزمة متوفرة لجميع الحصص."},
+  perk2Title:{en:"Beautiful Studio",ar:"استوديو جميل"},
+  perk2Desc:{en:"Inside a gorgeous flower shop: full privacy guaranteed.",ar:"داخل محل زهور رائع: خصوصية كاملة مضمونة."},
+  perk3Title:{en:"Easy Parking",ar:"موقف سيارات سهل"},
+  perk3Desc:{en:"Mawaqif public parking in front and nearby the studio.",ar:"موقف Mawaqif العام أمام الاستوديو وبالقرب منه."},
+  perk4Title:{en:"Your First Accessory",ar:"أول إكسسوار لكِ"},
+  perk4Desc:{en:"Learn to dance with your first accessory, on top of new variations of steps.",ar:"تعلّمي الرقص بأول إكسسوار لكِ، إلى جانب تنويعات جديدة من الخطوات."},
+  perk5Title:{en:"Supportive Community",ar:"مجتمع داعم"},
+  perk5Desc:{en:"No competition: we grow together, every single one of us.",ar:"بدون منافسة: ننمو جميعًا معًا!"},
+  perk6Title:{en:"WhatsApp Group",ar:"مجموعة واتساب"},
+  perk6Desc:{en:"Weekly videos to practice the steps learned in class, at home.",ar:"فيديوهات أسبوعية لممارسة الخطوات المتعلمة في المنزل."},
+  locH2:{en:"📍 Find us in Abu Dhabi",ar:"📍 موقعنا في أبوظبي"},
+  locP1:{en:"We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.",ar:"نحن في <strong>أبوظبي، الإمارات العربية المتحدة</strong>."},
+  locP2:{en:"🌸 <strong>Inside a beautiful flower shop</strong>: opposite Umm Al Emarat Park.",ar:"🌸 <strong>داخل محل زهور جميل</strong>: مقابل حديقة أم العمار."},
+  locP3:{en:"Full privacy · Easy Mawaqif parking",ar:"خصوصية كاملة · موقف سيارات Mawaqif سهل"},
+  locBtn:{en:"Open in Google Maps →",ar:"افتحي في خرائط جوجل ←"},
+  revTag:{en:"What our ladies say",ar:"ماذا تقول طالباتنا"},
+  revH2:{en:"Real reviews from <span>Google</span>",ar:"تقييمات حقيقية من <span>جوجل</span>"},
+  revRating:{en:"⭐ 5.0 · Google Reviews",ar:"⭐ 5.0 · تقييمات جوجل"},
+  rev1Text:{en:'"Jiji is beyond amazing with her teaching skills, step by step. Fun classes, amazing people, pure empowering energy 🤍"',ar:'"جيجي معلمة مذهلة، تشرح خطوة بخطوة. حصص ممتعة مع أشخاص رائعين، وطاقة نسائية حقيقية 🤍"'},
+  rev2Text:{en:'"Incredibly kind, professional, full of positive energy. Even beginners felt confident and comfortable. Highly recommended! 💕"',ar:'"لطيفة جدًا ومحترفة ومليئة بالطاقة الإيجابية. حتى المبتدئات يشعرن بالثقة. أنصح بشدة! 💕"'},
+  rev3Text:{en:'"So positive and contagious energy that it makes you enjoy every second. Highly recommend!"',ar:'"طاقة إيجابية ومعدية تجعلك تستمتعين بكل لحظة. أنصح بشدة!"'},
+  revAuthorLabel:{en:"Verified Student",ar:"طالبة موثقة"},
+  waH2:{en:"Still have questions?",ar:"لديكِ أسئلة؟"},
+  waP:{en:"I'm happy to help! Send me a message on WhatsApp.",ar:"يسعدني مساعدتك! أرسلي لي رسالة على واتساب."},
+  waBtn:{en:"💬 &nbsp;Chat on WhatsApp",ar:"💬 &nbsp;تحدثي عبر واتساب"},
+  heroWaBtn:{en:"💬 &nbsp;Questions? Chat on WhatsApp",ar:"💬 &nbsp;أسئلة؟ تحدثي عبر واتساب"},
+  ctaTag:{en:"Ready?",ar:"جاهزة؟"},
+  ctaH2:{en:"Spots are<br><span>limited.</span>",ar:"الأماكن<br><span>محدودة.</span>"},
+  ctaP:{en:"Register and complete your payment to confirm your spot. Registration without payment does not reserve your place.",ar:"سجّلي وأكملي الدفع لتأكيد مكانك. التسجيل بدون دفع لا يحجز مكانك."},
+  ctaBtn1:{en:"Register Now →",ar:"سجّلي الآن ←"},
+  ctaBtn2:{en:"Ask on WhatsApp",ar:"اسألي عبر واتساب"},
+  ctaFoot:{en:"🥳 Hope to see you dancing with us soon!",ar:"🥳 نتمنى رؤيتك ترقصين معنا قريبًا!"},
+  pageTitle:{en:"Pre-Intermediate 1 - October & November 2026 - Jiji Bellydance",ar:"ما قبل المتوسط 1 - أكتوبر ونوفمبر 2026 - جيجي دانس"}
+};
+const stripItems = {
+  en:["Pre-Intermediate 1","Weekly · Mondays","Ladies Only","Oct - Nov 2026","7 Classes","Spots Limited"],
+  ar:["ما قبل المتوسط 1","أسبوعيًا · الاثنين","نساء فقط","أكتوبر - نوفمبر 2026","7 حصص","الأماكن محدودة"]
+};
+function renderStrip(lang){
+  const items = stripItems[lang];
+  const html = items.map(i=>`<span>${i}</span><span class="dot"> ✦ </span>`).join('');
+  document.getElementById('stripTrack').innerHTML = html+html;
+}
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('ar', lang === 'ar');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.innerHTML = dict[key][lang];
+  });
+  document.title = dict.pageTitle[lang];
+  renderStrip(lang);
+  document.getElementById('langToggle').textContent = lang === 'en' ? '🌐 العربية' : '🌐 English';
+  try { localStorage.setItem('jiji_lang', lang); } catch(e){}
+}
+function toggleLang(){
+  const current = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  setLang(current === 'en' ? 'ar' : 'en');
+}
+let initialLang = 'en';
+try { initialLang = localStorage.getItem('jiji_lang') || 'en'; } catch(e){}
+setLang(initialLang);
+
+function toggleBank(btn){
+  const panel = document.getElementById('bankDetails');
+  const open = panel.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+}
+</script>
+
+</body>
+</html>
