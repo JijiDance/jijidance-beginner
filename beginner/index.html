@@ -92,6 +92,8 @@ body.ar .schedule h2 em{font-style:normal}
 
 .gcard-day{font-family:'Abril Fatface',serif;font-size:1.2rem;color:var(--text)}
 .gcard-time{font-size:.9rem;color:var(--mid)}
+.intensive-link{display:inline-block;font-size:.88rem;font-weight:600;color:var(--v1);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.intensive-link:hover{color:var(--t1)}
 .gcard-start{font-size:.72rem;color:var(--t1);font-weight:500;margin-top:.2rem}
 .recover{background:rgba(216,139,160,.06);border:1px solid rgba(216,139,160,.2);padding:.9rem 1.2rem;border-radius:12px;font-size:.83rem;color:var(--mid);margin-top:1.2rem}
 .what{padding:1rem 0}
@@ -396,6 +398,7 @@ main { padding: 0 !important; margin: 0 !important; }
       <div class="gcard"><div class="gcard-bar"></div><div><div class="gcard-day" data-i18n="panel1Tag">Group A</div><div class="gcard-time" data-i18n="panelDay">Day & time to be announced</div><div class="gcard-start" data-i18n="panelDates">Dates to be announced</div></div></div>
       <div class="gcard"><div class="gcard-bar" style="background:linear-gradient(180deg,var(--v1),var(--o1))"></div><div><div class="gcard-day" data-i18n="panel2Tag">Group B</div><div class="gcard-time" data-i18n="panelDay">Day & time to be announced</div><div class="gcard-start" data-i18n="panelDates">Dates to be announced</div></div></div>
       <div class="recover" style="font-family:'Abril Fatface',serif;font-size:1.1rem;font-style:italic;background:transparent;border:none;padding:.5rem 0;color:var(--mid)" data-i18n="recoverNote">📅 Stay tuned for the announcement of our next edition's dates!</div>
+      <a href="/beginner-intensive/" class="intensive-link" data-i18n="intensiveLink">⚡ In the meantime, learn more about our Intensive edition →</a>
     </div>
     <div>
       <span class="tag" data-i18n="whatTag">What to expect</span>
@@ -520,6 +523,7 @@ const dict = {
   panelDates:{en:"Dates to be announced",ar:"المواعيد قريبًا"},
   panelCtaText:{en:"⚡ Stay tuned for our next edition",ar:"⚡ ترقبوا إعلان الدورة القادمة"},
   panelCtaBtn:{en:"Register →",ar:"سجّلي ←"},
+  intensiveLink:{en:"⚡ In the meantime, learn more about our Intensive edition →",ar:"⚡ في هذه الأثناء، تعرّفي على نسختنا المكثفة ←"},
   schedTag:{en:"Schedule &bull; Dates to be announced &bull; Beginner Level",ar:"الجدول &bull; المواعيد قريبًا &bull; مستوى المبتدئات"},
   schedH2:{en:"Choose your <em>group</em>",ar:"اختاري <em>مجموعتك</em>"},
   recoverNote:{en:"📅 Stay tuned for the announcement of our next edition's dates!",ar:"📅 ترقبوا الإعلان عن مواعيد الدورة القادمة!"},

@@ -142,6 +142,9 @@ body.ar .diff-item-desc em{font-style:normal}
 .course-card{background:var(--bg);border-radius:20px;padding:2.5rem 2rem;border:1px solid rgba(139,68,104,.12);transition:all .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
 .course-card:hover{border-color:var(--o1);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,151,74,.15)}
 .course-card h3{font-family:'Abril Fatface',serif;font-size:1.8rem;color:var(--text);margin:.6rem 0}
+.intensive-link{display:inline-block;font-size:.88rem;font-weight:600;color:var(--v1);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.intensive-link:hover{color:var(--t1)}
+.course-card .btn{align-self:flex-start}
 .course-card .desc{font-size:.92rem;color:var(--mid);line-height:1.6;margin-bottom:1.2rem;flex-grow:1}
 .course-price{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--o1);margin-bottom:1.4rem}
 body.ar .course-price{font-family:'Tajawal',sans-serif;font-weight:800}
@@ -258,13 +261,14 @@ body.ar .cta-heading em{font-style:normal}
     <div class="eyebrow-with-line"><span class="section-eyebrow" data-i18n="coursesEyebrow">Courses</span></div>
     <h2 class="section-heading" data-i18n="coursesHeading">Choose your <em>course</em></h2>
     <div class="course-grid">
-      <a href="/beginner/" class="course-card">
+      <div class="course-card">
         <span class="section-eyebrow" data-i18n="course1Eyebrow">8-Week Track</span>
         <h3 data-i18n="course1Title">Beginner Level</h3>
         <p class="desc" data-i18n="course1Desc">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space. Dates to be announced - stay tuned!</p>
+        <a href="/beginner-intensive/" class="intensive-link" data-i18n="intensiveLink" style="margin-bottom:1.4rem">⚡ In the meantime, learn more about our Intensive edition →</a>
         <span class="course-price" data-i18n="coursePrice">AED 800 <span>full course</span></span>
-        <span class="btn btn-teal" data-i18n="btnViewCourse">View Course →</span>
-      </a>
+        <a href="/beginner/" class="btn btn-teal" data-i18n="btnViewCourse">View Course →</a>
+      </div>
       <a href="/beginner-intensive/" class="course-card">
         <span class="section-eyebrow" data-i18n="course2Eyebrow">4-Week Intensive</span>
         <h3 data-i18n="course2Title">Beginner Intensive</h3>
@@ -365,6 +369,7 @@ const dict = {
   int1Title:{en:"Intermediate 1",ar:"متوسط 1"},
   int2Title:{en:"Intermediate 2",ar:"متوسط 2"},
   courseTrack8:{en:"8-Week Track",ar:"مسار 8 أسابيع"},
+  intensiveLink:{en:"⚡ In the meantime, learn more about our Intensive edition →",ar:"⚡ في هذه الأثناء، تعرّفي على نسختنا المكثفة ←"},
   btnChatWa:{en:"Chat on WhatsApp →",ar:"تحدثي عبر واتساب ←"},
   pageTitle:{en:"Courses - Jiji Bellydance",ar:"الدورات - جيجي بيلي دانس"}
 };
