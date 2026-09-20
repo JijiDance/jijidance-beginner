@@ -97,6 +97,11 @@ body.ar .section-heading-light em{font-style:normal}
 .service-num{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--o1);margin-bottom:1rem;display:block;letter-spacing:.05em}
 .service-card h3{font-family:'Abril Fatface',serif;font-size:1.35rem;color:var(--text);margin-bottom:.6rem}
 .service-card p{font-size:.9rem;color:var(--mid);line-height:1.6;margin-bottom:1.4rem;flex-grow:1}
+.service-card-wide{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:2rem}
+.service-card-wide p{max-width:620px;flex-grow:0}
+.service-chips{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin:0}
+.service-chips li{background:var(--white);border:1px solid rgba(139,68,104,.15);border-radius:20px;padding:.35rem .9rem;font-size:.8rem;color:var(--v1);font-weight:500}
+.service-card-wide .btn{flex-shrink:0}
 .service-note{font-size:.75rem;color:var(--v1);font-weight:500;margin-bottom:1rem}
 .service-note-btn{background:none;border:none;padding:0;font-family:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer;text-align:start}
 
@@ -227,6 +232,7 @@ body.ar .cta-heading em{font-style:normal}
   .diff-body-grid{grid-template-columns:1fr;gap:2rem}
   .diff-photo{max-height:320px}
   .services-grid{grid-template-columns:1fr}
+  .service-card-wide{flex-direction:column;align-items:flex-start;gap:1.2rem}
   .course-grid{grid-template-columns:1fr}
   .benefits-cards{grid-template-columns:1fr}
   .mosaic-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
@@ -309,6 +315,19 @@ body.ar .cta-heading em{font-style:normal}
         <p data-i18n="service3Desc">Book an exclusive bellydance performance for your event and surprise your guests.</p>
         <button type="button" class="service-note service-note-btn" onclick="openModal('tcModal')" data-i18n="service3Note">15% off for my students, T&C's apply</button>
         <a href="https://wa.me/971567750994" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="btnChatWa">Chat on WhatsApp →</a>
+      </div>
+      <div class="service-card service-card-wide">
+        <div>
+          <span class="service-num">04</span>
+          <h3 data-i18n="service4Title">Show + Dance Class</h3>
+          <p data-i18n="service4Desc">A 10-minute bellydance show followed by a 40-minute class, with dance belts for all the guests. Perfect for private events.</p>
+          <ul class="service-chips">
+            <li data-i18n="service4Chip1">🎭 10 min show</li>
+            <li data-i18n="service4Chip2">💃 40 min class</li>
+            <li data-i18n="service4Chip3">✨ Dance belts for all guests</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27d%20like%20to%20book%20the%20Show%20%2B%20Class%20experience%20%2810%20min%20show%20%2B%2040%20min%20class%20with%20dance%20belts%29%20for%20my%20event." class="btn btn-teal" target="_blank" rel="noopener" data-i18n="btnChatWa">Chat on WhatsApp →</a>
       </div>
     </div>
   </div>
@@ -532,13 +551,18 @@ const dict = {
   hstat3:{en:"Countries Reached",ar:"دولة وصلت إليها"},
   servicesEyebrow:{en:"What I Offer",ar:"ماذا أقدم"},
   servicesHeading:{en:"How can I <em>help you?</em>",ar:"كيف يمكنني <em>مساعدتك؟</em>"},
-  servicesSub:{en:"Three ways to bring bellydance into your life, your event or your own journey.",ar:"ثلاث طرق لإدخال الرقص الشرقي إلى حياتك، مناسبتك، أو رحلتك الخاصة."},
+  servicesSub:{en:"Four ways to bring bellydance into your life, your event or your own journey.",ar:"أربع طرق لإدخال الرقص الشرقي إلى حياتك، مناسبتك، أو رحلتك الخاصة."},
   service1Title:{en:"Group Classes",ar:"دروس جماعية"},
   service1Desc:{en:"Weekly courses in a warm, ladies only studio in Abu Dhabi. No experience needed - be ready to have fun and learn a lot!",ar:"دورات أسبوعية في استوديو دافئ مخصص للنساء فقط في أبوظبي. لا حاجة لخبرة سابقة - استعدي للمرح وتعلم الكثير!"},
   service2Title:{en:"Private Lessons",ar:"دروس خاصة"},
   service2Desc:{en:"One-on-one sessions tailored to your pace, your goals and your schedule.",ar:"حصص فردية مصممة حسب وتيرتك وأهدافك وجدولك."},
   service3Title:{en:"Shows - Private Events",ar:"عروض - مناسبات خاصة"},
   service3Desc:{en:"Book an exclusive bellydance performance for your event and surprise your guests.",ar:"احجزي عرض رقص شرقي حصري لمناسبتك وفاجئي ضيوفك."},
+  service4Title:{en:"Show + Dance Class",ar:"عرض + حصة رقص"},
+  service4Desc:{en:"A 10-minute bellydance show followed by a 40-minute class, with dance belts for all the guests. Perfect for private events.",ar:"عرض رقص شرقي لمدة 10 دقائق يليه درس لمدة 40 دقيقة، مع أحزمة رقص لجميع الضيفات. مثالي للمناسبات الخاصة."},
+  service4Chip1:{en:"🎭 10 min show",ar:"🎭 عرض 10 دقائق"},
+  service4Chip2:{en:"💃 40 min class",ar:"💃 درس 40 دقيقة"},
+  service4Chip3:{en:"✨ Dance belts for all guests",ar:"✨ أحزمة رقص لجميع الضيفات"},
   service3Note:{en:"15% off for my students, T&C's apply",ar:"خصم 15% لطالباتي، تُطبّق الشروط والأحكام"},
   tcTitle:{en:"Student Discount - Terms & Conditions",ar:"خصم الطالبات - الشروط والأحكام"},
   tcText:{en:"This 15% discount is available to students who are currently enrolled in a course, and only from their second course onward - or who have already completed their 2nd package of private lessons.",ar:"هذا الخصم بنسبة 15% متاح للطالبات المسجلات حاليًا في إحدى الدورات، ابتداءً من دورتهن الثانية فما فوق - أو اللواتي أكملن بالفعل باقتهن الثانية من الدروس الخاصة."},
