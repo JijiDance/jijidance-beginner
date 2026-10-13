@@ -194,14 +194,10 @@ body.en .btn-wa{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:60
 @media(max-width:480px){
   .why-grid{grid-template-columns:1fr}
 }
-.home-link{position:fixed;top:1rem;inset-inline-end:1rem;z-index:999;background:#2A0620;color:#fff;border:1px solid rgba(255,255,255,.15);padding:.6rem 1.2rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-decoration:none;font-family:'Poppins',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;box-shadow:0 4px 18px rgba(42,6,32,.35)}
-body.ar .home-link{font-family:'Tajawal',sans-serif}
-.home-link:hover{background:#3D0A32;transform:translateY(-2px)}
 </style>
 </head>
 <body>
 
-<a href="/" class="home-link" data-i18n="homeLink">🏠 Home</a>
 <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 English</button>
 
 <section class="hero">
@@ -421,7 +417,6 @@ body.ar .home-link{font-family:'Tajawal',sans-serif}
 
 <script>
 const dict = {
-  homeLink:{en:"🏠 Home",ar:"🏠 الرئيسية"},
   heroTag:{ar:"📱 متوفر الآن على آيفون · السعودية",en:"📱 Now on iPhone · Saudi Arabia"},
   heroH1:{ar:'تعلّمي الرقص الشرقي<br><span class="t">من بيتك، بخصوصية تامة</span>',en:'LEARN BELLYDANCE<br><span class="t">FROM HOME, 100% PRIVATE</span>'},
   heroBody:{ar:"تطبيق جيجي لتعليم الرقص الشرقي - دروس فيديو خطوة بخطوة، من مدرّبة عالمية عاشت وعلّمت في الخليج لأكثر من ١٣ عامًا.",en:"The Jiji Bellydance app - step-by-step video lessons from an international instructor who has lived and taught across the Gulf for 13+ years."},
