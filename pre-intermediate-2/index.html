@@ -190,10 +190,14 @@ body.ar .cta-final h2{font-family:'Tajawal',sans-serif;font-weight:800}
   .perks,.pricing,.cta-final,.location,.schedule,.reviews{padding:4rem 1.5rem}
   .hero{padding:5rem 1.5rem 3rem}
 }
+.home-link{position:fixed;top:1rem;inset-inline-start:1rem;z-index:999;background:#2A0620;color:#fff;border:1px solid rgba(255,255,255,.15);padding:.6rem 1.2rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-decoration:none;font-family:'Poppins',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;box-shadow:0 4px 18px rgba(42,6,32,.35)}
+body.ar .home-link{font-family:'Tajawal',sans-serif}
+.home-link:hover{background:#3D0A32;transform:translateY(-2px)}
 </style>
 </head>
 <body>
 
+<a href="/schedule/october-november/" class="home-link" data-i18n="homeLink">← Schedule</a>
 <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
 
 <section class="hero">
@@ -359,6 +363,7 @@ body.ar .cta-final h2{font-family:'Tajawal',sans-serif;font-weight:800}
 
 <script>
 const dict = {
+  homeLink:{en:"← Schedule",ar:"→ جدول الحصص"},
   heroTag:{en:"Abu Dhabi &bull; Ladies Only &bull; Pre-Intermediate 2",ar:"أبوظبي &bull; دروس نسائية فقط &bull; ما قبل المتوسط 2"},
   heroH1:{en:'CONNECT THE<br><span class="t">STEPS</span>',ar:'اربطي<br><span class="t">الخطوات</span>'},
   heroBody:{en:"Pre-Intermediate 2 &middot; 7 classes &middot; Wednesdays, 7 PM &middot; October 7 to November 25. Now learn how to connect the steps in a beautiful way.",ar:"ما قبل المتوسط 2 &middot; 7 حصص &middot; كل أربعاء الساعة 7 مساءً &middot; من 7 أكتوبر إلى 25 نوفمبر. تعلّمي الآن كيف تربطين الخطوات بطريقة جميلة."},

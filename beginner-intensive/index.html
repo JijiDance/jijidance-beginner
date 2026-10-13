@@ -190,10 +190,14 @@ body.ar .cta-final h2{font-family:'Tajawal',sans-serif;font-weight:800}
   .perks,.pricing,.cta-final,.location,.schedule,.reviews{padding:4rem 1.5rem}
   .hero{padding:5rem 1.5rem 3rem}
 }
+.home-link{position:fixed;top:1rem;inset-inline-start:1rem;z-index:999;background:#2A0620;color:#fff;border:1px solid rgba(255,255,255,.15);padding:.6rem 1.2rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-decoration:none;font-family:'Poppins',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;box-shadow:0 4px 18px rgba(42,6,32,.35)}
+body.ar .home-link{font-family:'Tajawal',sans-serif}
+.home-link:hover{background:#3D0A32;transform:translateY(-2px)}
 </style>
 </head>
 <body>
 
+<a href="/schedule/october-november/" class="home-link" data-i18n="homeLink">← Schedule</a>
 <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
 
 <section class="hero">
@@ -359,6 +363,7 @@ body.ar .cta-final h2{font-family:'Tajawal',sans-serif;font-weight:800}
 
 <script>
 const dict = {
+  homeLink:{en:"← Schedule",ar:"→ جدول الحصص"},
   heroTag:{en:"Abu Dhabi &bull; Ladies Only &bull; October 2026",ar:"أبوظبي &bull; دروس نسائية فقط &bull; أكتوبر 2026"},
   heroH1:{en:'BELLYDANCE<br><span class="t">IN 1 MONTH</span>',ar:'الرقص الشرقي<br><span class="t">في شهر واحد</span>'},
   heroBody:{en:"4-week intensive course &middot; 8 classes &middot; Tuesday &amp; Thursday, 7 PM &middot; Starts October 1. No experience needed.",ar:"دورة مكثفة لمدة 4 أسابيع &middot; 8 حصص &middot; كل ثلاثاء وخميس الساعة 7 مساءً &middot; تبدأ 1 أكتوبر. لا حاجة لخبرة سابقة."},

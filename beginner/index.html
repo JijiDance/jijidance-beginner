@@ -347,10 +347,14 @@ main { padding: 0 !important; margin: 0 !important; }
   background: rgba(255,255,255,0.1) !important;
   color: #fff !important;
 }
+.home-link{position:fixed;top:1rem;inset-inline-start:1rem;z-index:999;background:#2A0620;color:#fff;border:1px solid rgba(255,255,255,.15);padding:.6rem 1.2rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-decoration:none;font-family:'Poppins',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;box-shadow:0 4px 18px rgba(42,6,32,.35)}
+body.ar .home-link{font-family:'Tajawal',sans-serif}
+.home-link:hover{background:#3D0A32;transform:translateY(-2px)}
 </style>
 </head>
 <body>
 
+<a href="/" class="home-link" data-i18n="homeLink">🏠 Home</a>
 <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
 
 <section class="hero">
@@ -509,6 +513,7 @@ main { padding: 0 !important; margin: 0 !important; }
 
 <script>
 const dict = {
+  homeLink:{en:"🏠 Home",ar:"🏠 الرئيسية"},
   heroTagLine1:{en:"Abu Dhabi &bull; Group Classes",ar:"أبوظبي &bull; دروس جماعية"},
   heroTagLine2:{en:"Beginner &bull; Dates to be announced",ar:"مبتدئات &bull; المواعيد قريبًا"},
   heroH1:{en:'BEGINNER<br><span class="t">LEVEL</span><br>COURSE',ar:'دورة<br><span class="t">المبتدئات</span><br>الرقص الشرقي'},
