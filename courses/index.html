@@ -46,6 +46,8 @@ body.ar .nav-links a,body.ar .nav-cta,body.ar .btn,body.ar .section-eyebrow,body
 .nav-links a:hover{color:var(--o1)}
 .nav-cta{background:linear-gradient(135deg,var(--o1),var(--v1));color:#fff;padding:.65rem 1.5rem;border-radius:40px;text-decoration:none;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
 @media(max-width:768px){.nav-links{display:none}}
+.nav-home{position:absolute;top:100%;inset-inline-start:6vw;margin-top:.6rem;background:var(--dark);color:#fff;border:1px solid rgba(255,255,255,.15);padding:.55rem 1.1rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;box-shadow:0 4px 18px rgba(74,32,56,.3);transition:all .2s}
+.nav-home:hover{background:var(--dark2);transform:translateY(-2px)}
 
 /* HERO */
 .hero-bio{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden}
@@ -243,6 +245,7 @@ body.ar .cta-heading em{font-style:normal}
 
 <nav class="nav scrolled" id="nav">
   <a href="/" class="nav-logo">Jiji Bellydance</a>
+  <a href="/" class="nav-home" data-i18n="navHome">🏠 Home</a>
   <ul class="nav-links">
     <li><a href="/#services" data-i18n="navServices">Services</a></li>
     <li><a href="/#about" data-i18n="navAbout">About</a></li>
@@ -346,6 +349,7 @@ const dict = {
   navBenefits:{en:"Benefits",ar:"الفوائد"},
   navCourses:{en:"Courses",ar:"الدورات"},
   navCta:{en:"See Courses",ar:"شاهدي الدورات"},
+  navHome:{en:"🏠 Home",ar:"🏠 الرئيسية"},
   aboutEyebrow:{en:"Who I Am",ar:"من أنا"},
   coursesEyebrow:{en:"Courses",ar:"الدورات"},
   coursesHeading:{en:"Choose your <em>course</em>",ar:"اختاري <em>دورتك</em>"},
