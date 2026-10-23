@@ -529,6 +529,7 @@ body.ar .cta-heading em{font-style:normal}
         <li><a href="#why" data-i18n="navWhy">Why Me</a></li>
         <li><a href="#benefits" data-i18n="navBenefits">Benefits</a></li>
         <li><a href="/courses/" data-i18n="navCourses">Courses</a></li>
+        <li data-until="2026-12-01"><a href="/schedule/october-november/" data-i18n="footerScheduleOct">October &amp; November Schedule</a></li>
         <li><a href="/schedule/december-january/" data-i18n="footerSchedule">December &amp; January Schedule</a></li>
       </ul>
     </div>
@@ -664,6 +665,7 @@ const dict = {
   ctaSub:{en:"Choose how you want to start your bellydance journey in Abu Dhabi.",ar:"اختاري كيف تريدين بدء رحلتك في الرقص الشرقي في أبوظبي."},
   footerTagline:{en:"International Dancer · Abu Dhabi, UAE",ar:"راقصة عالمية · أبوظبي، الإمارات"},
   footerNavTitle:{en:"Navigate",ar:"التنقل"},
+  footerScheduleOct:{en:"October &amp; November Schedule",ar:"جدول أكتوبر ونوفمبر"},
   footerSchedule:{en:"December &amp; January Schedule",ar:"جدول ديسمبر ويناير"},
   footerFindTitle:{en:"Find Us",ar:"موقعنا"},
   footerAbuDhabi:{en:"Abu Dhabi, UAE",ar:"أبوظبي، الإمارات"},
@@ -729,5 +731,9 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
+<script>
+// Hide links whose edition has ended (data-until = first day it should disappear, Abu Dhabi time)
+document.querySelectorAll('[data-until]').forEach(el => { if (Date.now() >= Date.parse(el.dataset.until + 'T00:00:00+04:00')) el.remove(); });
+</script>
 </body>
 </html>
