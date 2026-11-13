@@ -1,351 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title id="pageTitle">Beginner Level - Dec 2026 to Feb 2027 - Jiji Bellydance</title>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<title id="pageTitle">Beginner Level - December 2026 - February 2027 - Jiji Bellydance</title>
+<meta name="description" content="Beginner bellydance course in Abu Dhabi, ladies only. No experience needed. Thursdays at 7 PM, from December 10, 2026 to February 4, 2027."/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Poppins:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --t1:#D88BA0;--t2:#E8A8B8;--t3:#F7D9E0;
-  --v1:#8B4468;--v2:#B06B8F;--v3:#EAD9E8;
-  --o1:#C9974A;--o2:#D9B36C;
-  --dark:#4A2038;--dark2:#5E2C46;
-  --bg:#FDF3F0;--white:#FFFBF9;
-  --text:#3D1F30;--mid:#8A6478;
+  --t1:#E5195F;--t2:#FF4D85;--t3:#FFD6E4;
+  --v1:#8A17A8;--v2:#B23FD1;--v3:#F3D6F7;
+  --o1:#FFB300;--o2:#FFD166;
+  --dark:#2A0620;--dark2:#3D0930;
+  --bg:#FFF6F9;--white:#FFFFFF;
+  --text:#200418;--mid:#5E2350;
 }
 html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+body{background:var(--white);color:var(--text);font-family:'Poppins',sans-serif;font-weight:400;line-height:1.7;overflow-x:hidden}
 body.ar{font-family:'Tajawal',sans-serif;font-weight:400}
-body.ar h1,body.ar h2,body.ar h3,body.ar .pa,body.ar .gcard-day,body.ar .panel-card h3,body.ar .bank h4{font-family:'Tajawal',sans-serif;font-weight:800}
-body.ar .tag,body.ar .btn,body.ar .panel-tag,body.ar .pl,body.ar .best-tag,body.ar .review-source,body.ar .bank-toggle span,body.ar .ps,body.ar .pc,body.ar .reviews-hint{text-transform:none;letter-spacing:normal}
-.btn{display:inline-block;font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;transition:all .25s;cursor:pointer}
-.btn-teal{background:var(--t1);color:var(--dark);border:none;box-shadow:0 4px 20px rgba(216,139,160,.3)}
-.btn-teal:hover{background:var(--t2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(216,139,160,.4)}
-.btn-violet{background:var(--v1);color:#fff;border:none;box-shadow:0 4px 20px rgba(139,68,104,.3)}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:800}
+body.ar h1,body.ar h2,body.ar h3,body.ar .pa{font-family:'Tajawal',sans-serif;font-weight:800}
+body.ar .tag,body.ar .btn,body.ar .panel-tag,body.ar .pl,body.ar .hero-tag span,body.ar .best-tag,body.ar .review-source,body.ar .bank-toggle span,body.ar .ps,body.ar .pc{text-transform:none;letter-spacing:normal}
+
+.btn{display:inline-block;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;transition:all .25s;cursor:pointer}
+.btn-teal{background:var(--t1);color:#fff;border:none;box-shadow:0 4px 20px rgba(229,25,95,.4)}
+.btn-teal:hover{background:var(--t2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(229,25,95,.5)}
+.btn-violet{background:var(--v1);color:#fff;border:none;box-shadow:0 4px 20px rgba(138,23,168,.35)}
 .btn-violet:hover{background:var(--v2);transform:translateY(-2px)}
-.btn-orange{background:var(--o1);color:#fff;border:none;box-shadow:0 4px 20px rgba(201,151,74,.3)}
-.btn-orange:hover{background:var(--o2);transform:translateY(-2px)}
-.btn-outline-lt{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}
-.btn-outline-lt:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.btn-outline-lt{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn-outline-lt:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
 .btn-outline-dark{background:transparent;color:var(--dark);border:2px solid var(--dark)}
 .btn-outline-dark:hover{background:var(--dark);color:#fff;transform:translateY(-2px)}
 
 /* LANG TOGGLE */
-.lang-toggle{position:fixed;top:1rem;inset-inline-end:1rem;z-index:999;background:linear-gradient(135deg,var(--v1),var(--t1));color:#fff;border:none;padding:.6rem 1.3rem;border-radius:40px;font-size:.72rem;font-weight:500;letter-spacing:.05em;cursor:pointer;box-shadow:0 4px 18px rgba(139,68,104,.4);font-family:'DM Sans',sans-serif;transition:transform .2s}
+.lang-toggle{position:fixed;top:1rem;inset-inline-end:1rem;z-index:999;background:linear-gradient(135deg,var(--v1),var(--t1));color:#fff;border:none;padding:.6rem 1.3rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;cursor:pointer;box-shadow:0 4px 18px rgba(138,23,168,.45);font-family:'Poppins',sans-serif;transition:transform .2s}
 .lang-toggle:hover{transform:translateY(-2px)}
 
 /* HERO */
-.hero{
-  min-height:100vh;
-  background:linear-gradient(150deg,#3D1B30 0%,#5A2A47 40%,#3D1B30 70%,#2A1121 100%);
-  display:flex;align-items:center;padding:5rem 6vw;
-  position:relative;overflow:hidden;
-}
-.g1{position:absolute;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(216,139,160,.18) 0%,transparent 70%);top:-80px;left:-80px;pointer-events:none}
-.g2{position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(139,68,104,.15) 0%,transparent 70%);bottom:-60px;right:-60px;pointer-events:none}
-.g3{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(201,151,74,.1) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.hero{min-height:100vh;background:linear-gradient(150deg,#3D0A32 0%,#7A1B63 40%,#3D0A32 70%,#22041A 100%);display:flex;align-items:center;padding:5rem 6vw;position:relative;overflow:hidden}
+.g1{position:absolute;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(229,25,95,.25) 0%,transparent 70%);top:-80px;left:-80px;pointer-events:none}
+.g2{position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(138,23,168,.22) 0%,transparent 70%);bottom:-60px;right:-60px;pointer-events:none}
+.g3{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,0,.16) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
 
-.hero-inner{position:relative;z-index:2;max-width:1100px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
-.hero-tag{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:2.5rem}
-.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--t1);animation:pulse 2s ease-in-out infinite}
+.hero-inner{position:relative;z-index:2;max-width:1100px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.8rem}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--t2);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
-.hero-tag-lines{display:flex;flex-direction:column;gap:.15rem;text-align:start}
-.hero-tag span{font-size:.65rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.hero h1{font-family:'Abril Fatface',serif;font-size:clamp(4rem,9vw,9.5rem);line-height:.85;color:#fff;margin-bottom:2rem}
-.hero h1 .t{color:var(--t1)}
-.hero-body{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:420px;margin-bottom:2.5rem;line-height:1.75}
+.hero-tag span{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);line-height:.95;color:#fff;margin-bottom:1.5rem}
+.hero h1 .t{color:var(--t2)}
+.hero-body{color:rgba(255,255,255,.9);font-size:1.02rem;font-weight:500;max-width:440px;margin-bottom:1.5rem;line-height:1.65}
+.hero-bio-mini{max-width:440px;margin-bottom:2rem;padding-inline-start:1rem;border-inline-start:3px solid var(--o1)}
+.hero-bio-mini p{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.6}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
 
 .hero-panel{display:flex;flex-direction:column;gap:1rem}
-.panel-card{background:rgba(255,255,255,.04);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);padding:1.5rem 1.8rem;border-radius:16px;position:relative;overflow:hidden}
-.panel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.panel-card{background:rgba(255,255,255,.07);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.14);padding:1.4rem 1.6rem;border-radius:16px;position:relative;overflow:hidden}
+.panel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
 .panel-card:nth-child(1)::before{background:linear-gradient(90deg,var(--t1),var(--v1))}
 .panel-card:nth-child(2)::before{background:linear-gradient(90deg,var(--v1),var(--o1))}
-.panel-tag{font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-bottom:.5rem}
-.panel-card h3{font-family:'Abril Fatface',serif;font-size:1.5rem;color:#fff}
-.panel-card p{font-size:.85rem;color:rgba(255,255,255,.4);margin-top:.2rem}
-.panel-start{color:var(--t1);font-size:.75rem;font-weight:500;margin-top:.5rem;display:block}
-.panel-cta{background:linear-gradient(135deg,var(--t1),var(--v1));border-radius:16px;padding:1.5rem;text-align:center}
-.panel-cta p{color:#fff;font-weight:500;font-size:.85rem;margin-bottom:.8rem}
+.panel-tag{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);display:block;margin-bottom:.5rem}
+.panel-card h3{font-size:1.4rem;color:#fff}
+.panel-card p{font-size:.85rem;color:rgba(255,255,255,.68);margin-top:.2rem}
+.panel-start{color:var(--t2);font-size:.76rem;font-weight:600;margin-top:.5rem;display:block}
+.panel-cta{background:linear-gradient(135deg,var(--t1),var(--v1));border-radius:16px;padding:1.4rem;text-align:center}
+.panel-cta p{color:#fff;font-weight:600;font-size:.86rem;margin-bottom:.8rem}
 
 /* STRIP */
-.strip{background:linear-gradient(90deg,var(--t1),var(--v1),var(--o1),var(--t1));background-size:300% 100%;animation:gs 5s linear infinite;padding:.65rem 0;overflow:hidden;white-space:nowrap}
+.strip{background:linear-gradient(90deg,var(--t1),var(--v1),var(--o1),var(--t1));background-size:300% 100%;animation:gs 5s linear infinite;padding:.7rem 0;overflow:hidden;white-space:nowrap}
 @keyframes gs{0%{background-position:0%}100%{background-position:300%}}
 .strip-track{display:inline-flex;gap:2rem;animation:marquee 20s linear infinite}
-.strip-track span{font-family:'Abril Fatface',serif;font-size:.82rem;color:#fff;letter-spacing:.06em}
+.strip-track span{font-family:'Fraunces',serif;font-weight:800;font-size:.85rem;color:#fff;letter-spacing:.06em;text-shadow:0 1px 4px rgba(0,0,0,.4)}
 body.ar .strip-track span{font-family:'Tajawal',sans-serif;font-weight:700}
-.strip-track .dot{opacity:.4}
+.strip-track .dot{opacity:.6}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* SCHEDULE */
 .schedule{background:var(--white);padding:6rem 6vw}
-.schedule-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem}
-.tag{font-size:.63rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--t1);display:block;margin-bottom:1rem}
-.schedule h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.9;color:var(--text);margin-bottom:2rem}
+.schedule-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--v1);display:block;margin-bottom:1rem}
+.schedule h2{font-size:clamp(2.3rem,4.5vw,3.8rem);line-height:.95;color:var(--text);margin-bottom:1.8rem}
 .schedule h2 em{font-style:italic;color:var(--v1)}
 body.ar .schedule h2 em{font-style:normal}
-.gcard{border-radius:16px;background:var(--bg);padding:1.5rem;margin-bottom:1rem;display:flex;align-items:center;gap:1.2rem;border:1px solid rgba(216,139,160,.15);transition:all .2s}
-.gcard:hover{border-color:var(--t1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(216,139,160,.1)}
+.gcard{border-radius:16px;background:var(--bg);padding:1.4rem;margin-bottom:1rem;display:flex;align-items:center;gap:1.2rem;border:1px solid rgba(229,25,95,.22)}
 .gcard-bar{width:4px;border-radius:4px;background:linear-gradient(180deg,var(--t1),var(--v1));flex-shrink:0;align-self:stretch;min-height:70px}
-
-.gcard-day{font-family:'Abril Fatface',serif;font-size:1.2rem;color:var(--text)}
-.gcard-time{font-size:.9rem;color:var(--mid)}
-.intensive-link{display:inline-block;font-size:.88rem;font-weight:600;color:var(--v1);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
-.intensive-link:hover{color:var(--t1)}
-.gcard-start{font-size:.72rem;color:var(--t1);font-weight:500;margin-top:.2rem}
-.recover{background:rgba(216,139,160,.06);border:1px solid rgba(216,139,160,.2);padding:.9rem 1.2rem;border-radius:12px;font-size:.83rem;color:var(--mid);margin-top:1.2rem}
-.what{padding:1rem 0}
-.what h3{font-family:'Abril Fatface',serif;font-size:1.8rem;color:var(--text);margin-bottom:1rem}
-.what p{font-size:1rem;color:var(--mid);margin-bottom:.8rem;line-height:1.7}
-.what p.small{font-size:.95rem}
-
-/* PERKS */
-.perks{background:var(--bg);padding:6rem 6vw}
-.perks-inner{max-width:1100px;margin:0 auto}
-.perks h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.9;color:var(--text);margin-bottom:3rem}
-.perks h2 span{color:var(--v1)}
-.perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.perk{background:var(--white);padding:2rem;border-radius:20px;border:1px solid rgba(216,139,160,.1);transition:all .25s}
-.perk:hover{border-color:var(--t1);transform:translateY(-4px);box-shadow:0 8px 24px rgba(216,139,160,.1)}
-.perk-icon{font-size:2rem;margin-bottom:1rem;display:block}
-.perk h4{font-family:'Abril Fatface',serif;font-size:1.1rem;color:var(--text);margin-bottom:.4rem}
-body.ar .perk h4{font-family:'Tajawal',sans-serif;font-weight:700}
-.perk p{font-size:.87rem;color:var(--mid);line-height:1.6}
+.gcard-day{font-family:'Fraunces',serif;font-weight:800;font-size:1.15rem;color:var(--text)}
+body.ar .gcard-day{font-family:'Tajawal',sans-serif;font-weight:700}
+.gcard-time{font-size:.92rem;color:var(--mid);font-weight:500}
+.gcard-start{font-size:.74rem;color:var(--v1);font-weight:700;margin-top:.2rem}
+.date-list{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .55rem;font-size:.82rem;color:var(--mid);font-weight:500;margin:1rem 0 0}
+.date-list .date-list-label{font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--v1);margin-inline-end:.2rem}
+body.ar .date-list .date-list-label{letter-spacing:normal;text-transform:none}
+.note-line{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;font-style:italic;color:var(--mid);padding:1rem 0}
+body.ar .note-line{font-family:'Tajawal',sans-serif;font-weight:500;font-style:normal}
+.morning-link{display:inline-block;font-size:.88rem;font-weight:600;color:var(--v1);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.morning-link:hover{color:var(--t1)}
+.what h3{font-size:1.55rem;color:var(--text);margin-bottom:1rem;line-height:1.25}
+body.ar .what h3{font-family:'Tajawal',sans-serif;font-weight:800}
+.what p{font-size:.96rem;color:var(--mid);font-weight:500;margin-bottom:.8rem;line-height:1.7}
 
 /* PRICING */
 .pricing{background:var(--dark);padding:6rem 6vw;text-align:center}
 .pricing-inner{max-width:780px;margin:0 auto}
-.pricing h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,5rem);line-height:.9;color:#fff;margin-bottom:3rem}
-.pricing h2 span{color:var(--t1)}
-.price-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}
-.pcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:2.5rem 2rem;border-radius:20px;text-align:center;position:relative}
-.pcard.best{border:1px solid var(--t1);background:rgba(216,139,160,.05)}
-.best-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--t1),var(--v1));color:#fff;font-size:.58rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:.22rem .8rem;border-radius:40px;white-space:nowrap}
-.pl{font-size:.63rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-bottom:.8rem}
-.pa{font-family:'Abril Fatface',serif;font-size:4.5rem;color:#fff;line-height:1;display:block}
-.pc{font-size:1.3rem;vertical-align:top;margin-top:.7rem;display:inline-block}
-.ps{font-size:.78rem;color:rgba(255,255,255,.3);display:block;margin-top:.3rem}
-.pn{font-size:.78rem;color:rgba(255,255,255,.3);margin-top:.8rem}
-.bank{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:1.8rem 2rem;border-radius:16px;max-width:420px;margin:2rem auto;text-align:start}
-.bank h4{font-family:'Abril Fatface',serif;font-size:1rem;margin-bottom:1rem;color:#fff}
-.br{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem}
-.br span:first-child{color:rgba(255,255,255,.3)}
-.br span:last-child{color:rgba(255,255,255,.65)}
+.pricing h2{font-size:clamp(2.3rem,5vw,4.5rem);line-height:.95;color:#fff;margin-bottom:2.5rem}
+.pricing h2 span{color:var(--t2)}
+.price-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem}
+.pcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:2.2rem 1.8rem;border-radius:20px;text-align:center;position:relative}
+.pcard.best{border:1px solid var(--t2);background:rgba(229,25,95,.1)}
+.best-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--t1),var(--v1));color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.25rem .9rem;border-radius:40px;white-space:nowrap}
+.pl{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-bottom:.8rem}
+.pa{font-family:'Fraunces',serif;font-weight:800;font-size:3.6rem;color:#fff;line-height:1;display:block}
+.pc{font-size:1.15rem;vertical-align:top;margin-top:.6rem;display:inline-block}
+.ps{font-size:.8rem;color:rgba(255,255,255,.6);display:block;margin-top:.4rem;font-weight:500}
+.pn{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.8rem}
+.bank-toggle{background:none;border:none;color:rgba(255,255,255,.55);font-family:'Poppins',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:.5rem;margin:1.5rem auto 0;padding:0;transition:color .2s}
+body.ar .bank-toggle{font-family:'Tajawal',sans-serif}
+.bank-toggle:hover{color:#fff}
+.bank-toggle .arrow{transition:transform .3s;font-style:normal;font-size:.7rem}
+.bank-toggle.open .arrow{transform:rotate(180deg)}
+.bank-collapse{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;opacity:0}
+.bank-collapse.open{max-height:200px;opacity:1}
+.bank{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:1.4rem 1.6rem;border-radius:14px;max-width:420px;margin:1rem auto 0;text-align:start}
+.bank p{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.65}
+
+/* PERKS */
+.perks{background:var(--bg);padding:6rem 6vw}
+.perks-inner{max-width:1100px;margin:0 auto}
+.perks h2{font-size:clamp(2.3rem,5vw,4.2rem);line-height:.95;color:var(--text);margin-bottom:2.8rem}
+.perks h2 span{color:var(--v1)}
+.perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.perk{background:var(--white);padding:1.8rem;border-radius:20px;border:1px solid rgba(229,25,95,.16);transition:all .25s}
+.perk:hover{border-color:var(--t1);transform:translateY(-4px);box-shadow:0 8px 24px rgba(229,25,95,.15)}
+.perk-icon{font-size:1.9rem;margin-bottom:.9rem;display:block}
+.perk h4{font-family:'Fraunces',serif;font-weight:800;font-size:1.05rem;color:var(--text);margin-bottom:.4rem}
+body.ar .perk h4{font-family:'Tajawal',sans-serif;font-weight:700}
+.perk p{font-size:.87rem;color:var(--mid);font-weight:500;line-height:1.6}
 
 /* LOCATION */
-.location{background:linear-gradient(135deg,#E8A8B8 0%,#E0BC85 50%,#D88BA0 100%);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
-.location h2{font-family:'Abril Fatface',serif;font-size:clamp(2.5rem,5vw,4.5rem);color:#fff;margin-bottom:1rem}
+.location{background:linear-gradient(135deg,#FF6FA0 0%,#FFC64B 50%,#E5195F 100%);padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.location h2{font-size:clamp(2.2rem,5vw,4rem);color:var(--dark);margin-bottom:1rem}
 body.ar .location h2{font-family:'Tajawal',sans-serif;font-weight:800}
-.location p{color:rgba(255,255,255,.8);margin-bottom:.5rem}
+.location p{color:rgba(42,6,32,.82);font-weight:500;margin-bottom:.5rem}
 
-/* CTA */
-.cta-final{background:var(--bg);padding:7rem 6vw;text-align:center;position:relative;overflow:hidden}
-.cta-blob{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(216,139,160,.08) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-.cta-final h2{font-family:'Abril Fatface',serif;font-size:clamp(3.5rem,9vw,9rem);line-height:.85;color:var(--text);margin-bottom:1.5rem;position:relative;z-index:1}
+/* REVIEWS */
+.reviews{background:var(--white);padding:5.5rem 6vw}
+.reviews-inner{max-width:1000px;margin:0 auto}
+.reviews h2{font-size:clamp(2rem,4vw,3.2rem);line-height:.95;color:var(--text)}
+body.ar .reviews h2{font-family:'Tajawal',sans-serif;font-weight:800}
+.reviews h2 span{color:var(--t1)}
+.reviews-sub{color:var(--mid);font-weight:500;font-size:.92rem;margin-top:.6rem;margin-bottom:2.5rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.review-card{background:var(--bg);border-radius:20px;border:1px solid rgba(229,25,95,.18);padding:1.7rem}
+.review-stars{display:flex;gap:3px;margin-bottom:.8rem}
+.review-stars span{color:#FFB300;font-size:1rem}
+.review-text{font-size:.89rem;color:var(--mid);font-weight:500;line-height:1.6;margin-bottom:1.1rem}
+.review-author{font-size:.8rem;color:var(--text);font-weight:600}
+.review-source{color:var(--mid);font-weight:500}
+
+/* WHATSAPP */
+.whatsapp-section{background:linear-gradient(135deg,var(--dark),var(--dark2));padding:5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.whatsapp-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,211,102,.12) 0%,transparent 60%);pointer-events:none}
+.wa-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.wa-icon{width:64px;height:64px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2rem;box-shadow:0 0 32px rgba(37,211,102,.4)}
+.whatsapp-section h2{font-size:clamp(1.7rem,3.5vw,2.6rem);color:#fff;margin-bottom:.8rem;line-height:1.15}
+body.ar .whatsapp-section h2{font-family:'Tajawal',sans-serif;font-weight:800}
+.whatsapp-section p{color:rgba(255,255,255,.75);font-weight:500;font-size:.94rem;margin-bottom:2rem}
+.btn-wa{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;border-radius:60px;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:all .25s}
+body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-transform:none}
+.btn-wa:hover{background:#20BA5C;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.55)}
+
+/* CTA FINAL */
+.cta-final{background:var(--bg);padding:6.5rem 6vw;text-align:center;position:relative;overflow:hidden}
+.cta-blob{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(229,25,95,.16) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-final h2{font-size:clamp(3rem,8vw,7rem);line-height:.92;color:var(--text);margin-bottom:1.3rem;position:relative;z-index:1}
 body.ar .cta-final h2{font-family:'Tajawal',sans-serif;font-weight:800}
 .cta-final h2 span{color:var(--v1)}
-.cta-final p{color:var(--mid);max-width:420px;margin:0 auto 2.5rem;font-size:.9rem;position:relative;z-index:1}
+.cta-final p{color:var(--mid);font-weight:500;max-width:420px;margin:0 auto 2.2rem;font-size:.92rem;position:relative;z-index:1}
 .cta-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
+.cta-foot{color:var(--mid);font-weight:500;font-size:.88rem;margin-top:1.8rem;position:relative;z-index:1}
+
+.footer-mini{background:#1E0620;padding:1.6rem 6vw;text-align:center}
+.footer-mini span{color:rgba(255,255,255,.5);font-size:.72rem}
 
 @media(max-width:768px){
-  .hero-inner{grid-template-columns:1fr;gap:3rem;padding:5rem 2rem}
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem;padding-top:1rem}
   .hero-panel{display:none}
-  .nums-inner{grid-template-columns:repeat(2,1fr)}
-  .schedule-inner{grid-template-columns:1fr;gap:2rem;padding:4rem 2rem}
-  .perks-grid{grid-template-columns:1fr}
+  .schedule-inner{grid-template-columns:1fr;gap:2rem}
+  .perks-grid,.reviews-grid{grid-template-columns:1fr}
   .price-cards{grid-template-columns:1fr}
-  .perks,.pricing,.cta-final,.location,.schedule,.nums{padding:4rem 2rem}
-}
-
-/* ── REVIEWS CAROUSEL ── */
-.reviews {
-  background: var(--white);
-  padding: 6rem 0;
-  overflow: hidden;
-}
-.reviews-header {
-  padding: 0 6vw;
-  margin-bottom: 3rem;
-}
-.reviews-header h2 {
-  font-family: 'Abril Fatface', serif;
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
-  line-height: .92; color: var(--text);
-}
-body.ar .reviews-header h2 { font-family:'Tajawal',sans-serif; font-weight:800; }
-.reviews-header h2 span { color: var(--t1); }
-.reviews-header p { color: var(--mid); font-size: .9rem; margin-top: .6rem; }
-
-.reviews-track-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  cursor: grab;
-}
-.reviews-track-wrap::-webkit-scrollbar { display: none; }
-.reviews-track-wrap.dragging { cursor: grabbing; }
-
-.reviews-track {
-  display: flex;
-  gap: 1.2rem;
-  padding: 0 6vw 1.5rem;
-  width: max-content;
-}
-
-.review-card {
-  width: 300px;
-  flex-shrink: 0;
-  background: var(--bg);
-  border-radius: 20px;
-  border: 1px solid rgba(216,139,160,.12);
-  padding: 1.8rem;
-  transition: box-shadow .25s, transform .25s;
-  user-select: none;
-}
-.review-card:hover {
-  box-shadow: 0 8px 28px rgba(216,139,160,.12);
-  transform: translateY(-3px);
-}
-.review-stars {
-  display: flex; gap: 3px; margin-bottom: .8rem;
-}
-.review-stars span { color: #FFC107; font-size: 1rem; }
-
-.review-text {
-  font-size: .9rem; color: var(--mid); line-height: 1.65;
-  margin-bottom: 1.2rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.review-author {
-  display: flex; align-items: center; gap: .8rem;
-}
-.review-avatar {
-  width: 38px; height: 38px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Abril Fatface', serif;
-  font-size: 1rem; color: #fff;
-  flex-shrink: 0;
-}
-.review-name { font-size: .82rem; font-weight: 500; color: var(--text); }
-.review-date { font-size: .72rem; color: var(--mid); margin-top: .1rem; }
-.review-source {
-  margin-inline-start: auto;
-  font-size: .68rem; font-weight: 500; letter-spacing: .1em;
-  text-transform: uppercase; color: rgba(0,0,0,.25);
-}
-
-.reviews-hint {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: .72rem;
-  color: var(--mid);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  opacity: .6;
-}
-
-/* ── WHATSAPP CTA ── */
-.whatsapp-section {
-  background: linear-gradient(135deg, var(--dark), var(--dark2));
-  padding: 5rem 6vw;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.whatsapp-section::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 50% 50%, rgba(37,211,102,.08) 0%, transparent 60%);
-  pointer-events: none;
-}
-.wa-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-.wa-icon {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: #25D366; display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 1.5rem; font-size: 2rem;
-  box-shadow: 0 0 32px rgba(37,211,102,.3);
-}
-.whatsapp-section h2 {
-  font-family: 'Abril Fatface', serif;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  color: #fff; margin-bottom: .8rem; line-height: 1.1;
-}
-body.ar .whatsapp-section h2 { font-family:'Tajawal',sans-serif; font-weight:800; }
-.whatsapp-section p {
-  color: rgba(255,255,255,.5);
-  font-size: .95rem; margin-bottom: 2rem;
-}
-.btn-wa {
-  display: inline-flex; align-items: center; gap: .6rem;
-  background: #25D366; color: #fff;
-  font-family: 'DM Sans', sans-serif;
-  font-size: .75rem; font-weight: 500;
-  letter-spacing: .15em; text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 2.4rem; border-radius: 60px;
-  box-shadow: 0 4px 20px rgba(37,211,102,.35);
-  transition: all .25s;
-}
-body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-transform:none}
-.btn-wa:hover { background: #20BA5C; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,.45); }
-
-/* ── BANK DETAILS: collapsible ── */
-.bank-toggle {
-  background: none; border: none;
-  color: rgba(255,255,255,.35);
-  font-family: 'DM Sans', sans-serif;
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .18em; text-transform: uppercase;
-  cursor: pointer; display: flex; align-items: center; gap: .5rem;
-  margin: 1.5rem auto 0; padding: 0;
-  transition: color .2s;
-}
-body.ar .bank-toggle{font-family:'Tajawal',sans-serif}
-.bank-toggle:hover { color: rgba(255,255,255,.6); }
-.bank-toggle .arrow { transition: transform .3s; font-style: normal; font-size: .7rem; }
-.bank-toggle.open .arrow { transform: rotate(180deg); }
-
-.bank-collapse {
-  max-height: 0; overflow: hidden;
-  transition: max-height .4s ease, opacity .3s ease;
-  opacity: 0;
-}
-.bank-collapse.open {
-  max-height: 300px;
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .review-card { width: 270px; }
-}
-
-
-/* Hide Shopify default page title and padding */
-.shopify-section { margin: 0 !important; padding: 0 !important; }
-h1.title, h1.page-title, .page-title, .page-header,
-[class*="page-title"], [class*="PageTitle"],
-.template-page h1:first-of-type { display: none !important; }
-main { padding: 0 !important; margin: 0 !important; }
-.main-page-content { padding: 0 !important; }
-
-/* Fix outline button overridden by Shopify theme */
-.btn-outline, a.btn-outline, a.btn-outline:visited {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: rgba(255,255,255,0.9) !important;
-  border: 2px solid rgba(255,255,255,0.5) !important;
-  -webkit-appearance: none !important;
-  opacity: 1 !important;
-  text-decoration: none !important;
-}
-.btn-outline:hover {
-  background: rgba(255,255,255,0.1) !important;
-  color: #fff !important;
+  .perks,.pricing,.cta-final,.location,.schedule,.reviews{padding:4rem 1.5rem}
+  .hero{padding:5rem 1.5rem 3rem}
 }
 .home-link{position:fixed;top:1rem;inset-inline-start:1rem;z-index:999;background:#2A0620;color:#fff;border:1px solid rgba(255,255,255,.15);padding:.6rem 1.2rem;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-decoration:none;font-family:'Poppins',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;box-shadow:0 4px 18px rgba(42,6,32,.35)}
 body.ar .home-link{font-family:'Tajawal',sans-serif}
@@ -354,36 +199,38 @@ body.ar .home-link{font-family:'Tajawal',sans-serif}
 </head>
 <body>
 
-<a href="/" class="home-link" data-i18n="homeLink">🏠 Home</a>
+<a href="/schedule/december-january/" class="home-link" data-i18n="homeLink">← Schedule</a>
 <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
 
 <section class="hero">
   <div class="g1"></div><div class="g2"></div><div class="g3"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag"><div class="hero-tag-dot"></div><div class="hero-tag-lines"><span data-i18n="heroTagLine1">Abu Dhabi &bull; Group Classes</span><span data-i18n="heroTagLine2">Beginner &bull; Dec 2026 - Feb 2027</span></div></div>
-      <h1 data-i18n="heroH1">BEGINNER<br><span class="t">LEVEL</span><br>COURSE</h1>
-      <p class="hero-body" data-i18n="heroBody">No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space.</p>
+      <div class="hero-tag"><div class="hero-tag-dot"></div><span data-i18n="heroTag">Abu Dhabi &bull; Ladies Only &bull; Beginner Level</span></div>
+      <h1 data-i18n="heroH1">BEGINNER<br><span class="t">LEVEL</span></h1>
+      <p class="hero-body" data-i18n="heroBody">No experience needed &middot; 8 classes &middot; Thursdays, 7 PM &middot; December 10 to February 4. Discover the power of bellydance: your body, your rhythm, your space.</p>
+      <div class="hero-bio-mini"><p data-i18n="heroBio">Hi, I'm Jiji - international bellydancer with 13+ years teaching across the Arab world. I'll guide you step by step, in a warm, ladies-only studio in Abu Dhabi.</p></div>
       <div class="hero-ctas">
         <a href="https://m815sjhn01s.typeform.com/to/PvLBAZGM" class="btn btn-teal" target="_blank" data-i18n="ctaRegister">Register Now →</a>
         <a href="#pricing" class="btn btn-outline-lt" data-i18n="ctaSeePricing">See Pricing</a>
+        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%20have%20a%20question%20about%20the%20Beginner%20Level%20course." class="btn-wa" target="_blank" rel="noopener" data-i18n="heroWaBtn">💬 &nbsp;Questions? Chat on WhatsApp</a>
       </div>
     </div>
     <div class="hero-panel">
       <div class="panel-card">
-        <span class="panel-tag" data-i18n="panel1Tag">Weekly</span>
-        <h3 data-i18n="panelWeekly1">THURSDAYS</h3>
-        <p data-i18n="panelDay">Every Thursday · 7:00 PM</p>
-        <span class="panel-start" data-i18n="panelDates">Starts December 10, 2026</span>
+        <span class="panel-tag" data-i18n="panel1Tag">Weekly Track</span>
+        <h3 data-i18n="panel1Title">THURSDAYS</h3>
+        <p data-i18n="panel1Text">Every Thursday · 7:00 PM</p>
+        <span class="panel-start" data-i18n="panel1Start">Starts December 10, 2026</span>
       </div>
       <div class="panel-card">
-        <span class="panel-tag" data-i18n="panel2Tag">Full course</span>
-        <h3 data-i18n="panelWeekly2">8 CLASSES</h3>
-        <p data-i18n="panelRange">Dec 10 - Feb 4</p>
-        <span class="panel-start" style="color:var(--v2)" data-i18n="panelBreak">No class on Dec 31</span>
+        <span class="panel-tag" data-i18n="panel2Tag">No Experience Needed</span>
+        <h3 data-i18n="panel2Title">8 CLASSES</h3>
+        <p data-i18n="panel2Text">Dec 10 - Feb 4</p>
+        <span class="panel-start" style="color:var(--o1)" data-i18n="panel2Start">No class on Dec 31</span>
       </div>
       <div class="panel-cta">
-        <p data-i18n="panelCtaText">⚡ Registration is open - spots are limited</p>
+        <p data-i18n="panelCtaText">⚡ Spots limited: registration open</p>
         <a href="https://m815sjhn01s.typeform.com/to/PvLBAZGM" class="btn btn-outline-lt" target="_blank" style="padding:.7rem 1.8rem" data-i18n="panelCtaBtn">Register →</a>
       </div>
     </div>
@@ -394,22 +241,23 @@ body.ar .home-link{font-family:'Tajawal',sans-serif}
   <div class="strip-track" id="stripTrack"></div>
 </div>
 
-<section class="schedule">
+<section class="schedule" id="schedule">
   <div class="schedule-inner">
     <div>
-      <span class="tag" data-i18n="schedTag">Schedule &bull; Dec 2026 - Feb 2027 &bull; Beginner Level</span>
+      <span class="tag" data-i18n="schedTag">Schedule &bull; December 2026 - February 2027</span>
       <h2 data-i18n="schedH2">Your <em>schedule</em></h2>
-      <div class="gcard"><div class="gcard-bar"></div><div><div class="gcard-day" data-i18n="schedDay">Thursdays</div><div class="gcard-time" data-i18n="schedTime">7:00 PM</div><div class="gcard-start" data-i18n="panelDates">Starts December 10, 2026</div></div></div>
-      <div class="recover" style="font-family:'Abril Fatface',serif;font-size:1.1rem;font-style:italic;background:transparent;border:none;padding:.5rem 0;color:var(--mid)" data-i18n="recoverNote">📅 Dec 10 · 17 · 24 · Jan 7 · 14 · 21 · 28 · Feb 4<br>No class on Dec 31 (New Year break).</div>
-      <a href="/beginner-morning/" class="intensive-link" data-i18n="intensiveLink">☀️ Prefer mornings? Check out our Beginner Level Morning, Tuesdays at 10 AM →</a>
+      <div class="gcard"><div class="gcard-bar"></div><div><div class="gcard-day" data-i18n="schedDay">Thursdays</div><div class="gcard-time" data-i18n="schedTime">7:00 PM</div><div class="gcard-start" data-i18n="schedStart">Starts December 10, 2026</div></div></div>
+      <div class="date-list"><span class="date-list-label" data-i18n="schedDatesLabel">Class Dates</span><span data-i18n="schedDates">Dec 10 &middot; 17 &middot; 24 &middot; Jan 7 &middot; 14 &middot; 21 &middot; 28 &middot; Feb 4</span></div>
+      <p class="note-line" data-i18n="schedNote">📌 No class on December 31 (New Year break).</p>
+      <a href="/beginner-morning/" class="morning-link" data-i18n="morningLink">☀️ Prefer mornings? Check out our Beginner Level Morning, Tuesdays at 10 AM →</a>
     </div>
     <div>
       <span class="tag" data-i18n="whatTag">What to expect</span>
       <div class="what">
         <h3 data-i18n="whatH3">8 weeks of learning + dancing + having fun</h3>
-        <p data-i18n="whatP1">Learn new bellydance steps every week, build rhythm and confidence in a safe, ladies only space.</p>
-        <p data-i18n="whatP2">Let's dance a full choreography together in our last class! 🎉</p>
-        <p class="small" data-i18n="whatP3">‼️ No recording allowed - let's respect the privacy of all the ladies 🫶</p>
+        <p data-i18n="whatP1">Learn new bellydance steps every week, build rhythm and confidence in a safe, ladies-only space.</p>
+        <p data-i18n="whatP2">A full choreography together in our last class! 🎉</p>
+        <p data-i18n="whatP3">‼️ No recording allowed - let's respect the privacy of all the ladies 🫶</p>
       </div>
     </div>
   </div>
@@ -417,21 +265,19 @@ body.ar .home-link{font-family:'Tajawal',sans-serif}
 
 <section class="pricing" id="pricing">
   <div class="pricing-inner">
-    <span class="tag" style="color:var(--t1)" data-i18n="priceTag">Pricing</span>
+    <span class="tag" style="color:var(--t2)" data-i18n="priceTag">Pricing</span>
     <h2 data-i18n="priceH2">Your <span>investment</span></h2>
     <div class="price-cards">
       <div class="pcard best">
         <div class="best-tag" data-i18n="bestTag">Save AED 50</div>
         <span class="pl" data-i18n="p1Label">Bank Transfer</span>
         <span class="pa" data-i18n="p1Price"><span class="pc">AED </span>800</span>
-        <span class="ps" data-i18n="p1Sub">Full course · 8 weeks</span>
-        <p class="pn" data-i18n="p1Note">Pay by bank transfer and save AED 50.</p>
+        <span class="ps" data-i18n="p1Sub">Full course · 8 classes</span>
       </div>
       <div class="pcard">
         <span class="pl" data-i18n="p2Label">Card / Tabby</span>
         <span class="pa" data-i18n="p2Price"><span class="pc">AED </span>850</span>
-        <span class="ps" data-i18n="p1Sub">Full course · 8 weeks</span>
-        <p class="pn" data-i18n="p2Note">Split in 4 installments with Tabby.</p>
+        <span class="ps" data-i18n="p2Sub">Full course · 8 classes</span>
       </div>
     </div>
     <button class="bank-toggle" onclick="toggleBank(this)" aria-expanded="false">
@@ -439,11 +285,11 @@ body.ar .home-link{font-family:'Tajawal',sans-serif}
       <em class="arrow">▼</em>
     </button>
     <div class="bank-collapse" id="bankDetails">
-      <div class="bank" style="margin-top:1rem">
-        <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7" data-i18n="bankText">The bank transfer details will be provided in the registration form after you submit your registration.</p>
-      </div>
+      <div class="bank"><p data-i18n="bankText">Bank transfer details are sent in the registration form after you submit it.</p></div>
     </div>
-    <a href="https://business.mamopay.com/pay/jijidance-e904bde82a41" class="btn btn-teal" target="_blank" rel="noopener" style="margin-top:1.5rem" data-i18n="payBtn">Pay by Card / Tabby →</a>
+    <div style="margin-top:1.5rem">
+      <a href="https://business.mamopay.com/pay/jijidance-e904bde82a41" class="btn btn-teal" target="_blank" rel="noopener" data-i18n="payBtn">Pay by Card / Tabby →</a>
+    </div>
   </div>
 </section>
 
@@ -455,103 +301,113 @@ body.ar .home-link{font-family:'Tajawal',sans-serif}
       <div class="perk"><span class="perk-icon">👗</span><h4 data-i18n="perk1Title">Belts Provided</h4><p data-i18n="perk1Desc">No need to buy anything: belts provided for all classes.</p></div>
       <div class="perk"><span class="perk-icon">🌸</span><h4 data-i18n="perk2Title">Beautiful Studio</h4><p data-i18n="perk2Desc">Inside a gorgeous flower shop: full privacy guaranteed.</p></div>
       <div class="perk"><span class="perk-icon">🅿️</span><h4 data-i18n="perk3Title">Easy Parking</h4><p data-i18n="perk3Desc">Mawaqif public parking in front and nearby the studio.</p></div>
-      <div class="perk"><span class="perk-icon">☕️</span><h4 data-i18n="perk4Title">Café Inside</h4><p data-i18n="perk4Desc">Coffee, juice, water: and flowers! Or bring your own.</p></div>
-      <div class="perk"><span class="perk-icon">💃🏻</span><h4 data-i18n="perk5Title">Final Choreography</h4><p data-i18n="perk5Desc">Let's dance a full choreography together in our last class!</p></div>
-      <div class="perk"><span class="perk-icon">🫶</span><h4 data-i18n="perk6Title">Supportive Community</h4><p data-i18n="perk6Desc">No competition: we are all growing together!</p></div>
-      <div class="perk"><span class="perk-icon">💬</span><h4 data-i18n="perk7Title">Exclusive WhatsApp Group</h4><p data-i18n="perk7Desc">Weekly videos with explanations of the steps learned in class, so you can practice at home.</p></div>
+      <div class="perk"><span class="perk-icon">💃🏻</span><h4 data-i18n="perk4Title">Final Choreography</h4><p data-i18n="perk4Desc">A full choreography together in our very last class!</p></div>
+      <div class="perk"><span class="perk-icon">🫶</span><h4 data-i18n="perk5Title">Supportive Community</h4><p data-i18n="perk5Desc">No competition: we grow together, every single one of us.</p></div>
+      <div class="perk"><span class="perk-icon">💬</span><h4 data-i18n="perk6Title">WhatsApp Group</h4><p data-i18n="perk6Desc">Weekly videos to practice the steps learned in class, at home.</p></div>
     </div>
   </div>
 </section>
 
 <section class="location">
   <h2 data-i18n="locH2">📍 Find us in Abu Dhabi</h2>
-  <p data-i18n="locP1">🌸 <strong>Inside a beautiful flower shop</strong>: opposite to Umm Al Emarat Park.</p>
-  <p style="margin-bottom:2rem" data-i18n="locP2">Full privacy · Easy Mawaqif parking</p>
-  <a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" class="btn btn-outline-lt" target="_blank" rel="noopener" data-i18n="locBtn">Open in Google Maps →</a>
+  <p data-i18n="locP1">We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.</p>
+  <p data-i18n="locP2">🌸 <strong>Inside a beautiful flower shop</strong>: opposite Umm Al Emarat Park.</p>
+  <p style="margin-bottom:1.5rem" data-i18n="locP3">Full privacy · Easy Mawaqif parking</p>
+  <a href="https://maps.app.goo.gl/xDLtZD7ruKcFszZL7" class="btn btn-outline-dark" target="_blank" rel="noopener" data-i18n="locBtn">Open in Google Maps →</a>
 </section>
 
-<!-- ── GOOGLE REVIEWS CAROUSEL ── -->
 <section class="reviews">
-  <div class="reviews-header">
+  <div class="reviews-inner">
     <span class="tag" data-i18n="revTag">What our ladies say</span>
     <h2 data-i18n="revH2">Real reviews from <span>Google</span></h2>
-    <p data-i18n="revRating">⭐ 5.0 · Google Reviews</p>
+    <p class="reviews-sub" data-i18n="revRating">⭐ 5.0 · Google Reviews</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev1Text">"Jiji is beyond amazing with her teaching skills, step by step. Fun classes, amazing people, pure empowering energy 🤍"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">Verified Student</span> · <span class="review-source">Google</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev2Text">"Incredibly kind, professional, full of positive energy. Even beginners felt confident and comfortable. Highly recommended! 💕"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">Verified Student</span> · <span class="review-source">Google</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text" data-i18n="rev3Text">"So positive and contagious energy that it makes you enjoy every second. Highly recommend!"</p>
+        <div class="review-author"><span data-i18n="revAuthorLabel">Verified Student</span> · <span class="review-source">Google</span></div>
+      </div>
+    </div>
   </div>
-
-  <div class="reviews-track-wrap" id="reviewsCarousel">
-    <div class="reviews-track" id="reviewsTrack"></div>
-  </div>
-  <p class="reviews-hint" data-i18n="revHint">← Swipe to see more →</p>
 </section>
 
-<!-- ── WHATSAPP ── -->
 <section class="whatsapp-section">
   <div class="wa-inner">
     <div class="wa-icon">💬</div>
     <h2 data-i18n="waH2">Still have questions?</h2>
-    <p data-i18n="waP">I'm happy to help! Send me a message on WhatsApp and I'll get back to you as soon as possible.</p>
-    <a href="https://wa.me/971567750994" class="btn-wa" target="_blank" rel="noopener" data-i18n="waBtn">
-      💬 &nbsp;Chat on WhatsApp
-    </a>
+    <p data-i18n="waP">I'm happy to help! Send me a message on WhatsApp.</p>
+    <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27m%20interested%20in%20the%20Beginner%20Level%20course" class="btn-wa" target="_blank" rel="noopener" data-i18n="waBtn">💬 &nbsp;Chat on WhatsApp</a>
   </div>
 </section>
-
 
 <section class="cta-final">
   <div class="cta-blob"></div>
   <span class="tag" data-i18n="ctaTag">Ready?</span>
   <h2 data-i18n="ctaH2">Spots are<br><span>limited.</span></h2>
-  <p data-i18n="ctaP">Fill in the registration form and complete your payment to confirm your spot. Registration without payment does not reserve your place.</p>
+  <p data-i18n="ctaP">Register and complete your payment to confirm your spot. Registration without payment does not reserve your place.</p>
   <div class="cta-btns">
     <a href="https://m815sjhn01s.typeform.com/to/PvLBAZGM" class="btn btn-teal" target="_blank" rel="noopener" data-i18n="ctaBtn1">Register Now →</a>
     <a href="https://business.mamopay.com/pay/jijidance-e904bde82a41" class="btn btn-violet" target="_blank" rel="noopener" data-i18n="ctaBtn2">Pay by Card / Tabby</a>
   </div>
-  <p style="color:var(--mid);font-size:.88rem;margin-top:2rem" data-i18n="ctaFoot">🥳 Hope to see you dancing with us soon!</p>
+  <p class="cta-foot" data-i18n="ctaFoot">🥳 Hope to see you dancing with us soon!</p>
 </section>
 
+<div class="footer-mini"><span>© 2026 Jiji Bellydance · jijidance.com/beginner</span></div>
 
 <script>
 const dict = {
-  homeLink:{en:"🏠 Home",ar:"🏠 الرئيسية"},
-  heroTagLine1:{en:"Abu Dhabi &bull; Group Classes",ar:"أبوظبي &bull; دروس جماعية"},
-  heroTagLine2:{en:"Beginner &bull; Dec 2026 - Feb 2027",ar:"مبتدئات &bull; ديسمبر 2026 - فبراير 2027"},
-  heroH1:{en:'BEGINNER<br><span class="t">LEVEL</span><br>COURSE',ar:'دورة<br><span class="t">المبتدئات</span><br>الرقص الشرقي'},
-  heroBody:{en:"No experience needed. 8 weeks to discover the power of bellydance - your body, your rhythm, your space.",ar:"لا حاجة لخبرة سابقة. 8 أسابيع لاكتشاف قوة الرقص الشرقي - جسدكِ، إيقاعكِ، مساحتكِ الخاصة."},
+  homeLink:{en:"← Schedule",ar:"→ جدول الحصص"},
+  heroTag:{en:"Abu Dhabi &bull; Ladies Only &bull; Beginner Level",ar:"أبوظبي &bull; دروس نسائية فقط &bull; مستوى المبتدئات"},
+  heroH1:{en:'BEGINNER<br><span class="t">LEVEL</span>',ar:'مستوى<br><span class="t">المبتدئات</span>'},
+  heroBody:{en:"No experience needed &middot; 8 classes &middot; Thursdays, 7 PM &middot; December 10 to February 4. Discover the power of bellydance: your body, your rhythm, your space.",ar:"لا حاجة لخبرة سابقة &middot; 8 حصص &middot; كل خميس الساعة 7 مساءً &middot; من 10 ديسمبر إلى 4 فبراير. اكتشفي قوة الرقص الشرقي: جسدكِ، إيقاعكِ، مساحتكِ."},
+  heroBio:{en:"Hi, I'm Jiji - international bellydancer with 13+ years teaching across the Arab world. I'll guide you step by step, in a warm, ladies-only studio in Abu Dhabi.",ar:"مرحباً، أنا جيجي، راقصة شرقية عالمية بخبرة أكثر من 13 عامًا في تدريس النساء بالعالم العربي. سأرافقكِ خطوة بخطوة في استوديو دافئ مخصص للنساء فقط في أبوظبي."},
   ctaRegister:{en:"Register Now →",ar:"سجّلي الآن ←"},
   ctaSeePricing:{en:"See Pricing",ar:"شاهدي الأسعار"},
-  panel1Tag:{en:"Weekly",ar:"أسبوعي"},
-  panel2Tag:{en:"Full course",ar:"الدورة كاملة"},
-  panelWeekly1:{en:"THURSDAYS",ar:"أيام الخميس"},
-  panelWeekly2:{en:"8 CLASSES",ar:"8 حصص"},
-  panelDay:{en:"Every Thursday · 7:00 PM",ar:"كل خميس · 7:00 مساءً"},
-  panelDates:{en:"Starts December 10, 2026",ar:"تبدأ 10 ديسمبر 2026"},
-  panelRange:{en:"Dec 10 - Feb 4",ar:"10 ديسمبر - 4 فبراير"},
-  panelBreak:{en:"No class on Dec 31",ar:"لا حصة يوم 31 ديسمبر"},
+  panel1Tag:{en:"Weekly Track",ar:"مسار أسبوعي"},
+  panel1Title:{en:"THURSDAYS",ar:"أيام الخميس"},
+  panel1Text:{en:"Every Thursday · 7:00 PM",ar:"كل خميس · 7:00 مساءً"},
+  panel1Start:{en:"Starts December 10, 2026",ar:"تبدأ 10 ديسمبر 2026"},
+  panel2Tag:{en:"No Experience Needed",ar:"لا حاجة لخبرة سابقة"},
+  panel2Title:{en:"8 CLASSES",ar:"8 حصص"},
+  panel2Text:{en:"Dec 10 - Feb 4",ar:"10 ديسمبر - 4 فبراير"},
+  panel2Start:{en:"No class on Dec 31",ar:"لا حصة يوم 31 ديسمبر"},
+  panelCtaText:{en:"⚡ Spots limited: registration open",ar:"⚡ الأماكن محدودة: التسجيل مفتوح الآن"},
+  panelCtaBtn:{en:"Register →",ar:"سجّلي ←"},
+  schedTag:{en:"Schedule &bull; December 2026 - February 2027",ar:"الجدول &bull; ديسمبر 2026 - فبراير 2027"},
+  schedH2:{en:"Your <em>schedule</em>",ar:"<em>جدولكِ</em>"},
   schedDay:{en:"Thursdays",ar:"أيام الخميس"},
   schedTime:{en:"7:00 PM",ar:"7:00 مساءً"},
-  panelCtaText:{en:"⚡ Registration is open - spots are limited",ar:"⚡ التسجيل مفتوح - الأماكن محدودة"},
-  panelCtaBtn:{en:"Register →",ar:"سجّلي ←"},
-  intensiveLink:{en:"☀️ Prefer mornings? Check out our Beginner Level Morning, Tuesdays at 10 AM →",ar:"☀️ تفضّلين الصباح؟ تعرّفي على دورة المبتدئات الصباحية، كل ثلاثاء الساعة 10 صباحًا ←"},
-  schedTag:{en:"Schedule &bull; Dec 2026 - Feb 2027 &bull; Beginner Level",ar:"الجدول &bull; ديسمبر 2026 - فبراير 2027 &bull; مستوى المبتدئات"},
-  schedH2:{en:"Your <em>schedule</em>",ar:"<em>جدولكِ</em>"},
-  recoverNote:{en:"📅 Dec 10 · 17 · 24 · Jan 7 · 14 · 21 · 28 · Feb 4<br>No class on Dec 31 (New Year break).",ar:"📅 10 · 17 · 24 ديسمبر · 7 · 14 · 21 · 28 يناير · 4 فبراير<br>لا حصة يوم 31 ديسمبر (عطلة رأس السنة)."},
+  schedStart:{en:"Starts December 10, 2026",ar:"تبدأ 10 ديسمبر 2026"},
+  schedDatesLabel:{en:"Class Dates",ar:"تواريخ الحصص"},
+  schedDates:{en:"Dec 10 &middot; 17 &middot; 24 &middot; Jan 7 &middot; 14 &middot; 21 &middot; 28 &middot; Feb 4",ar:"10 &middot; 17 &middot; 24 ديسمبر &middot; 7 &middot; 14 &middot; 21 &middot; 28 يناير &middot; 4 فبراير"},
+  schedNote:{en:"📌 No class on December 31 (New Year break).",ar:"📌 لا حصة يوم 31 ديسمبر (عطلة رأس السنة)."},
+  morningLink:{en:"☀️ Prefer mornings? Check out our Beginner Level Morning, Tuesdays at 10 AM →",ar:"☀️ تفضّلين الصباح؟ تعرّفي على دورة المبتدئات الصباحية، كل ثلاثاء الساعة 10 صباحًا ←"},
   whatTag:{en:"What to expect",ar:"ماذا تتوقعين"},
   whatH3:{en:"8 weeks of learning + dancing + having fun",ar:"8 أسابيع من التعلم + الرقص + المرح"},
-  whatP1:{en:"Learn new bellydance steps every week, build rhythm and confidence in a safe, ladies only space.",ar:"تعلّمي خطوات جديدة في الرقص الشرقي كل أسبوع، وابني إيقاعك وثقتك في مساحة آمنة مخصصة للنساء فقط."},
-  whatP2:{en:"Let's dance a full choreography together in our last class! 🎉",ar:"سنرقص معًا كوريغرافيا كاملة في الحصة الأخيرة! 🎉"},
+  whatP1:{en:"Learn new bellydance steps every week, build rhythm and confidence in a safe, ladies-only space.",ar:"تعلّمي خطوات جديدة في الرقص الشرقي كل أسبوع، وابني إيقاعكِ وثقتكِ في مساحة آمنة مخصصة للنساء فقط."},
+  whatP2:{en:"A full choreography together in our last class! 🎉",ar:"سنرقص معًا كوريغرافيا كاملة في الحصة الأخيرة! 🎉"},
   whatP3:{en:"‼️ No recording allowed - let's respect the privacy of all the ladies 🫶",ar:"‼️ ممنوع التصوير - احترامًا لخصوصية جميع المشاركات 🫶"},
   priceTag:{en:"Pricing",ar:"الأسعار"},
   priceH2:{en:"Your <span>investment</span>",ar:"استثمارك <span>في نفسك</span>"},
   bestTag:{en:"Save AED 50",ar:"وفّري 50 درهم"},
   p1Label:{en:"Bank Transfer",ar:"تحويل بنكي"},
   p1Price:{en:'<span class="pc">AED </span>800',ar:'800 <span class="pc">درهم</span>'},
-  p1Sub:{en:"Full course · 8 weeks",ar:"الدورة كاملة · 8 أسابيع"},
-  p1Note:{en:"Pay by bank transfer and save AED 50.",ar:"ادفعي عن طريق التحويل البنكي ووفّري 50 درهمًا."},
+  p1Sub:{en:"Full course · 8 classes",ar:"الدورة كاملة · 8 حصص"},
   p2Label:{en:"Card / Tabby",ar:"بطاقة / تابي"},
   p2Price:{en:'<span class="pc">AED </span>850',ar:'850 <span class="pc">درهم</span>'},
-  p2Note:{en:"Split in 4 installments with Tabby.",ar:"قسّمي الدفع على 4 دفعات مع تابي."},
+  p2Sub:{en:"Full course · 8 classes",ar:"الدورة كاملة · 8 حصص"},
   bankToggleLabel:{en:"🏦 Bank transfer details",ar:"🏦 تفاصيل التحويل البنكي"},
-  bankText:{en:"The bank transfer details will be provided in the registration form after you submit your registration.",ar:"سيتم تزويدك بتفاصيل التحويل البنكي ضمن نموذج التسجيل بعد إرساله."},
+  bankText:{en:"Bank transfer details are sent in the registration form after you submit it.",ar:"سيتم إرسال تفاصيل التحويل البنكي ضمن نموذج التسجيل بعد إرساله."},
   payBtn:{en:"Pay by Card / Tabby →",ar:"ادفعي بالبطاقة / تابي ←"},
   perksTag:{en:"What's included",ar:"ما يشمله الاشتراك"},
   perksH2:{en:"Everything to feel <span>at home</span>",ar:"كل ما تحتاجينه لتشعري <span>بالراحة</span>"},
@@ -561,68 +417,44 @@ const dict = {
   perk2Desc:{en:"Inside a gorgeous flower shop: full privacy guaranteed.",ar:"داخل محل زهور رائع: خصوصية كاملة مضمونة."},
   perk3Title:{en:"Easy Parking",ar:"موقف سيارات سهل"},
   perk3Desc:{en:"Mawaqif public parking in front and nearby the studio.",ar:"موقف Mawaqif العام أمام الاستوديو وبالقرب منه."},
-  perk4Title:{en:"Café Inside",ar:"كافيه بالداخل"},
-  perk4Desc:{en:"Coffee, juice, water: and flowers! Or bring your own.",ar:"قهوة وعصير ومياه، وأزهار! أو أحضري ما يناسبك."},
-  perk5Title:{en:"Final Choreography",ar:"كوريغرافيا ختامية"},
-  perk5Desc:{en:"Let's dance a full choreography together in our last class!",ar:"سنرقص كوريغرافيا كاملة معًا في الحصة الأخيرة!"},
-  perk6Title:{en:"Supportive Community",ar:"مجتمع داعم"},
-  perk6Desc:{en:"No competition: we are all growing together!",ar:"بدون منافسة: ننمو جميعًا معًا!"},
-  perk7Title:{en:"Exclusive WhatsApp Group",ar:"مجموعة واتساب حصرية"},
-  perk7Desc:{en:"Weekly videos with explanations of the steps learned in class, so you can practice at home.",ar:"فيديوهات أسبوعية تشرح خطوات الحصة لتتمريني في المنزل."},
+  perk4Title:{en:"Final Choreography",ar:"كوريغرافيا ختامية"},
+  perk4Desc:{en:"A full choreography together in our very last class!",ar:"سنرقص كوريغرافيا كاملة معًا في الحصة الأخيرة!"},
+  perk5Title:{en:"Supportive Community",ar:"مجتمع داعم"},
+  perk5Desc:{en:"No competition: we grow together, every single one of us.",ar:"بدون منافسة: ننمو جميعًا معًا!"},
+  perk6Title:{en:"WhatsApp Group",ar:"مجموعة واتساب"},
+  perk6Desc:{en:"Weekly videos to practice the steps learned in class, at home.",ar:"فيديوهات أسبوعية لممارسة الخطوات المتعلمة في المنزل."},
   locH2:{en:"📍 Find us in Abu Dhabi",ar:"📍 موقعنا في أبوظبي"},
-  locP1:{en:"🌸 <strong>Inside a beautiful flower shop</strong>: opposite to Umm Al Emarat Park.",ar:"🌸 <strong>داخل محل زهور جميل</strong>: مقابل حديقة أم العمار."},
-  locP2:{en:"Full privacy · Easy Mawaqif parking",ar:"خصوصية كاملة · موقف سيارات Mawaqif سهل"},
+  locP1:{en:"We are located in <strong>Abu Dhabi, United Arab Emirates</strong>.",ar:"نحن في <strong>أبوظبي، الإمارات العربية المتحدة</strong>."},
+  locP2:{en:"🌸 <strong>Inside a beautiful flower shop</strong>: opposite Umm Al Emarat Park.",ar:"🌸 <strong>داخل محل زهور جميل</strong>: مقابل حديقة أم العمار."},
+  locP3:{en:"Full privacy · Easy Mawaqif parking",ar:"خصوصية كاملة · موقف سيارات Mawaqif سهل"},
   locBtn:{en:"Open in Google Maps →",ar:"افتحي في خرائط جوجل ←"},
   revTag:{en:"What our ladies say",ar:"ماذا تقول طالباتنا"},
   revH2:{en:"Real reviews from <span>Google</span>",ar:"تقييمات حقيقية من <span>جوجل</span>"},
   revRating:{en:"⭐ 5.0 · Google Reviews",ar:"⭐ 5.0 · تقييمات جوجل"},
-  revHint:{en:"← Swipe to see more →",ar:"← اسحبي لرؤية المزيد →"},
+  rev1Text:{en:'"Jiji is beyond amazing with her teaching skills, step by step. Fun classes, amazing people, pure empowering energy 🤍"',ar:'"جيجي معلمة مذهلة، تشرح خطوة بخطوة. حصص ممتعة مع أشخاص رائعين، وطاقة نسائية حقيقية 🤍"'},
+  rev2Text:{en:'"Incredibly kind, professional, full of positive energy. Even beginners felt confident and comfortable. Highly recommended! 💕"',ar:'"لطيفة جدًا ومحترفة ومليئة بالطاقة الإيجابية. حتى المبتدئات يشعرن بالثقة. أنصح بشدة! 💕"'},
+  rev3Text:{en:'"So positive and contagious energy that it makes you enjoy every second. Highly recommend!"',ar:'"طاقة إيجابية ومعدية تجعلك تستمتعين بكل لحظة. أنصح بشدة!"'},
+  revAuthorLabel:{en:"Verified Student",ar:"طالبة موثقة"},
   waH2:{en:"Still have questions?",ar:"لديكِ أسئلة؟"},
-  waP:{en:"I'm happy to help! Send me a message on WhatsApp and I'll get back to you as soon as possible.",ar:"يسعدني مساعدتك! أرسلي لي رسالة على واتساب وسأرد عليكِ بأقرب وقت."},
+  waP:{en:"I'm happy to help! Send me a message on WhatsApp.",ar:"يسعدني مساعدتك! أرسلي لي رسالة على واتساب."},
   waBtn:{en:"💬 &nbsp;Chat on WhatsApp",ar:"💬 &nbsp;تحدثي عبر واتساب"},
+  heroWaBtn:{en:"💬 &nbsp;Questions? Chat on WhatsApp",ar:"💬 &nbsp;أسئلة؟ تحدثي عبر واتساب"},
   ctaTag:{en:"Ready?",ar:"جاهزة؟"},
   ctaH2:{en:"Spots are<br><span>limited.</span>",ar:"الأماكن<br><span>محدودة.</span>"},
-  ctaP:{en:"Fill in the registration form and complete your payment to confirm your spot. Registration without payment does not reserve your place.",ar:"املئي نموذج التسجيل وأكملي الدفع لتأكيد مكانك. التسجيل بدون دفع لا يحجز مكانك."},
+  ctaP:{en:"Register and complete your payment to confirm your spot. Registration without payment does not reserve your place.",ar:"سجّلي وأكملي الدفع لتأكيد مكانك. التسجيل بدون دفع لا يحجز مكانك."},
   ctaBtn1:{en:"Register Now →",ar:"سجّلي الآن ←"},
   ctaBtn2:{en:"Pay by Card / Tabby",ar:"ادفعي بالبطاقة / تابي"},
   ctaFoot:{en:"🥳 Hope to see you dancing with us soon!",ar:"🥳 نتمنى رؤيتك ترقصين معنا قريبًا!"},
-  pageTitle:{en:"Beginner Level - Dec 2026 to Feb 2027 - Jiji Bellydance",ar:"مستوى المبتدئات - ديسمبر 2026 إلى فبراير 2027 - جيجي دانس"}
+  pageTitle:{en:"Beginner Level - December 2026 - February 2027 - Jiji Bellydance",ar:"مستوى المبتدئات - ديسمبر 2026 - فبراير 2027 - جيجي دانس"}
 };
 const stripItems = {
-  en:["Beginner","8 Weeks","Ladies Only","Dec - Feb","Thursdays · 7 PM","Spots Limited"],
-  ar:["مبتدئات","8 أسابيع","نساء فقط","ديسمبر - فبراير","الخميس · 7 مساءً","الأماكن محدودة"]
+  en:["Beginner Level","No Experience Needed","Weekly · Thursdays","Ladies Only","Dec 2026 - Feb 2027","8 Classes","Spots Limited"],
+  ar:["مستوى المبتدئات","لا حاجة لخبرة سابقة","أسبوعيًا · الخميس","نساء فقط","ديسمبر 2026 - فبراير 2027","8 حصص","الأماكن محدودة"]
 };
-const reviews = [
-  {grad:"linear-gradient(135deg,#FF6B9D,#C850C0)",dateEn:"2 months ago",dateAr:"قبل شهرين",en:"Great experience for my beginner level certificate. Jiji is beyond amazing with her teaching skills, taking it step by step. I really improved throughout the 8 weeks. Fun classes with amazing people, pure girlhood and empowering energy 🤍 Can't wait for my next level with Jiji!",ar:"تجربة رائعة لشهادتي في المستوى الأول. جيجي معلمة مذهلة، تشرح خطوة بخطوة. تحسّنت كثيرًا خلال الأسابيع الثمانية. حصص ممتعة مع أشخاص رائعين، وطاقة نسائية حقيقية 🤍 بالانتظار للمستوى القادم مع جيجي!"},
-  {grad:"linear-gradient(135deg,#4FACFE,#00F2FE)",dateEn:"8 months ago",dateAr:"قبل 8 أشهر",en:"I absolutely loved the bellydance course! The instructor was incredibly kind, professional, and full of positive energy. She explained every move step by step, so even beginners felt confident and comfortable. Every session was enjoyable, and I always looked forward to the class. Highly recommended! 💕🙌✨",ar:"أحببت دورة الرقص الشرقي كثيرًا! المعلمة لطيفة جدًا ومحترفة ومليئة بالطاقة الإيجابية. تشرح كل حركة خطوة بخطوة، فحتى المبتدئات يشعرن بالثقة والراحة. كل حصة كانت ممتعة، وكنت أنتظرها بشوق. أنصح بشدة! 💕🙌✨"},
-  {grad:"linear-gradient(135deg,#43E97B,#38F9D7)",dateEn:"2 months ago",dateAr:"قبل شهرين",en:"Thank you Jiji for everything: these classes were SO much fun. Can't wait to start the next round!",ar:"شكرًا جيجي على كل شيء: هذه الحصص كانت ممتعة جدًا. بالانتظار لبدء الدورة القادمة!"},
-  {grad:"linear-gradient(135deg,#F093FB,#F5576C)",dateEn:"a year ago",dateAr:"قبل سنة",en:"Taking bellydance classes with Jiji was an amazing experience! The classes were great, but the absolute best part was her energy: so positive and contagious that it makes you enjoy every second. Her enthusiasm and passion make you want to keep coming back. Highly recommend!",ar:"أخذ حصص الرقص الشرقي مع جيجي كانت تجربة رائعة! الحصص ممتازة، لكن الأجمل كان طاقتها الإيجابية المعدية التي تجعلك تستمتعين بكل لحظة. حماسها وشغفها يجعلانك ترغبين بالعودة دائمًا. أنصح بشدة!"},
-  {grad:"linear-gradient(135deg,#FA709A,#FEE140)",dateEn:"a year ago",dateAr:"قبل سنة",en:"Your talent and passion for oriental dance are truly mesmerizing. You have an incredible ability to inspire and empower everyone around you. With your guidance, each movement becomes an art form, full of grace, beauty, and soul. You're not just a teacher but a true artist and motivator. I feel so lucky to learn from you! ❤️",ar:"موهبتك وشغفك بالرقص الشرقي ساحران حقًا. لديكِ قدرة مذهلة على إلهام وتمكين كل من حولك. بفضل توجيهك، تتحول كل حركة إلى عمل فني مليء بالرشاقة والجمال والروح. أنتِ لستِ مجرد معلمة، بل فنانة وملهمة حقيقية. أشعر بالحظ لتعلّم الرقص منكِ! ❤️"},
-  {grad:"linear-gradient(135deg,#A18CD1,#FBC2EB)",dateEn:"a year ago",dateAr:"قبل سنة",en:"Very nice experience for those who want to start from the basics and move forward. Nice environment, beautiful ladies, great dancer Jiji. Thank you 🌸",ar:"تجربة جميلة جدًا لمن تريد البدء من الأساسيات والتقدم خطوة بخطوة. أجواء لطيفة، سيدات رائعات، وراقصة محترفة مثل جيجي. شكرًا لكِ 🌸"},
-  {grad:"linear-gradient(135deg,#FFC3A0,#FFAFBD)",dateEn:"2 years ago",dateAr:"قبل سنتين",en:"I am fond of dancing with Jiji 💕 Even though I am a beginner, her teaching methods are perfect and easy to learn. Jiji is an amazing dancer and I strongly suggest dancing with her 💃 You are an incredible dancer and the greatest coach 🌸🌸🌸",ar:"أعشق الرقص مع جيجي 💕 رغم أنني مبتدئة، أسلوبها في التعليم رائع وسهل الفهم. جيجي راقصة مذهلة وأنصح بشدة بالرقص معها 💃 أنتِ راقصة مذهلة وأفضل مدربة 🌸🌸🌸"},
-  {grad:"linear-gradient(135deg,#667EEA,#764BA2)",dateEn:"a year ago",dateAr:"قبل سنة",en:"I really enjoy my bellydance classes with Jiji! She is the best!!! Very patient, kind, and makes every class fun. I am learning a lot and feel more confident each time. I love her classes!",ar:"أستمتع كثيرًا بحصص الرقص الشرقي مع جيجي! هي الأفضل!!! صبورة ولطيفة، وتجعل كل حصة ممتعة. أتعلم الكثير وأشعر بثقة أكبر في كل مرة. أحب حصصها!"},
-  {grad:"linear-gradient(135deg,#F7971E,#FFD200)",dateEn:"3 years ago",dateAr:"قبل 3 سنوات",en:"Amazing teacher! She teaches you everything in detail and makes sure you make the right moves. So dedicated and passionate about teaching dancing! Highly recommend her!",ar:"معلمة رائعة! تشرح كل شيء بالتفصيل وتتأكد من أن حركاتك صحيحة. شغوفة ومتفانية جدًا في تعليم الرقص! أنصح بها بشدة!"},
-  {grad:"linear-gradient(135deg,#00C9FF,#92FE9D)",dateEn:"3 years ago",dateAr:"قبل 3 سنوات",en:"She is the best bellydance instructor, full of vitality and energy. Her dance is very beautiful and she masters all Arabic dances. And I do not forget the beautiful smile all the time 🌸",ar:"هي أفضل معلمة رقص شرقي، مليئة بالحيوية والطاقة. رقصها جميل جدًا وتتقن جميع الرقصات العربية. ولا أنسى ابتسامتها الجميلة الدائمة 🌸"},
-  {grad:"linear-gradient(135deg,#D4906A,#FF6B35)",dateEn:"2 months ago",dateAr:"قبل شهرين",en:"The instructor is very skilled and teaches from scratch, and her atmosphere is great 🥰 Jiji is very sweet and really knows how to teach bellydance. I disconnect after work and her classes are exactly what I need: you will enjoy the music and the vibes 😘 Highly recommended!",ar:"المعلمة ماهرة جدًا وتعلّم من الصفر، وأجواؤها رائعة 🥰 جيجي لطيفة جدًا وتعرف كيف تعلّم الرقص الشرقي. أحضر حصصها بعد العمل لأرتاح، وهي بالضبط ما أحتاجه: ستستمتعين بالموسيقى والأجواء 😘 أنصح بشدة!"},
-  {grad:"linear-gradient(135deg,#C850C0,#FF6B9D)",dateEn:"2 years ago",dateAr:"قبل سنتين",en:"Gigi is a lovely coach: she is the best in town! Her classes are enjoyable and never boring. Great atmosphere, well organized schedules, easy and clear. Her classes are entertaining and you will never get bored. Love u Gigi ❤️",ar:"جيجي مدربة رائعة: الأفضل في المدينة! حصصها ممتعة ولا تشعرين بالملل أبدًا. أجواء رائعة وجدول منظم وواضح. حصصها مسلية ولن تشعري بالملل. أحبك جيجي ❤️"}
-];
 function renderStrip(lang){
   const items = stripItems[lang];
   const html = items.map(i=>`<span>${i}</span><span class="dot"> ✦ </span>`).join('');
   document.getElementById('stripTrack').innerHTML = html+html;
-}
-function renderReviews(lang){
-  const name = lang === 'ar' ? 'طالبة موثقة' : 'Verified Student';
-  document.getElementById('reviewsTrack').innerHTML = reviews.map(r => `
-    <div class="review-card">
-      <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-      <p class="review-text">"${lang === 'ar' ? r.ar : r.en}"</p>
-      <div class="review-author">
-        <div class="review-avatar" style="background:${r.grad}">✨</div>
-        <div><div class="review-name">${name}</div><div class="review-date">${lang === 'ar' ? r.dateAr : r.dateEn} · Google</div></div>
-        <span class="review-source">Google</span>
-      </div>
-    </div>`).join('');
 }
 function setLang(lang){
   document.documentElement.lang = lang;
@@ -634,7 +466,6 @@ function setLang(lang){
   });
   document.title = dict.pageTitle[lang];
   renderStrip(lang);
-  renderReviews(lang);
   document.getElementById('langToggle').textContent = lang === 'en' ? '🌐 العربية' : '🌐 English';
   try { localStorage.setItem('jiji_lang', lang); } catch(e){}
 }
@@ -646,24 +477,7 @@ let initialLang = 'en';
 try { initialLang = localStorage.getItem('jiji_lang') || 'en'; } catch(e){}
 setLang(initialLang);
 
-// Drag to scroll carousel
-const carousel = document.getElementById('reviewsCarousel');
-let isDown = false, startX, scrollLeft;
-carousel.addEventListener('mousedown', e => {
-  isDown = true; carousel.classList.add('dragging');
-  startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-});
-carousel.addEventListener('mouseleave', () => { isDown = false; carousel.classList.remove('dragging'); });
-carousel.addEventListener('mouseup', () => { isDown = false; carousel.classList.remove('dragging'); });
-carousel.addEventListener('mousemove', e => {
-  if (!isDown) return; e.preventDefault();
-  const x = e.pageX - carousel.offsetLeft;
-  carousel.scrollLeft = scrollLeft - (x - startX) * 1.2;
-});
-
-// Bank details toggle
-function toggleBank(btn) {
+function toggleBank(btn){
   const panel = document.getElementById('bankDetails');
   const open = panel.classList.toggle('open');
   btn.classList.toggle('open', open);
