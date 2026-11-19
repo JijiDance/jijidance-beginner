@@ -44,6 +44,20 @@ body.en .btn{font-family:'Poppins',sans-serif;font-size:.8rem;font-weight:700;le
 .btn-outline{background:transparent;color:var(--violet);border:2px solid var(--violet)}
 .btn-outline:hover{background:var(--violet);color:#fff;transform:translateY(-3px)}
 .apple{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+.stores{display:flex;gap:.8rem;flex-wrap:wrap}
+.store{display:inline-flex;align-items:center;gap:.7rem;padding:.7rem 1.4rem;border-radius:16px;text-decoration:none;min-width:200px;transition:transform .25s,box-shadow .25s;direction:ltr}
+.store:hover{transform:translateY(-3px)}
+.store svg{width:28px;height:28px;flex-shrink:0;fill:currentColor}
+.store span{display:flex;flex-direction:column;text-align:start;line-height:1.15}
+[dir=rtl] .store span{direction:rtl}
+.store small{font-size:.74rem;font-weight:600;opacity:.85}
+.store b{font-family:'Poppins',sans-serif;font-size:1.18rem;font-weight:700;letter-spacing:.01em}
+.store-gold{background:linear-gradient(120deg,var(--gold),#FFAA00);color:var(--night);box-shadow:0 8px 30px rgba(255,170,0,.45)}
+.store-light{background:#fff;color:var(--night);box-shadow:0 8px 30px rgba(40,0,60,.3)}
+.store-dark{background:var(--night);color:#fff;box-shadow:0 8px 24px rgba(26,5,38,.35)}
+.store-dark:hover{box-shadow:0 12px 30px rgba(139,43,226,.45)}
+.see-course{display:inline-block;color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:4px;margin:-.6rem 0 1.4rem;opacity:.9}
+.see-course:hover{opacity:1}
 
 .announce{position:relative;z-index:10;display:flex;align-items:center;justify-content:center;gap:1rem;padding:.6rem 1rem;background:var(--night);color:var(--gold2);font-weight:800;font-size:.95rem;border-bottom:3px solid var(--gold)}
 body.en .announce{font-size:.82rem;letter-spacing:.03em}
@@ -315,7 +329,7 @@ body.en .cta-final h2 em{font-style:italic}
   .collage .p1{height:340px}.collage .p2{height:260px}
   .collage .stamp{width:96px;height:96px}
   .gal-row img{height:280px;width:210px}
-  .hero-ctas .btn,.cta-btns .btn{width:100%}
+  .hero-ctas .btn,.cta-btns .btn,.store{width:100%;justify-content:center}
   .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:998;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 -6px 20px rgba(40,0,60,.15);transform:translateY(110%);transition:transform .3s}
   .sticky-cta.show{transform:none}
   .sticky-cta .btn{width:100%}
@@ -326,23 +340,24 @@ body.en .cta-final h2 em{font-style:italic}
 <body>
 
 <div class="announce">
-  <div class="announce-msg"><span data-i18n="annAndroid">🤖 نسخة أندرويد قريبًا</span><span class="announce-sep">✦</span><span data-i18n="annLevels">🆕 مستويات جديدة قريبًا</span></div>
+  <div class="announce-msg"><span data-i18n="annAndroid">🎉 متوفر الآن على أندرويد أيضًا!</span><span class="announce-sep">✦</span><span data-i18n="annLevels">🆕 مستويات جديدة قريبًا</span></div>
   <button id="langToggle" class="lang-toggle" onclick="toggleLang()">🌐 English</button>
 </div>
 
-<svg width="0" height="0" style="position:absolute"><symbol id="apple" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute"><symbol id="apple" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></symbol><symbol id="gplay" viewBox="0 0 512 512"><path fill="#00D2FF" d="M47 28c-9 6-15 17-15 31v394c0 14 6 25 15 31l228-228z"/><path fill="#00E676" d="M47 28l228 228 77-77L96 30C79 20 60 19 47 28z"/><path fill="#FF3D57" d="M47 484c13 9 32 8 49-2l256-149-77-77z"/><path fill="#FFC400" d="M352 179l-77 77 77 77 67-39c30-18 30-58 0-76z"/></symbol></svg>
 
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-tag"><span class="dot"></span><span data-i18n="heroTag">📱 متوفر الآن على آيفون</span></div>
+      <div class="hero-tag"><span class="dot"></span><span data-i18n="heroTag">📱 متوفر الآن على آيفون وأندرويد</span></div>
       <h1 data-i18n="heroH1">تعلّمي الرقص الشرقي<span class="t">من بيتك، بخصوصية تامة</span></h1>
       <p class="hero-body" data-i18n="heroBody">تطبيق جيجي لتعليم الرقص الشرقي - دروس فيديو خطوة بخطوة، من مدرّبة عالمية عاشت وعلّمت في العالم العربي لأكثر من ١٣ عامًا.</p>
       <p class="hero-bio" data-i18n="heroBio">لا حاجة للسفر أو حضور استوديو. حمّلي التطبيق وابدئي رحلتك اليوم، أنتِ وهاتفك فقط.</p>
-      <div class="hero-ctas">
-        <a href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="btn btn-main" target="_blank" rel="noopener"><svg class="apple"><use href="#apple"/></svg><span data-i18n="ctaDownload">حمّلي التطبيق من App Store ←</span></a>
-        <a href="#preview" class="btn btn-ghost" data-i18n="ctaSeePricing">شاهدي الدورة</a>
+      <div class="hero-ctas stores">
+        <a href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="store store-gold" target="_blank" rel="noopener"><svg><use href="#apple"/></svg><span><small data-i18n="sApple">حمّليه من</small><b>App Store</b></span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.ptq9wuargrak.pmikvo6hdapp1" class="store store-light" target="_blank" rel="noopener"><svg><use href="#gplay"/></svg><span><small data-i18n="sPlay">احصلي عليه من</small><b>Google Play</b></span></a>
       </div>
+      <a href="#preview" class="see-course" data-i18n="ctaSeePricing">شاهدي الدورة</a>
       <p class="hero-price" data-i18n="heroPrice">💳 دورة المبتدئات الكاملة: <b>٤٩$</b> <s>٩٧$</s> · سعر الإطلاق · دفعة واحدة داخل التطبيق</p>
       <div class="chips">
         <span class="chip" data-i18n="chip1">⭐ ٥.٠ تقييم جوجل</span>
@@ -510,8 +525,11 @@ body.en .cta-final h2 em{font-style:italic}
       <li data-i18n="inc3">إحماء وقوام وإطالة</li>
       <li data-i18n="inc4">دفعة واحدة، بدون اشتراك</li>
     </ul>
-    <a href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="btn btn-pink" target="_blank" rel="noopener"><svg class="apple"><use href="#apple"/></svg><span data-i18n="priceBtn">حمّلي التطبيق وابدئي ←</span></a>
-    <p class="pn" data-i18n="priceNote">يُعرض السعر ويُدفع داخل التطبيق بعملتك المحلية عبر App Store.</p>
+    <div class="stores" style="justify-content:center">
+        <a href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="store store-dark" target="_blank" rel="noopener"><svg><use href="#apple"/></svg><span><small data-i18n="sApple">حمّليه من</small><b>App Store</b></span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.ptq9wuargrak.pmikvo6hdapp1" class="store store-dark" target="_blank" rel="noopener"><svg><use href="#gplay"/></svg><span><small data-i18n="sPlay">احصلي عليه من</small><b>Google Play</b></span></a>
+    </div>
+    <p class="pn" data-i18n="priceNote">يُعرض السعر ويُدفع داخل التطبيق بعملتك المحلية عبر App Store أو Google Play.</p>
   </div>
 </section>
 
@@ -540,7 +558,7 @@ body.en .cta-final h2 em{font-style:italic}
       <div class="faq-item open"><button class="faq-q" data-i18n="faq1Q">هل خصوصيتي مضمونة؟</button><p class="faq-a" data-i18n="faq1A">نعم تمامًا. تتعلمين وحدك من خلال هاتفك، لا كاميرا ولا أحد يراكِ.</p></div>
       <div class="faq-item"><button class="faq-q" data-i18n="faq2Q">هل أحتاج خبرة سابقة؟</button><p class="faq-a" data-i18n="faq2A">لا إطلاقًا. دورة المبتدئات مصممة لمن لم يرقصن من قبل - ابدئي من الصفر.</p></div>
       <div class="faq-item"><button class="faq-q" data-i18n="faq3Q">هل الرقص للمتعة الشخصية فقط؟</button><p class="faq-a" data-i18n="faq3A">نعم. التطبيق مخصص للاستمتاع واللياقة والتعبير عن الذات في خصوصية منزلك، دون أي أداء أو ظهور أمام أحد.</p></div>
-      <div class="faq-item"><button class="faq-q" data-i18n="faq4Q">ما الأجهزة المتوفرة؟</button><p class="faq-a" data-i18n="faq4A">التطبيق متوفر حاليًا على آيفون عبر App Store. نسخة أندرويد قادمة قريبًا.</p></div>
+      <div class="faq-item"><button class="faq-q" data-i18n="faq4Q">ما الأجهزة المتوفرة؟</button><p class="faq-a" data-i18n="faq4A">التطبيق متوفر على آيفون عبر App Store وعلى أندرويد عبر Google Play.</p></div>
       <div class="faq-item"><button class="faq-q" data-i18n="faq7Q">بأي لغة تُقدَّم الدروس؟</button><p class="faq-a" data-i18n="faq7A">جميع دروس التطبيق باللغة الإنجليزية، بشرح مرئي واضح يسهل متابعته خطوة بخطوة حتى دون إتقان تام للغة.</p></div>
       <div class="faq-item"><button class="faq-q" data-i18n="faq8Q">هل ستكون هناك مستويات أخرى؟</button><p class="faq-a" data-i18n="faq8A">نعم! مستويات جديدة قادمة قريبًا داخل التطبيق، لتواصلي رحلتكِ بعد دورة المبتدئات.</p></div>
       <div class="faq-item"><button class="faq-q" data-i18n="faq5Q">هل الوصول فعلاً مدى الحياة؟</button><p class="faq-a" data-i18n="faq5A">نعم، تدفعين مرة واحدة فقط للحصول على دخول دائم لدورة المبتدئات.</p></div>
@@ -561,7 +579,8 @@ body.en .cta-final h2 em{font-style:italic}
   <h2 data-i18n="ctaH2">جاهزة تبدئي<br><em class="grad-text">رحلتك؟</em></h2>
   <p data-i18n="ctaP">حمّلي تطبيق جيجي اليوم، واستمتعي بسعر الإطلاق قبل انتهائه.</p>
   <div class="cta-btns">
-    <a href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="btn btn-pink" target="_blank" rel="noopener"><svg class="apple"><use href="#apple"/></svg><span data-i18n="ctaBtn1">حمّلي التطبيق الآن ←</span></a>
+    <a href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="store store-dark" target="_blank" rel="noopener"><svg><use href="#apple"/></svg><span><small data-i18n="sApple">حمّليه من</small><b>App Store</b></span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.ptq9wuargrak.pmikvo6hdapp1" class="store store-dark" target="_blank" rel="noopener"><svg><use href="#gplay"/></svg><span><small data-i18n="sPlay">احصلي عليه من</small><b>Google Play</b></span></a>
     <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%20have%20a%20question%20about%20the%20Bellydance%20app." class="btn btn-outline" target="_blank" rel="noopener" data-i18n="ctaBtn2">تحدثي عبر واتساب</a>
   </div>
   <p class="cta-foot" data-i18n="ctaFoot">🥳 أتمنى رؤيتك ترقصين قريبًا!</p>
@@ -569,19 +588,21 @@ body.en .cta-final h2 em{font-style:italic}
 
 <div class="footer-mini"><span>© 2026 Jiji Bellydance School · jijidance.com/app</span></div>
 
-<div class="sticky-cta" id="stickyCta"><a href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="btn btn-main" target="_blank" rel="noopener"><svg class="apple"><use href="#apple"/></svg><span data-i18n="stickyBtn">حمّلي التطبيق · ٤٩$</span></a></div>
+<div class="sticky-cta" id="stickyCta"><a id="stickyLink" href="https://apps.apple.com/app/jiji-bellydance-school/id6774510794" class="btn btn-main" target="_blank" rel="noopener"><svg class="apple"><use href="#apple"/></svg><span data-i18n="stickyBtn">حمّلي التطبيق · ٤٩$</span></a></div>
 
 <script>
 const dict = {
-  heroTag:{ar:"📱 متوفر الآن على آيفون",en:"📱 Now available on iPhone"},
+  heroTag:{ar:"📱 متوفر الآن على آيفون وأندرويد",en:"📱 Now on iPhone & Android"},
   heroH1:{ar:'تعلّمي الرقص الشرقي<span class="t">من بيتك، بخصوصية تامة</span>',en:'Learn bellydance<span class="t">from home, 100% private</span>'},
   heroBody:{ar:"تطبيق جيجي لتعليم الرقص الشرقي - دروس فيديو خطوة بخطوة، من مدرّبة عالمية عاشت وعلّمت في العالم العربي لأكثر من ١٣ عامًا.",en:"The Jiji Bellydance app - step-by-step video lessons from an international instructor who has lived and taught across the Arab world for 13+ years."},
-  annAndroid:{ar:"🤖 نسخة أندرويد قريبًا",en:"🤖 Android version coming soon"},
+  annAndroid:{ar:"🎉 متوفر الآن على أندرويد أيضًا!",en:"🎉 Now available on Android too!"},
   annLevels:{ar:"🆕 مستويات جديدة قريبًا",en:"🆕 New levels coming soon"},
   heroPrice:{ar:"💳 دورة المبتدئات الكاملة: <b>٤٩$</b> <s>٩٧$</s> · سعر الإطلاق · دفعة واحدة داخل التطبيق",en:"💳 Full Beginner Course: <b>$49</b> <s>$97</s> · launch price · one-time in-app purchase"},
   heroBio:{ar:"لا حاجة للسفر أو حضور استوديو. حمّلي التطبيق وابدئي رحلتك اليوم، أنتِ وهاتفك فقط.",en:"No studio visits, no travel needed. Download the app and start today - just you and your phone."},
+  sApple:{ar:"حمّليه من",en:"Download on the"},
+  sPlay:{ar:"احصلي عليه من",en:"Get it on"},
   ctaDownload:{ar:"حمّلي التطبيق من App Store ←",en:"Get it on the App Store →"},
-  ctaSeePricing:{ar:"شاهدي الدورة",en:"See The Course"},
+  ctaSeePricing:{ar:"شاهدي الدورة ↓",en:"See the course ↓"},
   chip1:{ar:"⭐ ٥.٠ تقييم جوجل",en:"⭐ 5.0 Google Rating"},
   chip2:{ar:"+٤٠٠ طالبة",en:"+400 Students"},
   chip3:{ar:"🗣️ الدروس بالإنجليزية",en:"🗣️ Lessons in English"},
@@ -655,7 +676,7 @@ const dict = {
   inc3:{ar:"إحماء وقوام وإطالة",en:"Warm-up, posture & stretching"},
   inc4:{ar:"دفعة واحدة، بدون اشتراك",en:"One payment, no subscription"},
   priceBtn:{ar:"حمّلي التطبيق وابدئي ←",en:"Download the App to Start →"},
-  priceNote:{ar:"يُعرض السعر ويُدفع داخل التطبيق بعملتك المحلية عبر App Store.",en:"Price is shown and charged in-app, in your local currency, via the App Store."},
+  priceNote:{ar:"يُعرض السعر ويُدفع داخل التطبيق بعملتك المحلية عبر App Store أو Google Play.",en:"Price is shown and charged in-app, in your local currency, via the App Store or Google Play."},
   revTag:{ar:"ماذا يقلن عني",en:"What They Say"},
   revH2:{ar:"تقييمات حقيقية من طالباتي",en:"Real reviews from my students"},
   revRating:{ar:"⭐ ٥.٠ · تقييمات جوجل",en:"⭐ 5.0 · Google Reviews"},
@@ -672,7 +693,7 @@ const dict = {
   faq3Q:{ar:"هل الرقص للمتعة الشخصية فقط؟",en:"Is this just for personal enjoyment?"},
   faq3A:{ar:"نعم. التطبيق مخصص للاستمتاع واللياقة والتعبير عن الذات في خصوصية منزلك، دون أي أداء أو ظهور أمام أحد.",en:"Yes. The app is for enjoyment, fitness, and self-expression in the privacy of your own home - no performing or appearing in front of anyone required."},
   faq4Q:{ar:"ما الأجهزة المتوفرة؟",en:"What devices are supported?"},
-  faq4A:{ar:"التطبيق متوفر حاليًا على آيفون عبر App Store. نسخة أندرويد قادمة قريبًا.",en:"The app is currently available on iPhone via the App Store. Android is coming soon."},
+  faq4A:{ar:"التطبيق متوفر على آيفون عبر App Store وعلى أندرويد عبر Google Play.",en:"The app is available on iPhone via the App Store and on Android via Google Play."},
   faq7Q:{ar:"بأي لغة تُقدَّم الدروس؟",en:"What language are the lessons in?"},
   faq7A:{ar:"جميع دروس التطبيق باللغة الإنجليزية، بشرح مرئي واضح يسهل متابعته خطوة بخطوة حتى دون إتقان تام للغة.",en:"All lessons in the app are taught in English, with clear visual step-by-step instruction that's easy to follow even without perfect fluency."},
   faq8Q:{ar:"هل ستكون هناك مستويات أخرى؟",en:"Will there be more levels?"},
@@ -694,8 +715,8 @@ const dict = {
   pageTitle:{ar:"تطبيق جيجي لتعليم الرقص الشرقي - بخصوصية تامة",en:"Jiji Bellydance School App - 100% Private"}
 };
 const stripItems = {
-  ar:["خصوصية تامة","تطبيق آيفون","+١٣ عام خبرة","دخول مدى الحياة","عرض إطلاق محدود","+٢٠ درس فيديو"],
-  en:["100% Private","iPhone App","13+ Years Experience","Lifetime Access","Limited Launch Offer","20+ Video Lessons"]
+  ar:["خصوصية تامة","آيفون وأندرويد","+١٣ عام خبرة","دخول مدى الحياة","عرض إطلاق محدود","+٢٠ درس فيديو"],
+  en:["100% Private","iPhone & Android","13+ Years Experience","Lifetime Access","Limited Launch Offer","20+ Video Lessons"]
 };
 function renderStrip(lang){
   const html = stripItems[lang].map(i=>`<span>${i}</span><span class="sep">✦</span>`).join('');
@@ -749,6 +770,13 @@ document.getElementById('playBtn').addEventListener('click', () => {
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => q.parentElement.classList.toggle('open')));
+
+// sticky download button: send Android phones to Google Play
+if (/android/i.test(navigator.userAgent)) {
+  const sl = document.getElementById('stickyLink');
+  sl.href = 'https://play.google.com/store/apps/details?id=com.ptq9wuargrak.pmikvo6hdapp1';
+  sl.querySelector('use').setAttribute('href', '#gplay');
+}
 
 // sticky download button on mobile after the hero
 const sticky = document.getElementById('stickyCta');
