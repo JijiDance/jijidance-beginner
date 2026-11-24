@@ -263,7 +263,11 @@ body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-tran
 .legend-dot.openlvl,.cal-dot.openlvl{background:var(--t1)}
 .cal-cell.has-openlvl{border-color:rgba(229,25,95,.35)}
 .level-card.open-lvl{border-color:rgba(229,25,95,.3);background:linear-gradient(160deg,#FFF0F5,var(--bg))}
-.level-card.open-lvl .level-price-alt{margin-top:auto}
+.level-card.open-lvl .level-desc{flex-grow:1}
+.open-promo{align-self:flex-start;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--t1);padding:.25rem .7rem;border-radius:20px;margin-bottom:.5rem}
+body.ar .open-promo{letter-spacing:normal}
+.open-wa{margin-top:.8rem;font-size:.8rem;color:var(--mid);text-decoration:underline;text-underline-offset:3px;text-align:center}
+.open-wa:hover{color:var(--t1)}
 .cal-cell.has-begeve{border-color:rgba(255,179,0,.5)}
 .cal-cell.has-inter{border-color:rgba(18,147,110,.35)}
 .cal-dots{display:flex;flex-wrap:wrap;justify-content:center;gap:3px}
@@ -385,11 +389,17 @@ body.ar .btn-wa{font-family:'Tajawal',sans-serif;letter-spacing:normal;text-tran
         <div class="level-meta">
           <div class="level-meta-row"><b data-i18n="openDays">Saturdays</b> <span data-i18n="openTime">· 2:00 PM</span></div>
           <div class="level-meta-row" data-i18n="openDates">Dec 5 · 12 · 19 · 26</div>
-          <div class="level-meta-note" data-i18n="openNote">December only</div>
+          <div class="level-meta-note" data-i18n="openNote">Drop-in classes · not a full course</div>
         </div>
         <p class="level-desc" data-i18n="openDesc">A weekend class for ladies who have completed the Beginner Level: come dance, practice and keep improving your technique on Saturday afternoons.</p>
-        <p class="level-price-alt" data-i18n="openBook">Message us on WhatsApp to book your spot.</p>
-        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27d%20like%20to%20book%20the%20Open%20Level%20class%20on%20Saturday%20at%202%20PM." class="btn btn-teal" target="_blank" rel="noopener" data-i18n="openBtn">Book on WhatsApp →</a>
+        <span class="open-promo" data-i18n="openPromo">Promotional price</span>
+        <div class="level-price-row">
+          <span class="level-price" data-i18n="openPrice">AED 100</span>
+          <span class="level-price-note" data-i18n="openPriceNote">per class · cash</span>
+        </div>
+        <p class="level-price-alt" data-i18n="openPriceAlt">AED 105 per class by card</p>
+        <a href="https://pay.mamopay.com/jijidance-f48c63" class="btn btn-teal" target="_blank" rel="noopener" data-i18n="openPayBtn">Pay by Card →</a>
+        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27d%20like%20to%20book%20the%20Open%20Level%20class%20on%20Saturday%20at%202%20PM." class="open-wa" target="_blank" rel="noopener" data-i18n="openWa">Paying cash? Book on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -501,10 +511,14 @@ const dict = {
   openDays:{en:"Saturdays",ar:"أيام السبت"},
   openTime:{en:"· 2:00 PM",ar:"· 2:00 ظهرًا"},
   openDates:{en:"Dec 5 · 12 · 19 · 26",ar:"5 · 12 · 19 · 26 ديسمبر"},
-  openNote:{en:"December only",ar:"في ديسمبر فقط"},
+  openNote:{en:"Drop-in classes · not a full course",ar:"حصص فردية · ليست دورة كاملة"},
   openDesc:{en:"A weekend class for ladies who have completed the Beginner Level: come dance, practice and keep improving your technique on Saturday afternoons.",ar:"حصة نهاية الأسبوع للسيدات اللواتي أنهين مستوى المبتدئات: تعالي لترقصي وتتمرني وتطوري تقنيتكِ بعد ظهر كل سبت."},
-  openBook:{en:"Message us on WhatsApp to book your spot.",ar:"راسلينا عبر واتساب لحجز مكانكِ."},
-  openBtn:{en:"Book on WhatsApp →",ar:"احجزي عبر واتساب ←"},
+  openPromo:{en:"Promotional price",ar:"سعر ترويجي"},
+  openPrice:{en:"AED 100",ar:"100 درهم"},
+  openPriceNote:{en:"per class · cash",ar:"للحصة · نقدًا"},
+  openPriceAlt:{en:"AED 105 per class by card",ar:"105 درهم للحصة بالبطاقة"},
+  openPayBtn:{en:"Pay by Card →",ar:"ادفعي بالبطاقة ←"},
+  openWa:{en:"Paying cash? Book on WhatsApp",ar:"ستدفعين نقدًا؟ احجزي عبر واتساب"},
   legendOpenTime:{en:"Saturdays · 2:00 PM · Dec 5 - Dec 26",ar:"السبت · 2:00 ظهرًا · 5 - 26 ديسمبر"},
   level5Btn:{en:"Register Now →",ar:"سجّلي الآن ←"},
   calTag:{en:"Calendar",ar:"التقويم"},
