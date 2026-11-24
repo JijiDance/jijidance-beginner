@@ -148,6 +148,14 @@ body.ar .diff-item-desc em{font-style:normal}
 .intensive-link:hover{color:var(--t1)}
 .course-card .btn{align-self:flex-start}
 .course-card .desc{font-size:.92rem;color:var(--mid);line-height:1.6;margin-bottom:1.2rem;flex-grow:1}
+.open-card{border-color:rgba(201,151,74,.45);background:linear-gradient(160deg,#FFF7EE,var(--bg))}
+.ol-note{display:inline-block;align-self:flex-start;background:rgba(139,68,104,.1);color:var(--text);font-size:.8rem;font-weight:600;padding:.35rem .8rem;border-radius:20px;margin-bottom:.9rem}
+.ol-promo{align-self:flex-start;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--o1);padding:.25rem .7rem;border-radius:20px;margin-bottom:.5rem}
+body.ar .ol-promo{letter-spacing:normal}
+.open-card .course-price{margin-bottom:.3rem}
+.ol-alt{font-size:.85rem;color:var(--mid);margin-bottom:1.3rem}
+.ol-wa{margin-top:.9rem;font-size:.82rem;color:var(--mid);text-decoration:underline;text-underline-offset:3px;align-self:flex-start}
+.ol-wa:hover{color:var(--text)}
 .course-price{font-family:'Abril Fatface',serif;font-size:1.6rem;color:var(--o1);margin-bottom:1.4rem}
 body.ar .course-price{font-family:'Tajawal',sans-serif;font-weight:800}
 .course-price span{font-size:.85rem;color:var(--mid);font-family:'DM Sans',sans-serif;font-weight:400}
@@ -299,6 +307,17 @@ body.ar .cta-heading em{font-style:normal}
         <span class="course-price" data-i18n="coursePrice">AED 800 <span>full course</span></span>
         <span class="btn btn-violet" data-i18n="btnChatWa">Chat on WhatsApp →</span>
       </a>
+      <div class="course-card open-card">
+        <span class="section-eyebrow" data-i18n="olEyebrow">Drop-in classes · Saturdays 2 PM</span>
+        <h3 data-i18n="olTitle">Open Level</h3>
+        <p class="ol-note" data-i18n="olNote">Not a full course: single drop-in classes.</p>
+        <p class="desc" data-i18n="olDesc">For ladies who already know the basic steps. We dance to different songs to practise the steps we already know. Saturdays at 2 PM: Dec 5, 12, 19 &amp; 26.</p>
+        <span class="ol-promo" data-i18n="olPromo">Promotional price</span>
+        <span class="course-price" data-i18n="olPrice">AED 100 <span>per class · cash</span></span>
+        <p class="ol-alt" data-i18n="olAlt">AED 105 per class by card</p>
+        <a href="https://pay.mamopay.com/jijidance-f48c63" class="btn btn-violet" target="_blank" rel="noopener" data-i18n="olBtn">Pay by Card →</a>
+        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27d%20like%20to%20book%20an%20Open%20Level%20class%20on%20Saturday%20at%202%20PM." class="ol-wa" target="_blank" rel="noopener" data-i18n="olWa">Paying cash? Book on WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
@@ -365,6 +384,15 @@ const dict = {
   pre2Desc:{en:"If you already dance comfortably, you know the basics &amp; variations: now learn how to connect the steps in a beautiful way. Tuesdays at 6 PM, Dec 8 - Feb 2.",ar:"إذا كنتِ ترقصين بارتياح وتعرفين الأساسيات والتنويعات: تعلّمي الآن كيف تربطين الخطوات بطريقة جميلة. كل ثلاثاء الساعة 6 مساءً، 8 ديسمبر - 2 فبراير."},
   int1Title:{en:"Intermediate 1",ar:"متوسط 1"},
   int2Desc:{en:"✨ New information coming soon! Message us on WhatsApp to be the first to know.",ar:"✨ معلومات جديدة قريبًا! راسلينا عبر واتساب لتكوني أول من يعرف."},
+  olEyebrow:{en:"Drop-in classes · Saturdays 2 PM",ar:"حصص فردية · أيام السبت 2 ظهرًا"},
+  olTitle:{en:"Open Level",ar:"المستوى المفتوح"},
+  olNote:{en:"Not a full course: single drop-in classes.",ar:"ليست دورة كاملة: حصص فردية منفصلة."},
+  olDesc:{en:"For ladies who already know the basic steps. We dance to different songs to practise the steps we already know. Saturdays at 2 PM: Dec 5, 12, 19 &amp; 26.",ar:"للسيدات اللواتي يعرفن الخطوات الأساسية. نرقص على أغانٍ مختلفة لنتمرن على الخطوات التي نعرفها. أيام السبت الساعة 2 ظهرًا: 5 و12 و19 و26 ديسمبر."},
+  olPromo:{en:"Promotional price",ar:"سعر ترويجي"},
+  olPrice:{en:'AED 100 <span>per class · cash</span>',ar:'100 درهم <span>للحصة · نقدًا</span>'},
+  olAlt:{en:"AED 105 per class by card",ar:"105 درهم للحصة بالبطاقة"},
+  olBtn:{en:"Pay by Card →",ar:"ادفعي بالبطاقة ←"},
+  olWa:{en:"Paying cash? Book on WhatsApp",ar:"ستدفعين نقدًا؟ احجزي عبر واتساب"},
   int2Title:{en:"Intermediate 2",ar:"متوسط 2"},
   courseTrack8:{en:"8-Week Track",ar:"مسار 8 أسابيع"},
   intTitle:{en:"Intermediate",ar:"المتوسط"},
