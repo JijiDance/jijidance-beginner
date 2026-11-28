@@ -166,7 +166,7 @@ body.ar .cities li small{letter-spacing:0}
 /* cross-sell */
 .xsell{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
 .xsell-img{position:relative;overflow:hidden}
-.xsell-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.xsell-img img,.xsell-img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .xsell-body{padding:6rem 6vw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:var(--ink3)}
 .xsell-body p{color:rgba(247,241,230,.65);margin-bottom:2rem;max-width:480px}
 
