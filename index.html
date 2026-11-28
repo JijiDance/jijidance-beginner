@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title id="pageTitle">Jiji Bellydance - Abu Dhabi</title>
+<title id="pageTitle">Bellydance Classes for Beginners in Abu Dhabi &amp; Private Shows | Jiji Bellydance</title>
+<meta name="description" content="Ladies-only bellydance classes for beginners in Abu Dhabi, private bellydance instructor, Arabic dance workshops and luxury bellydance shows for private events in the UAE. A fun new hobby for women."/>
+<link rel="canonical" href="https://www.jijidance.com/"/>
 <meta property="og:title" content="Jiji Bellydance - Abu Dhabi"/>
 <meta property="og:description" content="Bellydance classes for ladies in Abu Dhabi with Jiji. دروس الرقص الشرقي للسيدات في أبوظبي."/>
 <meta property="og:image" content="https://www.jijidance.com/images/og-jijidance.jpg"/>
@@ -67,6 +69,11 @@ body.ar .hero-intro{font-style:normal}
 .hero-name{font-family:'Abril Fatface',serif;font-size:clamp(3.2rem,8vw,6rem);line-height:.95;color:#fff}
 .hero-location{color:rgba(255,255,255,.72);font-size:.95rem;margin:1rem 0 1.2rem;letter-spacing:.03em}
 .hero-desc{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.75;max-width:480px;margin-bottom:2.2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.hero-btns .btn{font-size:.8rem;padding:1.15rem 2.6rem}
+.btn-show{background:#0B0907;color:#E6CF9F;border:1px solid #C9A96E}
+.btn-show:hover{background:#1C1610;transform:translateY(-2px)}
+@media(max-width:480px){.hero-btns .btn{flex:1 1 100%;text-align:center}}
 .hero-divider{width:60px;height:2px;background:var(--o1);margin-bottom:2rem}
 .hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
 .hstat-num{font-family:'Abril Fatface',serif;font-size:2.1rem;color:#fff}
@@ -235,7 +242,7 @@ body.ar .cta-heading em{font-style:normal}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 @media(max-width:768px){
-  .hero-left{padding:5rem 1.5rem 3rem}
+  .hero-left{padding:7.5rem 1.5rem 3rem}
   .hero-stats{gap:1.5rem}
   .about-inner{grid-template-columns:1fr;gap:2.5rem}
   .about-img-col{order:-1}
@@ -277,6 +284,10 @@ body.ar .cta-heading em{font-style:normal}
     <h1 class="hero-name" data-i18n="heroName">JIJI</h1>
     <p class="hero-location" data-i18n="heroLocation">International Bellydancer · Abu Dhabi, UAE</p>
     <p class="hero-desc" data-i18n="heroDesc">A Brazilian dancer who crossed borders to live bellydance in the heart of the Middle East - and who now teaches women from all over the world to discover their own strength, right here in Abu Dhabi.</p>
+    <div class="hero-btns">
+      <a href="/courses/" class="btn btn-gold" data-i18n="heroBtnClass">Join a Class</a>
+      <a href="/shows/" class="btn btn-show" data-i18n="heroBtnShow">Book a Show</a>
+    </div>
     <div class="hero-divider"></div>
     <div class="hero-stats">
       <div>
@@ -310,7 +321,7 @@ body.ar .cta-heading em{font-style:normal}
       <div class="service-card">
         <span class="service-num">01</span>
         <h3 data-i18n="service1Title">Group Classes</h3>
-        <p data-i18n="service1Desc">Weekly courses in a warm, ladies only studio in Abu Dhabi. No experience needed - be ready to have fun and learn a lot!</p>
+        <p data-i18n="service1Desc">Bellydance classes for beginners in a warm, ladies-only studio in Abu Dhabi. No experience needed - a fun new hobby for women, and a great thing to do with your girlfriends!</p>
         <ul class="service-chips">
           <li data-i18n="service1Chip1">🎥 Videos with steps learned</li>
           <li data-i18n="service1Chip2">💃 Full choreography for every level</li>
@@ -321,7 +332,7 @@ body.ar .cta-heading em{font-style:normal}
       <div class="service-card">
         <span class="service-num">02</span>
         <h3 data-i18n="service2Title">Private Lessons</h3>
-        <p data-i18n="service2Desc">Private sessions tailored to your pace, your goals and your schedule.</p>
+        <p data-i18n="service2Desc">Your private bellydance instructor in Abu Dhabi: sessions tailored to your pace, your goals and your schedule.</p>
         <ul class="service-chips">
           <li data-i18n="service2Chip1">🏠 At the comfort of your home</li>
           <li data-i18n="service2Chip2">🏢 At the studio</li>
@@ -343,7 +354,7 @@ body.ar .cta-heading em{font-style:normal}
           <li data-i18n="service3Chip6">👯‍♀️ Ladies gatherings</li>
         </ul>
         <button type="button" class="service-note service-note-btn" onclick="openModal('tcModal')" data-i18n="service3Note">15% off for my students, T&C's apply</button>
-        <a href="https://wa.me/971567750994" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="btnChatWa">Chat on WhatsApp →</a>
+        <a href="/shows/" class="btn btn-gold" data-i18n="btnSeeShow">Discover the Show →</a>
       </div>
       <div class="service-card service-card-wide">
         <div>
@@ -356,7 +367,7 @@ body.ar .cta-heading em{font-style:normal}
             <li data-i18n="service4Chip3">✨ Dance belts for all guests</li>
           </ul>
         </div>
-        <a href="https://wa.me/971567750994?text=Hi%20Jiji%2C%20I%27d%20like%20to%20book%20the%20Show%20%2B%20Class%20experience%20%2810%20min%20show%20%2B%2040%20min%20class%20with%20dance%20belts%29%20for%20my%20event." class="btn btn-teal" target="_blank" rel="noopener" data-i18n="btnChatWa">Chat on WhatsApp →</a>
+        <a href="/show-and-dance-class/" class="btn btn-teal" data-i18n="btnSeeShowClass">Discover the Experience →</a>
       </div>
     </div>
   </div>
@@ -538,6 +549,7 @@ body.ar .cta-heading em{font-style:normal}
         <li><a href="#why" data-i18n="navWhy">Why Me</a></li>
         <li><a href="#benefits" data-i18n="navBenefits">Benefits</a></li>
         <li><a href="/courses/" data-i18n="navCourses">Courses</a></li>
+        <li><a href="/shows/" data-i18n="footerShows">Book a Show</a></li>
         <li data-until="2026-12-01"><a href="/schedule/october-november/" data-i18n="footerScheduleOct">October &amp; November Schedule</a></li>
         <li><a href="/schedule/december-january/" data-i18n="footerSchedule">December &amp; January Schedule</a></li>
       </ul>
@@ -575,6 +587,8 @@ const dict = {
   heroIntro:{en:"hello, i'm",ar:"مرحباً، أنا"},
   heroName:{en:"JIJI",ar:"جيجي"},
   heroLocation:{en:"International Bellydancer · Abu Dhabi, UAE",ar:"راقصة شرقية عالمية · أبوظبي، الإمارات"},
+  heroBtnClass:{en:"Join a Class",ar:"انضمي إلى درس"},
+  heroBtnShow:{en:"Book a Show",ar:"احجزي عرضًا"},
   heroDesc:{en:"A Brazilian dancer who crossed borders to live bellydance in the heart of the Middle East - and who now teaches women from all over the world to discover their own strength, right here in Abu Dhabi.",ar:"راقصة برازيلية عبرت الحدود لتعيش الرقص الشرقي في قلب الشرق الأوسط - وتُعلّم اليوم نساءً من مختلف أنحاء العالم كيف يكتشفن قوتهن الخاصة، هنا في أبوظبي."},
   hstat1:{en:"Years in the Arab World",ar:"سنة في العالم العربي"},
   hstat2:{en:"Students Taught",ar:"طالبة تعلّمت معي"},
@@ -596,9 +610,9 @@ const dict = {
   service3Chip4:{en:"🎓 Graduations",ar:"🎓 التخرج"},
   service3Chip5:{en:"🎂 Birthdays",ar:"🎂 أعياد الميلاد"},
   service3Chip6:{en:"👯‍♀️ Ladies gatherings",ar:"👯‍♀️ تجمعات نسائية"},
-  service1Desc:{en:"Weekly courses in a warm, ladies only studio in Abu Dhabi. No experience needed - be ready to have fun and learn a lot!",ar:"دورات أسبوعية في استوديو دافئ مخصص للنساء فقط في أبوظبي. لا حاجة لخبرة سابقة - استعدي للمرح وتعلم الكثير!"},
+  service1Desc:{en:"Bellydance classes for beginners in a warm, ladies-only studio in Abu Dhabi. No experience needed - a fun new hobby for women, and a great thing to do with your girlfriends!",ar:"دورات أسبوعية في استوديو دافئ مخصص للنساء فقط في أبوظبي. لا حاجة لخبرة سابقة - استعدي للمرح وتعلم الكثير!"},
   service2Title:{en:"Private Lessons",ar:"دروس خاصة"},
-  service2Desc:{en:"Private sessions tailored to your pace, your goals and your schedule.",ar:"حصص خاصة مصممة حسب وتيرتك وأهدافك وجدولك."},
+  service2Desc:{en:"Your private bellydance instructor in Abu Dhabi: sessions tailored to your pace, your goals and your schedule.",ar:"حصص خاصة مصممة حسب وتيرتك وأهدافك وجدولك."},
   service3Title:{en:"Shows - Private Events",ar:"عروض - مناسبات خاصة"},
   service3Desc:{en:"Book an exclusive bellydance performance for your event and surprise your guests. For any celebration, big or small.",ar:"احجزي عرض رقص شرقي حصري لمناسبتك وفاجئي ضيوفك. لأي احتفال، كبيرًا كان أم صغيرًا."},
   service4Title:{en:"Show + Dance Class",ar:"عرض + حصة رقص"},
@@ -610,7 +624,9 @@ const dict = {
   tcTitle:{en:"Student Discount - Terms & Conditions",ar:"خصم الطالبات - الشروط والأحكام"},
   tcText:{en:"This 15% discount is available to students who are currently enrolled in a course, and only from their second course onward - or who have already completed their 2nd package of private lessons.",ar:"هذا الخصم بنسبة 15% متاح للطالبات المسجلات حاليًا في إحدى الدورات، ابتداءً من دورتهن الثانية فما فوق - أو اللواتي أكملن بالفعل باقتهن الثانية من الدروس الخاصة."},
   btnSeeCourses:{en:"See Courses →",ar:"شاهدي الدورات ←"},
+  btnSeeShowClass:{en:"Discover the Experience →",ar:"اكتشفي التجربة ←"},
   btnChatWa:{en:"Chat on WhatsApp →",ar:"تحدثي عبر واتساب ←"},
+  btnSeeShow:{en:"Discover the Show →",ar:"اكتشفي العرض ←"},
   aboutEyebrow:{en:"Who I Am",ar:"من أنا"},
   aboutHeading:{en:"A girl from Brazil who<br>moved to the <em>desert…</em>",ar:"فتاة من البرازيل<br>انتقلت إلى <em>الصحراء…</em>"},
   aboutQuote:{en:'"I left Brazil on International Dance Day, in 2013, to experience bellydance at its origin - and without knowing it, I stepped into the biggest adventure of my life!"',ar:'"غادرت البرازيل في اليوم العالمي للرقص، عام 2013، لأعيش تجربة الرقص الشرقي في مهده - ودون أن أدري، دخلت أكبر مغامرة في حياتي!"'},
@@ -674,12 +690,13 @@ const dict = {
   ctaSub:{en:"Choose how you want to start your bellydance journey in Abu Dhabi.",ar:"اختاري كيف تريدين بدء رحلتك في الرقص الشرقي في أبوظبي."},
   footerTagline:{en:"International Dancer · Abu Dhabi, UAE",ar:"راقصة عالمية · أبوظبي، الإمارات"},
   footerNavTitle:{en:"Navigate",ar:"التنقل"},
+  footerShows:{en:"Book a Show",ar:"احجزي عرضًا"},
   footerScheduleOct:{en:"October &amp; November Schedule",ar:"جدول أكتوبر ونوفمبر"},
   footerSchedule:{en:"December &amp; January Schedule",ar:"جدول ديسمبر ويناير"},
   footerFindTitle:{en:"Find Us",ar:"موقعنا"},
   footerAbuDhabi:{en:"Abu Dhabi, UAE",ar:"أبوظبي، الإمارات"},
   footerCopy:{en:"© 2026 Jiji Bellydance · All rights reserved",ar:"© 2026 جيجي بيلي دانس · جميع الحقوق محفوظة"},
-  pageTitle:{en:"Jiji Bellydance - Abu Dhabi",ar:"جيجي بيلي دانس - أبوظبي"}
+  pageTitle:{en:"Bellydance Classes for Beginners in Abu Dhabi & Private Shows | Jiji Bellydance",ar:"دروس الرقص الشرقي للمبتدئات في أبوظبي وعروض خاصة | جيجي بيلي دانس"}
 };
 const tickerItems = {
   en:["International Dancer","School in Abu Dhabi","+13 Years in the Arab World","Postgraduate in Exercise Physiology","Ladies Only Classes"],
